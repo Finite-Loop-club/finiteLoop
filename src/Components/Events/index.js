@@ -20,6 +20,30 @@ function Events() {
         <Eventcard/>
         <Eventcard/>
         <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
+        <Eventcard/>
     </div>
     </>
   )
