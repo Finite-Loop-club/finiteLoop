@@ -5,6 +5,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 import Events from './Components/Events';
 import Team from './Components/Team';
+import About from './Components/About';
 import Navbar from './Components/BasicComponents/Navbar';
 import Footer from './Components/BasicComponents/Footer';
 
@@ -15,7 +16,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route exact path="/aboutus" element={<Events />}></Route>
+        <Route exact path="/about" element={<About />}></Route>
         <Route exact path="/events" element={<Events />}></Route>
         <Route exact path="/perks" element={<Events />}></Route>
         <Route exact path="/gallery" element={<Events />}></Route>
