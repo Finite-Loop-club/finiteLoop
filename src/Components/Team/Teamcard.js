@@ -22,15 +22,13 @@ function Teamcard() {
                         <div className="flex justify-center gap-3 mb-2">
                             <a href="/">
 
-                                <FaGithub className=" hover:animate-bounce  text-igold hover:text-white cursor cursor-pointer   transition-all ease-out hover:-translate-x-1 text-2xl hover:text-3xl hover:-translate-y-1 " />
+                                <FaGithub className=" hover:animate-bounce text-orange-600 hover:text-white cursor cursor-pointer   transition-all ease-in-out hover:-translate-x-1 text-2xl hover:text-3" />
                             </a>
 
                             <a href="/">
-                                <FiLinkedin className=" hover:animate-bounce  text-igold hover:text-white cursor-pointer  transition-all ease-in-out text-2xl hover:text-3xl   hover:-translate-y-1   " />
+                                <FiLinkedin className=" hover:animate-bounce text-orange-600 hover:text-white cursor-pointer  transition-all ease-in-out text-2xl hover:text-3xl" />
                             </a>
-                            <a href="/">
-                                <FaInstagram className=" hover:animate-bounce  text-igold hover:text-white cursor-pointer  transition-all ease-in-out text-2xl hover:text-3xl   hover:-translate-y-1   " />
-                            </a>
+                            
                             
                         </div>
                     </div>

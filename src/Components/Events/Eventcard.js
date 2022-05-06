@@ -1,6 +1,5 @@
 import React from 'react'
 import "./card.css"
-import {BsArrowUpRightSquare} from "react-icons/bs"
 import Button from "../BasicComponents/Button"
 import { Fade } from "react-awesome-reveal";
 
