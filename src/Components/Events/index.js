@@ -8,8 +8,7 @@ function Events() {
   return (
     <>
 
-    <div className='text-7xl text-center text-white pt-5 font-bold tracking-widest ' >Events</div>
-    <div className="bg-orange-500 h-1 w-48 my-2 m-auto"></div>
+    <div className='text-7xl text-center text-white pt-5 font-bold tracking-widest underline decoration-orange-500 underline-offset-8 decoration-4 ' >Events</div>
     <div className='text-3xl text-center text-white pt-3 pb-8   tracking-widest ' >Something that make sense</div>
 
     <Tab/>

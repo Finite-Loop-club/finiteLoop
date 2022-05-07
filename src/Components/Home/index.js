@@ -1,6 +1,7 @@
 import React from 'react'
 import { Parallax } from 'react-parallax';
 import Button from '../BasicComponents/Button';
+import { Link } from 'react-router-dom';
 
 const inlineStyleRD = {
     background: 'transparent',
@@ -26,7 +27,7 @@ function Home() {
                             <div className='text-white font-bold  text-4xl  md:text-6xl' style={{ textShadow: "2px 2px 15px #000000" }} >Welcome to Finite Loop</div>
                             <br />
                             <p style={{ textShadow: "2px 2px 15px #000000" }} className='font-normal text-white py-2 text-xl md:text-3xl font-body'>Innovate | Connect | Inspire</p>
-                            <Button text="What's new" />
+                            <Link to="/events">   <Button text="What's new" />   </Link>
                         </div>
 
 
@@ -40,7 +41,7 @@ function Home() {
                             <div className='text-white font-bold  text-4xl  md:text-6xl' style={{ textShadow: "2px 2px 15px #000000" }} >Know about the club</div>
                             <br />
                             <p style={{ textShadow: "2px 2px 15px #000000" }} className='font-normal py-2 text-white text-3xl md:text-3xl font-body'>What we do here</p>
-                            <Button text="About us" />
+                            <Link to="/about">   <Button text="About us" />  </Link>
                         </div>
                     </div>
                 </Parallax>
@@ -55,7 +56,7 @@ function Home() {
                             <div className='text-white font-bold  text-4xl  md:text-6xl' style={{ textShadow: "2px 2px 15px #000000" }} >EVENTS</div>
                             <br />
                             <p style={{ textShadow: "2px 2px 15px #000000" }} className='font-normal text-white py-2 text-2xl md:text-3xl font-body'>Events that we have done in past.</p>
-                            <Button text="Events" />
+                            <Link to="/events">   <Button text="Events" />  </Link>
                         </div>
                     </div>
                 </Parallax>
@@ -68,7 +69,7 @@ function Home() {
                             <div className='text-white font-bold  text-4xl  md:text-6xl' style={{ textShadow: "2px 2px 15px #000000" }} >Why You should join us</div>
                             <br />
                             <p style={{ textShadow: "2px 2px 15px #000000" }} className='font-normal text-white py-2 text-2xl md:text-3xl font-body'>Perks of joing Us</p>
-                            <Button text="Perks" />
+                            <Link to="/perks">   <Button text="Perks" />  </Link>
                         </div>
                     </div>
                 </Parallax>
@@ -80,7 +81,8 @@ function Home() {
                             <div className='text-white font-bold  text-4xl  md:text-6xl' style={{ textShadow: "2px 2px 15px #000000" }} >See us through Images</div>
                             <br />
                             <p style={{ textShadow: "2px 2px 15px #000000" }} className='font-normal text-white py-2 text-2xl md:text-3xl font-body'>Lorem ipsum dolor sit amet consectetur.</p>
-                            <Button text="Gallery" />
+
+                            <Link to="/gallery">   <Button text="Gallery" />   </Link>
                         </div>
                     </div>
                 </Parallax>
@@ -93,7 +95,7 @@ function Home() {
                             <div className='text-white font-bold  text-4xl  md:text-6xl' style={{ textShadow: "2px 2px 15px #000000" }} >TEAM</div>
                             <br />
                             <p style={{ textShadow: "2px 2px 15px #000000" }} className='font-normal text-white py-2 text-2xl md:text-3xl font-body'>Hardworkig Team behind all this </p>
-                            <Button text="Team" />
+                            <Link to="/team">   <Button text="Team" />  </Link>
                         </div>
                     </div>
                 </Parallax>
@@ -105,8 +107,8 @@ function Home() {
                         <div style={inlineStyleRD} className=' w-screen text-white'>
                             <div className=' font-bold  text-4xl  md:text-6xl' style={{ textShadow: "2px 2px 15px #000000" }} >Contact us</div>
                             <br />
-                            <p style={{ textShadow: "2px 2px 15px #000000" }} className='font-normal py-2 text-2xl md:text-3xl font-body'>We’d Love to Hear From You</p>
-                            <Button text="contact" />
+                            <p style={{ textShadow: "2px 2px 15px #000000" }} className='font-normal py-2 text-2xl md:text-3xl font-body'>We'd Love to Hear From You</p>
+                            <Link to="/contact">   <Button text="contact" />  </Link>
                         </div>
                     </div>
                 </Parallax>

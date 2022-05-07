@@ -6,7 +6,7 @@ import "./team.css"
 function Teamcard(props) {
     return (
         <>
-            <Fade as="div" className=" max-w-sm scale-90 lg:scale-100 h-full text-center w-[80%] lg:w-[20%] m-3">
+            <Fade as="div" className=" shadow-xl hover:shadow-orange-500 hover:shadow-2xl transition duration-300 max-w-sm scale-90 lg:scale-100 h-full text-center w-[80%] lg:w-[20%] m-5">
                 <div className="transition-transform hover:scale-105  duration-300">
                     <div className="bg-[#2f2f2f] h-60 pt-0 ">
                         <img className=" object-cover h-60 w-fit m-auto " src={props.src} alt="" />

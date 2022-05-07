@@ -8,7 +8,7 @@ function Eventcard(props) {
         <>
 
             <Fade as="div"duration={1000}  className="h-fit w-96 m-4  flex items-center">
-                <div className="container mx-auto p-5 bg-gray-900 max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-orange-500 hover:shadow-2xl transition duration-300">
+                <div className="container mx-auto p-5 bg-gray-900 max-w-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-orange-500 hover:shadow-2xl transition-all hover:scale-105  duration-300">
                     <img className="rounded-lg" src={props.src} alt="" />
                     <div className="flex justify-between items-center">
                         <div>
