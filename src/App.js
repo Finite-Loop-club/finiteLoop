@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './index.css';
 import Home from './Components/Home';
 import { Routes, Route, Navigate } from "react-router-dom";
+import Loader from './Components/BasicComponents/Loader';
 
 import Events from './Components/Events';
 import Team from './Components/Team';
@@ -9,8 +10,16 @@ import About from './Components/About';
 import Navbar from './Components/BasicComponents/Navbar';
 import Footer from './Components/BasicComponents/Footer';
 
+
 function App() {
-  return (
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2500);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+  return (loading ? <Loader/>:(
     <div className="App bg-gradient-to-r from-black to-gray-900">
       <Navbar />
 
@@ -27,7 +36,7 @@ function App() {
 
       <Footer />
     </div>
-  );
+  ));
 }
 
 export default App;
