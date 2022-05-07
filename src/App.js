@@ -11,14 +11,13 @@ import Footer from './Components/BasicComponents/Footer';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-gradient-to-r from-black to-gray-900">
       <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route exact path="/about" element={<About />}></Route>
         <Route exact path="/events" element={<Events />}></Route>
-        <Route exact path="/perks" element={<Events />}></Route>
         <Route exact path="/gallery" element={<Events />}></Route>
         <Route exact path="/team" element={<Team />}></Route>
         <Route exact path="/contact" element={<Events />}></Route>

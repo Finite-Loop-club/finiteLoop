@@ -63,8 +63,8 @@ function About() {
       <div class=" h-full bg-gradient-to-r from-black to-gray-900">
 
 
-        <div className='text-7xl text-center text-white pt-5 font-bold tracking-widest  underline decoration-orange-500 underline-offset-8 decoration-4' >About Us</div>
-        <div className='text-3xl text-center text-white pt-3 pb-8   tracking-widest ' >Something that make sense</div>
+        <div className='md:text-7xl text-5xl text-center text-white pt-5 font-bold tracking-widest  underline decoration-orange-500 underline-offset-8 decoration-4' >About Us</div>
+        <div className=' text-xl md:text-3xl text-center text-white pt-3 pb-8   tracking-widest ' >Something that make sense</div>
         <p className='text-xl text-center text-white w-2/3 m-auto ' >
         Finite Loop is a Coding Club, which aims to give a good perspective of development, and encourages students to realize their ideas. We encourage students to participate in competitive programming and thus, inspire the next.
         </p>

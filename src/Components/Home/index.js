@@ -61,18 +61,6 @@ function Home() {
                     </div>
                 </Parallax>
 
-                {/* Perks */}
-
-                <Parallax className='h-[80vh] ' bgImage={require('./img/about.jpg')} bgImageStyle={{ objectFit: 'cover ', backgroundPosition: "left" }} strength={-200} >
-                    <div style={{ height: 500, }} >
-                        <div style={inlineStyleRD} className='w-screen'>
-                            <div className='text-white font-bold  text-4xl  md:text-6xl' style={{ textShadow: "2px 2px 15px #000000" }} >Why You should join us</div>
-                            <br />
-                            <p style={{ textShadow: "2px 2px 15px #000000" }} className='font-normal text-white py-2 text-2xl md:text-3xl font-body'>Perks of joing Us</p>
-                            <Link to="/perks">   <Button text="Perks" />  </Link>
-                        </div>
-                    </div>
-                </Parallax>
 
                 {/* Gallery */}
                 <Parallax className='h-[80vh] ' bgImage={require('./img/gallery.jpg')} bgImageStyle={{ objectFit: 'cover ', backgroundPosition: "left" }} strength={-200} >
