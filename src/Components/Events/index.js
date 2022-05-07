@@ -1,6 +1,8 @@
 import React from 'react'
 import Eventcard from './Eventcard'
 import Tab from './Tab'
+import {eventData} from "./eventData"
+
 
 function Events() {
   return (
@@ -13,37 +15,15 @@ function Events() {
     <Tab/>
 
     <div className='flex flex-wrap w-[95vw] m-auto mt-0 justify-center ' >
+      {eventData.map((events, id)=>{
+        return(
+          <Eventcard key={id} name={events.name} src={events.image} catogary={events.type}  />
 
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
-        <Eventcard/>
+
+        )
+      } )}
+
+
     </div>
     </>
   )
