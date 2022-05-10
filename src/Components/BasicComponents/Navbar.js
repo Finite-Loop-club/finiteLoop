@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import logo from "../../assets/images/logo.png"
 import logo1 from "../../assets/images/logo1.png"
-import Switch from './switch/Switch'
+// import Switch from './switch/Switch'
 
 function Navbar() {
     const [click, setClick] = useState(0)
