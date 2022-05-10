@@ -96,7 +96,7 @@ function Home() {
                             <div className=' font-bold  text-4xl  md:text-6xl' style={{ textShadow: "2px 2px 15px #000000" }} >Contact us</div>
                             <br />
                             <p style={{ textShadow: "2px 2px 15px #000000" }} className='font-normal py-2 text-2xl md:text-3xl font-body'>We'd Love to Hear From You</p>
-                            <Link to="/contact">   <Button text="contact" />  </Link>
+                            <Link to="/contact">   <Button text="Contact" />  </Link>
                         </div>
                     </div>
                 </Parallax>
