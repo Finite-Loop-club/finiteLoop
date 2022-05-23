@@ -7,7 +7,7 @@ import events from "./png/events.png"
 import join from "./png/join.png"
 import laravel from "./png/laravel.png"
 import contact from "./png/contact.png"
-import { Fade, Slide } from "react-awesome-reveal";
+import { Fade, Slide, Zoom } from "react-awesome-reveal";
 
 const inlineStyleRD = {
     background: 'transparent',
@@ -255,8 +255,9 @@ function Home() {
                 </section>
 
                 {/* testimonials */}
-
+                <Zoom>
                 <div className="text-5xl font-bold text-gray-800">Testimonials</div>
+                </Zoom>
 
 
                 <div className="w-10/12 mx-auto flex flex-wrap flex-col md:flex-row gap-4 mb-8 md:mb-0 flex-between items-center p-8 justify-center  ">
