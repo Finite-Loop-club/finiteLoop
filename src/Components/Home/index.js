@@ -259,8 +259,6 @@ function Home() {
                 <Zoom>
                 <div className="text-5xl font-bold text-gray-800">Testimonials</div>
                 </Zoom>
-
-
                 <div className="w-10/12 mx-auto flex flex-wrap flex-col md:flex-row gap-4 mb-8 md:mb-0 flex-between items-center p-8 justify-center  ">
                     {testimonials.map((test, key) => {
                         return (
@@ -312,11 +310,11 @@ function Home() {
                                 <div className='text-gray-900 text-lg' >
                                     We'd love to hear from you!
                                 </div>
-                                <div className="flex space-x-6 pb-6">
-                                    <div className="mt-4 w-full md:w-44">
+                                <div className="flex space-x-6 justify-center lg:justify-start pb-6">
+                                    <div className="mt-4 w-44">
                                         <Button text="Mail us " />
                                     </div>
-                                    <div className="mt-4 w-full md:w-44">
+                                    <div className="mt-4 w-44">
                                         <Button text="Make a Call" />
                                     </div>
                                 </div>

@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import Button from '../BasicComponents/Button';
 
 function Contact() {
     const [Msg, setMsg] = useState({
@@ -21,32 +22,33 @@ function Contact() {
         events.preventDefault();
         const { name, email, message } = Msg;
 
-        if( name && email && message ){
+        if (name && email && message) {
 
-        const res = await fetch("https://finiteloop-club-default-rtdb.firebaseio.com/userData.json",
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    name,
-                    email,
-                    message,
-                }),
+            const res = await fetch("https://finiteloop-club-default-rtdb.firebaseio.com/userData.json",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        name,
+                        email,
+                        message,
+                    }),
+                }
+            );
+
+            if (res) {
+                alert("Submitted to DB");
             }
-        );
-
-        if (res) {
-            alert("Submitted to DB");
+            else {
+                alert("Failed to Submit message");
+            }
         }
         else {
-            alert("failed");
+            
+            
         }
-    }
-    else{
-        alert("fill the complete form")
-    }
 
     }
 
@@ -69,8 +71,11 @@ function Contact() {
                     <label for="message" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-orange-600 peer-focus:dark:text-orange-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 ">Message</label>
                 </div>
 
-                <button type="submit" class="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800" onClick={submitData} >Submit</button>
-
+                {/* <button type="submit" class="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800"  >Submit</button> */}
+                <button type="submit" className="mt-4 w-44" onClick={submitData} >
+                    <Button text="Submit" />
+                </button>
+                
             </form>
         </>
     )
