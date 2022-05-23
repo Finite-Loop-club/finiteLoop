@@ -2,7 +2,7 @@ import React from 'react'
 import Btn from '../BasicComponents/Btn';
 import Button from '../BasicComponents/Button';
 import Contact from './Contact';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import hero from "./png/programmer.png"
 import events from "./png/events.png"
 import join from "./png/join.png"
@@ -86,7 +86,9 @@ function Home() {
                                 <div className='text-gray-900' >Finite Loop is a Coding Club, which aims to give a good perspective of development, and encourages students to realize their ideas. We encourage students to participate in competitive programming and thus, inspire the next.
                                 </div>
                                 <div className='my-5 w-fit mx-auto lg:mx-0' >
-                                    <Btn text="Get Started" />
+                                    <NavLink to="/register" >
+                                        <Btn text="Join us" />
+                                    </NavLink>
                                 </div>
                             </div>
                         </Slide>
@@ -129,7 +131,9 @@ function Home() {
                                 <div className='text-gray-900' >Finite Loop is a Coding Club, which aims to give a good perspective of development, and encourages students to realize their ideas. We encourage students to participate in competitive programming and thus, inspire the next.
                                 </div>
                                 <div className='my-5 w-fit mx-auto lg:mx-0' >
+                                    <NavLink to="/events">
                                     <Btn text="Explore Events" />
+                                    </NavLink>
                                 </div>
                             </div>
                         </Slide>
@@ -160,7 +164,9 @@ function Home() {
                                         <li className=" py-1  " >we providing this too Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod distinctio commodi nostrum? </li>
                                     </ul>
                                     <div className='my-5 w-fit mx-auto lg:mx-0' >
+                                    <NavLink to="/register">
                                         <Btn text="Join us" />
+                                    </NavLink>
                                     </div>
 
                                 </div>
@@ -190,7 +196,9 @@ function Home() {
                                     @CPP lab 2pm-4pm
                                 </h3>
                                 <div className="mt-4 w-full md:w-44">
-                                    <Button text="Register Now" />
+                                    <a target="_blank" href="https://forms.gle/Qni5T6EBcjrnksUc6" >
+                                        <Button text="Register Now" />
+                                    </a>
                                 </div>
                             </div>
 
@@ -257,7 +265,7 @@ function Home() {
 
                 {/* testimonials */}
                 <Zoom>
-                <div className="text-5xl font-bold text-gray-800">Testimonials</div>
+                    <div className="text-5xl font-bold text-gray-800">Testimonials</div>
                 </Zoom>
                 <div className="w-10/12 mx-auto flex flex-wrap flex-col md:flex-row gap-4 mb-8 md:mb-0 flex-between items-center p-8 justify-center  ">
                     {testimonials.map((test, key) => {
@@ -321,7 +329,7 @@ function Home() {
                                 or
 
                                 <div className='py-5' >
-                                    <Contact/>
+                                    <Contact />
                                 </div>
 
                             </div>
