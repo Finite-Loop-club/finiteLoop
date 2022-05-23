@@ -99,7 +99,7 @@ function Home() {
                 {/* working on trending tech */}
 
                 <div className='h-full '>
-                    <div className='flex flex-col lg:flex-row justify-center items-center ' >
+                    <div className='flex flex-col-reverse lg:flex-row justify-center items-center ' >
                         <Slide direction="left" className='w-full   lg:w-1/2 flex justify-center ' >
 
                             <img src={laravel} height="500px" alt="" />
@@ -142,7 +142,7 @@ function Home() {
                 {/* join us */}
 
                 <div className='h-full '>
-                    <div className='flex flex-col lg:flex-row justify-center items-center ' >
+                    <div className='flex flex-col-reverse lg:flex-row justify-center items-center ' >
                         <Slide direction="left" className='w-full   lg:w-1/2 flex justify-center ' >
 
                             <img src={join} height="500px" alt="" />
@@ -151,7 +151,7 @@ function Home() {
                         <Slide direction="right" className='p-8 lg:p-16 mx-auto w-full lg:w-1/2 text-center lg:text-left ' >
                             <div  >
                                 <div className='text-org text-5xl font-extrabold py-7 ' >Why you should Join us</div>
-                                <div className='text-gray-900' >
+                                <div className='text-gray-900 items-center px-2' >
                                     <ul className='list-outside list-disc text-justify ' >
                                         <li className=" py-1  " >we providing this Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod distinctio commodi nostrum? </li>
                                         <li className=" py-1  " >we providing this too Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod distinctio commodi nostrum? </li>
@@ -259,11 +259,11 @@ function Home() {
                 <div className="text-5xl font-bold text-gray-800">Testimonials</div>
 
 
-                <div className="w-10/12 mx-auto flex flex-wrap flex-col md:flex-row gap-4 mb-8 md:mb-0 flex-between items-center p-8 justify-center ">
+                <div className="w-10/12 mx-auto flex flex-wrap flex-col md:flex-row gap-4 mb-8 md:mb-0 flex-between items-center p-8 justify-center  ">
                     {testimonials.map((test, key) => {
                         return (
                             <Fade>
-                                <div key={key} className="bg-white  w-72 shadow-lg mx-auto rounded-xl p-4">
+                                <div key={key} className="bg-white hover:shadow-2xl w-72 shadow-lg mx-auto transition-al duration-200 hover:scale-105 rounded-xl p-4">
                                     <p className="text-gray-700 ">
                                         <span className="font-bold text-org/75 text-lg">
                                             “

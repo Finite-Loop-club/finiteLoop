@@ -2,9 +2,20 @@ import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import logo from "../../assets/images/logo.png"
 import logo1 from "../../assets/images/logo1.png"
+import Button from './Button'
 // import Switch from './switch/Switch'
 
 function Navbar() {
+
+    const [offset, setOffset] = useState(0)
+
+    useEffect(() => {
+        const scrollFn = () => {
+            setOffset(window.pageYOffset)
+        }
+        window.addEventListener('scroll', scrollFn)
+    }, [offset])
+
 
     const menu = [
         {
@@ -16,10 +27,6 @@ function Navbar() {
             link: "/events"
         },
         {
-            option: "About us",
-            link: "/about"
-        },
-        {
             option: "Gallery",
             link: "/"
         },
@@ -27,10 +34,7 @@ function Navbar() {
             option: "Team",
             link: "/team"
         },
-        {
-            option: "Contact Us",
-            link: "/"
-        },
+
     ]
 
     const temp = [
@@ -70,9 +74,9 @@ function Navbar() {
                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
                         <svg className="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                     </button>
-                    <div className=" justify-stretch  items-center w-full md:flex md:w-auto   md:order-1 hidden" id="mobile-menu">
+                    <div className=" justify-stretch  items-center w-full md:flex md:w-auto md:order-1 hidden" id="mobile-menu">
                         <ul className="flex flex-col align-middle text-center md:flex-row md:space-x-6 md:mt-0 md:text-xl md:font-medium">
-                           
+
                             {menu.map((value, index) => {
                                 return (
                                     <li key={index} >
@@ -80,8 +84,12 @@ function Navbar() {
                                     </li>
                                 )
                             })}
+                            <div className='w-fit mx-auto lg:mx-0' >
+                                <Button text="Login" />
+                            </div>
                         </ul>
                     </div>
+
                 </div>
             </nav>
 
