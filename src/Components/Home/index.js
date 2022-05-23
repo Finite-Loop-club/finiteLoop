@@ -1,6 +1,7 @@
 import React from 'react'
 import Btn from '../BasicComponents/Btn';
 import Button from '../BasicComponents/Button';
+import Contact from './Contact';
 import { Link } from 'react-router-dom';
 import hero from "./png/programmer.png"
 import events from "./png/events.png"
@@ -319,7 +320,11 @@ function Home() {
                                         <Button text="Make a Call" />
                                     </div>
                                 </div>
+                                or
 
+                                <div className='py-5' >
+                                    <Contact/>
+                                </div>
 
                             </div>
                         </Slide>

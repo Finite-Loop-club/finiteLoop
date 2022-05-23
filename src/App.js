@@ -7,6 +7,7 @@ import Events from './Components/Events';
 import Team from './Components/Team';
 import Navbar from './Components/BasicComponents/Navbar';
 import Footer from './Components/BasicComponents/Footer';
+import Error from './Components/Error';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/events" element={<Events />}></Route>
           <Route exact path="/gallery" element={<Events />}></Route>
           <Route exact path="/team" element={<Team />}></Route>
+          <Route exact path="/error" element={<Error />}></Route>
         </Routes>
 
         <Footer />
