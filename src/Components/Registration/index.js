@@ -56,8 +56,8 @@ function Registration() {
     return (
         <>
 
-            <div className='text-7xl my-5 text-center text-gray-800 pt-5 font-bold tracking-widest underline decoration-orange-500 underline-offset-8 decoration-4 ' >Registration</div>
-            <div className='text-3xl text-center text-gray-600 pt-3 pb-8 tracking-widest ' > Just one step away from being member of club </div>
+            <div className=' text-5xl md:text-7xl my-5 text-center text-gray-800 pt-5 font-bold tracking-widest underline decoration-orange-500 underline-offset-8 decoration-4 ' >Registration</div>
+            <div className='text-xl lg:text-3xl text-center text-gray-600 pt-3 pb-8 tracking-widest ' > Just one step away from being member of club </div>
             <div className="w-7/12 my-8 mx-auto">
                 <form className='text-left' method='POST' >
                     <div className="relative z-0 w-full mb-6 group ">
