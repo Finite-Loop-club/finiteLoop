@@ -1,5 +1,6 @@
 import React from 'react'
 import profilePic from '../../assets/member/core/johnWick.png'
+import bgPic from '../../assets/member/core/pg.png'
 import AuthNavbar from '../../Components/navbars/AuthNavbar'
 
 const info = [
@@ -25,10 +26,11 @@ function Profile() {
             <main key={key} className="profile-page">
               <section className="relative block h-[500px]">
                 <div
-                  className="absolute top-0 w-full h-full bg-center bg-cover"
+                  className="absolute top-0 w-full h-full bg-center bg-cover bg-no-repeat "
                   style={{
                     backgroundImage:
-                      "url('https://images.unsplash.com/photo-1556557598-84d97035e37c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1285&q=80')",
+                      // `url(${bgPic})`,
+                      "url('https://images.unsplash.com/photo-1653076362668-a717e53fe8f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80')",
                   }}
                 >
                  
