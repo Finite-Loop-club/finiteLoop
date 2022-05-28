@@ -24,7 +24,7 @@ function SmallFooter(props) {
             <footer
                 className={
                     (props.absolute
-                        ? "absolute w-full bottom-0 bg-slate-800"
+                        ? "absolute w-full bottom-0 bg-none"
                         : "relative") + " pb-6"
                 }
             >

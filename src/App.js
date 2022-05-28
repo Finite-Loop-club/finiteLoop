@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react';
 import './index.css';
-import Home from './Components/Home';
+import Home from './views/landing/Home';
 import { Routes, Route } from "react-router-dom";
 import { useLocation } from "react-router";
 import Events from './Components/Events';
@@ -34,7 +34,7 @@ function App() {
         </Routes>
 
         {/* <Footer /> */}
-        <SmallFooter/>
+        <SmallFooter />
       {/* </ScrollToTop> */}
 
     </div>
