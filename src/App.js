@@ -9,6 +9,7 @@ import Navbar from './Components/BasicComponents/Navbar';
 import Footer from './Components/BasicComponents/Footer';
 import Error from './Components/Error';
 import Registration from './Components/Registration';
+import Login from './views/login/Login';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route exact path="/team" element={<Team/>}></Route>
           <Route exact path="/register" element={<Registration/>}></Route>
           <Route exact path="/error" element={<Error/>}></Route>
+          <Route exact path="/login" element={<Login/>}></Route>
 
         </Routes>
 
