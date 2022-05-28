@@ -10,6 +10,7 @@ import Footer from './Components/BasicComponents/Footer';
 import Error from './Components/Error';
 import Registration from './Components/Registration';
 import Login from './views/login/Login';
+import Profile from './views/profile/Profile';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
     <div className="App bg-[#eff0f3]">
       {/* <ScrollToTop> */}
 
-        <Navbar />
+        {/* <Navbar /> */}
 
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -27,10 +28,11 @@ function App() {
           <Route exact path="/register" element={<Registration/>}></Route>
           <Route exact path="/error" element={<Error/>}></Route>
           <Route exact path="/login" element={<Login/>}></Route>
+          <Route exact path="/profile" element={<Profile/>}></Route>
 
         </Routes>
 
-        <Footer />
+        {/* <Footer /> */}
       {/* </ScrollToTop> */}
 
     </div>

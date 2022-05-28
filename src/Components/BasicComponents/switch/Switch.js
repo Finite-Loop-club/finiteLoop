@@ -3,9 +3,9 @@ import "./switch.css"
 
 function Switch() {
     return (
-        <label class="switch">
+        <label className="switch">
             <input className='switch_input' type="checkbox"/>
-                <span class="slider"></span>
+                <span className="slider"></span>
         </label>
     )
 }

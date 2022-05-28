@@ -74,7 +74,7 @@ function Form() {
                                             placeholder="Password"
                                         />
                                     </div>
-                                    <div>
+                                    {/* <div>
                                         <label className="inline-flex items-center cursor-pointer">
                                             <input
                                                 id="customCheckLogin"
@@ -85,15 +85,17 @@ function Form() {
                                                 Remember me
                                             </span>
                                         </label>
-                                    </div>
+                                    </div> */}
 
                                     <div className="text-center mt-6">
+                                        <Link to="/profile">
                                         <button
                                             className="bg-slate-800 text-white active:bg-slate-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                                             type="button"
                                         >
                                             Sign In
                                         </button>
+                                        </Link>
                                     </div>
                                 </form>
                             </div>
