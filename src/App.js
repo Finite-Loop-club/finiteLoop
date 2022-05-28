@@ -11,6 +11,7 @@ import Error from './Components/Error';
 import Registration from './Components/Registration';
 import Login from './views/login/Login';
 import Profile from './views/profile/Profile';
+import SmallFooter from './Components/footers/SmallFooter';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         </Routes>
 
         {/* <Footer /> */}
+        <SmallFooter/>
       {/* </ScrollToTop> */}
 
     </div>

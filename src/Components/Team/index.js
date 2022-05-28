@@ -21,7 +21,6 @@ function Team() {
           github={member.github} linkedin= {member.linkedin}
           src={member.img}
           />
-          
         )
       })}
 

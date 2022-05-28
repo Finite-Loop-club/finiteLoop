@@ -83,8 +83,8 @@ function AuthNavbar() {
                     </div>
                     <div
                         className={
-                            "lg:flex flex-grow items-center bg-slate-800  lg:bg-opacity-0 lg:shadow-none" +
-                            (navbarOpen ? " block rounded shadow-lg " : " hidden")
+                            "lg:flex flex-grow items-center bg-none  lg:bg-opacity-0 lg:shadow-none" +
+                            (navbarOpen ? "block" : " hidden")
                         }
                         id="example-navbar-warning"
                     >
