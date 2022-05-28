@@ -1,11 +1,72 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import google_icons from '../../assets/img/phone.png'
 import github_icons from '../../assets/img/gmail.png'
-import {BsTelephoneForward} from 'react-icons/bs'
-import {HiOutlineMail} from 'react-icons/hi'
+import { BsTelephoneForward } from 'react-icons/bs'
+import { HiOutlineMail } from 'react-icons/hi'
 
 function ContactForm() {
+
+    const [Msg, setMsg] = useState({
+        name: "",
+        email: "",
+        message: "",
+    })
+
+    let name, value;
+    const postMsg = (event) => {
+        name = event.target.name;
+        value = event.target.value;
+
+        setMsg({ ...Msg, [name]: value });
+    };
+
+    const resetMsg = () => {
+        
+
+        setMsg({ ...Msg, [name]: "" });
+    };
+
+    // firebase connection
+
+    const submitData = async (events) => {
+        events.preventDefault();
+        const { name, email, message } = Msg;
+
+        if (name && email && message) {
+
+            const res = await fetch("https://finiteloop-club-default-rtdb.firebaseio.com/userMsg.json",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        name,
+                        email,
+                        message,
+                    }),
+                }
+            );
+
+            if (res) {
+                alert("Submitted to DB");
+                // {resetMsg()}
+                
+            }
+            else {
+                alert("Failed to Submit message");
+            }
+        }
+        else {
+            alert("Fill all the field");
+
+
+        }
+
+    }
+
+
     return (
         <>
             <div className="container mx-auto px-4 h-full">
@@ -15,32 +76,38 @@ function ContactForm() {
                             <div className="rounded-t mb-0 px-6 py-6">
                                 <div className="text-center mb-3">
                                     <h6 className="text-slate-500 text-sm font-bold">
-                                        Contact Us 
+                                        Contact Us
                                     </h6>
                                 </div>
                                 <div className="btn-wrapper text-center">
-                                    <button
-                                        className="bg-white active:bg-slate-50 text-slate-700  px-4 py-2 rounded outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
-                                        type="button"
-                                    >
-                                        <img
-                                            alt="..."
-                                            className="w-5 mr-1"
-                                            src={google_icons}
-                                        />
-                                        Call us
-                                    </button>
-                                    <button
-                                        className="bg-white active:bg-slate-50 text-slate-700  px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
-                                        type="button"
-                                    >
-                                        <img
-                                            alt="..."
-                                            className="w-5 mr-1"
-                                            src={github_icons}
-                                        />
-                                        Mail us
-                                    </button>
+                                    <a href="tel:8861643971">
+
+                                        <button
+                                            className="bg-white active:bg-slate-50 text-slate-700  px-4 py-2 rounded outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
+                                            type="button"
+                                        >
+                                            <img
+                                                alt="..."
+                                                className="w-5 mr-1"
+                                                src={google_icons}
+                                            />
+                                            Call us
+                                        </button>
+                                    </a>
+                                    <a href="mailto:finiteloopclub@gmail.com">
+
+                                        <button
+                                            className="bg-white active:bg-slate-50 text-slate-700  px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
+                                            type="button"
+                                        >
+                                            <img
+                                                alt="..."
+                                                className="w-5 mr-1"
+                                                src={github_icons}
+                                            />
+                                            Mail us
+                                        </button>
+                                    </a>
                                 </div>
                                 <hr className="mt-6 border-b-1 border-slate-300" />
                             </div>
@@ -52,42 +119,42 @@ function ContactForm() {
                                     <div className="relative w-full mb-3">
                                         <label
                                             className="block uppercase text-slate-600 text-xs font-bold mb-2"
-                                            htmlFor="grid-password"
+                                            for="name"
                                         >
                                             Name
                                         </label>
                                         <input
-                                            type="text"
+                                            type="text" name="name"
                                             className="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                            placeholder="Email"
+                                            placeholder="Name" value={Msg.name} onChange={postMsg} required=""
                                         />
                                     </div>
 
                                     <div className="relative w-full mb-3">
                                         <label
                                             className="block uppercase text-slate-600 text-xs font-bold mb-2"
-                                            htmlFor="grid-password"
+                                            for="email"
                                         >
                                             Email
                                         </label>
                                         <input
-                                            type="email"
+                                            type="email" name="email"
                                             className="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                            placeholder="Email"
+                                            placeholder="Email" value={Msg.email} onChange={postMsg} required=""
                                         />
                                     </div>
 
                                     <div className="relative w-full mb-3">
                                         <label
                                             className="block uppercase text-slate-600 text-xs font-bold mb-2"
-                                            
+                                            for="message"
                                         >
                                             Message
                                         </label>
                                         <textarea
-                                            
+                                            name="message"
                                             className="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                            placeholder="Password"
+                                            value={Msg.message} onChange={postMsg} required="" placeholder="Message"
                                         />
                                     </div>
                                     {/* <div>
@@ -104,34 +171,21 @@ function ContactForm() {
                                     </div> */}
 
                                     <div className="text-center mt-6">
-                                        <Link to="/profile">
+
                                         <button
+                                            onClick={submitData}
+                                            type="submit"
                                             className="bg-slate-800 text-white active:bg-slate-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
-                                            type="button"
+                                            
                                         >
                                             Submit
                                         </button>
-                                        </Link>
+
                                     </div>
                                 </form>
                             </div>
                         </div>
-                        <div className="flex flex-wrap mt-6 relative">
-                            <div className="w-1/2">
-                                <a
-                                    href="#pablo"
-                                    onClick={(e) => e.preventDefault()}
-                                    className="text-slate-200"
-                                >
-                                    <small>Forgot password?</small>
-                                </a>
-                            </div>
-                            <div className="w-1/2 text-right">
-                                <Link to="/" className="text-slate-200">
-                                    <small>Create new account</small>
-                                </Link>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
