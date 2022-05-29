@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import google_icons from '../../assets/img/google.svg'
 import github_icons from '../../assets/img/github.svg'
 import { AiOutlineWarning } from 'react-icons/ai'
@@ -13,9 +13,10 @@ function Form() {
 
 
     const [error, setError] = useState(false);
+    const [notFound, setNotFound] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
+    const navigate = useNavigate();
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -27,8 +28,9 @@ function Form() {
                 const user = userCredential.user;
                 console.log(user);
                 setError(false);
-                alert("login successful");
-
+                // alert("login successful");
+                navigate("/profile")
+                setNotFound(false);
                 // ...
             })
             .catch((error) => {
@@ -36,7 +38,11 @@ function Form() {
                 const errorMessage = error.message;
                 console.log(errorCode);
                 console.log(errorMessage);
-                setError(true);
+                if(errorCode==="auth/user-not-found"){
+                    setNotFound(true);
+                }
+
+                // setError(true);
             });
     }
 
@@ -126,6 +132,10 @@ function Form() {
                                         </label>
                                     </div> */}
 
+                                    <div className={` ${notFound ? "flex" : "hidden"}  justify-center `} >
+                                        <AiOutlineWarning className='inline text-red-600 text-xl mr-2 my-auto' />
+                                        <p className='text-center text-red-600' >  Email doesn't exist </p>
+                                    </div>
                                     <div className={` ${error ? "flex" : "hidden"}  justify-center `} >
                                         <AiOutlineWarning className='inline text-red-600 text-xl mr-2 my-auto' />
                                         <p className='text-center text-red-600' >  Invalid Email or Password </p>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import google_icons from '../../assets/img/google.svg'
 import github_icons from '../../assets/img/github.svg'
 import { AiOutlineWarning } from 'react-icons/ai'
@@ -17,6 +17,7 @@ function Register() {
     const [alreadyResgister, setAlreadyResgister] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
 
     const handleRegister = (e) => {
@@ -30,6 +31,7 @@ function Register() {
           const user = userCredential.user;
           alert("sign up successful")
           setAlreadyResgister(false);
+          navigate("/profile")
           // ...
         })
         .catch((error) => {
