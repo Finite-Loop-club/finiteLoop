@@ -8,7 +8,7 @@ import Error from './Components/Error';
 import Login from './views/login/Login';
 import Profile from './views/profile/Profile';
 import SmallFooter from './Components/footers/SmallFooter';
-import {AuthContext} from './context/AuthContext'
+import {AuthContext, } from './context/AuthContext'
 
 
 function App() {
