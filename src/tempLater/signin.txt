@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import google_icons from '../../assets/img/google.svg'
 import github_icons from '../../assets/img/github.svg'
-import { AiOutlineWarning } from 'react-icons/ai'
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../../firebase'
 
 
@@ -11,34 +10,28 @@ import { auth } from '../../firebase'
 
 function Form() {
 
-
+    
     const [error, setError] = useState(false);
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [email, setEmail] = useState(false);
+    const [password, setPassword] = useState(false);
 
 
     const handleLogin = (e) => {
         e.preventDefault();
-
-
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                // Signed in 
-                const user = userCredential.user;
-                console.log(user);
-                setError(false);
-                alert("login successful");
-
-                // ...
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorCode);
-                console.log(errorMessage);
-                setError(true);
-            });
     }
+
+    createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            // ...
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // ..
+        });
+
 
 
     return (
@@ -83,7 +76,7 @@ function Form() {
                                 <div className="text-slate-400 text-center mb-3 font-bold">
                                     <small>Or sign in with credentials</small>
                                 </div>
-                                <form  >
+                                <form method='POST' onSubmit={handleLogin} >
                                     <div className="relative w-full mb-3">
                                         <label
                                             className="block uppercase text-slate-600 text-xs font-bold mb-2"
@@ -95,7 +88,7 @@ function Form() {
                                             type="email"
                                             className="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                                             placeholder="Email"
-                                            onChange={e => setEmail(e.target.value)}
+                                            onChange={e=>setEmail(e.target.value)}
                                         />
                                     </div>
 
@@ -110,7 +103,7 @@ function Form() {
                                             type="password"
                                             className="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                                             placeholder="Password"
-                                            onChange={e => setPassword(e.target.value)}
+                                            onChange={e=>setPassword(e.target.value)}
                                         />
                                     </div>
                                     {/* <div>
@@ -126,18 +119,11 @@ function Form() {
                                         </label>
                                     </div> */}
 
-                                    <div className={` ${error ? "flex" : "hidden"}  justify-center `} >
-                                        <AiOutlineWarning className='inline text-red-600 text-xl mr-2 my-auto' />
-                                        <p className='text-center text-red-600' >  Invalid Email or Password </p>
-                                    </div>
-
                                     <div className="text-center mt-6">
-                                        <Link to="">
+                                        <Link to="/profile">
                                             <button
-                                                onClick={handleLogin}
-                                                type="submit"
                                                 className="bg-slate-800 text-white active:bg-slate-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
-
+                                                type="submit"
                                             >
                                                 Sign In
                                             </button>
@@ -148,16 +134,16 @@ function Form() {
                         </div>
                         <div className="flex flex-wrap mt-6 relative">
                             <div className="w-1/2">
-                                <Link
-                                    to="/resetPassword"
+                                <a
+                                    href="#pablo"
                                     onClick={(e) => e.preventDefault()}
                                     className="text-slate-200"
                                 >
                                     <small>Forgot password?</small>
-                                </Link>
+                                </a>
                             </div>
                             <div className="w-1/2 text-right">
-                                <Link to="/register" className="text-slate-200">
+                                <Link to="/" className="text-slate-200">
                                     <small>Create new account</small>
                                 </Link>
                             </div>

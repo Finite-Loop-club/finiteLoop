@@ -3,41 +3,46 @@ import { Link } from 'react-router-dom'
 import google_icons from '../../assets/img/google.svg'
 import github_icons from '../../assets/img/github.svg'
 import { AiOutlineWarning } from 'react-icons/ai'
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../../firebase'
 
 
 
 
-function Form() {
+function Register() {
 
 
     const [error, setError] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [alreadyResgister, setAlreadyResgister] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
 
-    const handleLogin = (e) => {
+    const handleRegister = (e) => {
         e.preventDefault();
 
+        setLoading(true);
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed in 
 
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                // Signed in 
-                const user = userCredential.user;
-                console.log(user);
-                setError(false);
-                alert("login successful");
-
-                // ...
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorCode);
-                console.log(errorMessage);
-                setError(true);
-            });
+          const user = userCredential.user;
+          alert("sign up successful")
+          setAlreadyResgister(false);
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+        //   console.log(errorCode);
+            if (errorCode=="auth/email-already-in-use") {
+                setAlreadyResgister(true);
+            }
+            
+          // ..
+        });
+        setLoading(false);
     }
 
 
@@ -50,7 +55,7 @@ function Form() {
                             <div className="rounded-t mb-0 px-6 py-6">
                                 <div className="text-center mb-3">
                                     <h6 className="text-slate-500 text-sm font-bold">
-                                        Sign in with
+                                        Sign up with
                                     </h6>
                                 </div>
                                 <div className="btn-wrapper text-center">
@@ -81,7 +86,7 @@ function Form() {
                             </div>
                             <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                                 <div className="text-slate-400 text-center mb-3 font-bold">
-                                    <small>Or sign in with credentials</small>
+                                    <small>Or Sign up with credentials</small>
                                 </div>
                                 <form  >
                                     <div className="relative w-full mb-3">
@@ -130,16 +135,21 @@ function Form() {
                                         <AiOutlineWarning className='inline text-red-600 text-xl mr-2 my-auto' />
                                         <p className='text-center text-red-600' >  Invalid Email or Password </p>
                                     </div>
+                                    <div className={` ${alreadyResgister ? "flex" : "hidden"}  justify-center `} >
+                                        <AiOutlineWarning className='inline text-red-600 text-xl mr-2 my-auto' />
+                                        <p className='text-center text-red-600' >  Email Already Registered </p>
+                                    </div>
 
                                     <div className="text-center mt-6">
                                         <Link to="">
                                             <button
-                                                onClick={handleLogin}
+                                                onClick={handleRegister}
                                                 type="submit"
-                                                className="bg-slate-800 text-white active:bg-slate-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                                                disabled={loading}
+                                                className="  bg-slate-800 text-white active:bg-slate-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
 
                                             >
-                                                Sign In
+                                                Sign up
                                             </button>
                                         </Link>
                                     </div>
@@ -157,8 +167,8 @@ function Form() {
                                 </Link>
                             </div>
                             <div className="w-1/2 text-right">
-                                <Link to="/register" className="text-slate-200">
-                                    <small>Create new account</small>
+                                <Link to="/login" className="text-slate-200">
+                                    <small>Already User? Sign in</small>
                                 </Link>
                             </div>
                         </div>
@@ -169,4 +179,4 @@ function Form() {
     )
 }
 
-export default Form
+export default Register
