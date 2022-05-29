@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import google_icons from '../../assets/img/google.svg'
 import github_icons from '../../assets/img/github.svg'
 import { AiOutlineWarning } from 'react-icons/ai'
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../../firebase'
-
+import {AuthContext} from "../../context/AuthContext"
 
 
 
@@ -17,6 +17,8 @@ function Form() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+    const {dispatch} = useContext(AuthContext)
+
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -26,6 +28,7 @@ function Form() {
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
+                dispatch({type:"SIGNIN", payload:user })
                 console.log(user);
                 setError(false);
                 // alert("login successful");

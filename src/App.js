@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import './index.css';
 import Home from './views/landing/Home';
 import { Routes, Route, Navigate } from "react-router-dom";
@@ -8,17 +8,23 @@ import Error from './Components/Error';
 import Login from './views/login/Login';
 import Profile from './views/profile/Profile';
 import SmallFooter from './Components/footers/SmallFooter';
+import {AuthContext} from './context/AuthContext'
 
 
 function App() {
-
-  const [currentUser, setCurrentUser] = useState(true);
+  
+  
+  const {currentUser} = useContext(AuthContext)
+  console.log(currentUser);
   const RequireAuth = ({ children }) => {
     return (currentUser ? children : <Navigate to="/auth/signin" />)
   }
   const NotRequireAuth = ({ children }) => {
     return (!currentUser ? children : <Navigate to="/profile" />)
   }
+
+  
+
 
 
   return (
