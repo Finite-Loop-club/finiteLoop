@@ -20,11 +20,12 @@ function Login() {
             >
                 <AuthNavbar />
                 <div className="h-screen bg-none flex bg-no-repeat  ">
-                    <Routes>
+                    <Form/>
+                    {/* <Routes>
                         <Route exact path="/login/signin" element={<Form />}></Route>
                         <Route exact path="/auth/resetPassword" element={<ResetPassword />}></Route>
                         <Route exact path="/auth/register" element={<Register />}></Route>
-                    </Routes>
+                    </Routes> */}
                    
 
                 </div>
