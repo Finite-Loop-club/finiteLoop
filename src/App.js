@@ -1,42 +1,48 @@
-import React,{useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import './index.css';
 import Home from './views/landing/Home';
-import { Routes, Route } from "react-router-dom";
-import { useLocation } from "react-router";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Events from './Components/Events';
 import Team from './Components/Team';
-import Navbar from './Components/BasicComponents/Navbar';
-import Footer from './Components/BasicComponents/Footer';
 import Error from './Components/Error';
-import Registration from './Components/Registration';
 import Login from './views/login/Login';
 import Profile from './views/profile/Profile';
 import SmallFooter from './Components/footers/SmallFooter';
 
 
 function App() {
+
+  const [currentUser, setCurrentUser] = useState(true);
+  const RequireAuth = ({ children }) => {
+    return (currentUser ? children : <Navigate to="/auth/signin" />)
+  }
+  const NotRequireAuth = ({ children }) => {
+    return (!currentUser ? children : <Navigate to="/profile" />)
+  }
+
+
   return (
     <div className="App bg-[#eff0f3]">
       {/* <ScrollToTop> */}
 
-        {/* <Navbar /> */}
+      {/* <Navbar /> */}
 
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route exact path="/events" element={<Events/>}></Route>
-          <Route exact path="/gallery" element={<Events/>}></Route>
-          <Route exact path="/team" element={<Team/>}></Route>
-          {/* <Route exact path="/register" element={<Registration/>}></Route> */}
-          <Route exact path="/auth/signin" element={<Login/>}></Route>
-          <Route exact path="/auth/resetpassword" element={<Login/>}></Route>
-          <Route exact path="/auth/signup" element={<Login/>}></Route>
-          <Route exact path="/profile" element={<Profile/>}></Route>
-          <Route path="*" element={<Error/>}></Route>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route exact path="/events" element={<Events />}></Route>
+        <Route exact path="/gallery" element={<Events />}></Route>
+        <Route exact path="/team" element={<Team />}></Route>
+        {/* <Route exact path="/register" element={<Registration/>}></Route> */}
+        <Route exact path="/auth/signin" element={<NotRequireAuth> <Login  /> </NotRequireAuth>}></Route>
+        <Route exact path="/auth/resetpassword" element={<Login />}></Route>
+        <Route exact path="/auth/signup" element={<NotRequireAuth> <Login /> </NotRequireAuth>}></Route>
+        <Route exact path="/profile" element={<RequireAuth> <Profile /> </RequireAuth>} ></Route>
+        <Route path="*" element={<Error />}></Route>
 
-        </Routes>
+      </Routes>
 
-        {/* <Footer /> */}
-        <SmallFooter />
+      {/* <Footer /> */}
+      <SmallFooter />
       {/* </ScrollToTop> */}
 
     </div>

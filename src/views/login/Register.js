@@ -34,11 +34,11 @@ function Register() {
           navigate("/profile")
           // ...
         })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
+        .catch((err) => {
+          const errorCode = err.code;
+          const errorMessage = err.message;
         //   console.log(errorCode);
-            if (errorCode=="auth/email-already-in-use") {
+            if (errorCode==="auth/email-already-in-use") {
                 setAlreadyResgister(true);
             }
             
