@@ -1,49 +1,50 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import google_icons from '../../assets/img/google.svg'
 import github_icons from '../../assets/img/github.svg'
 import { AiOutlineWarning } from 'react-icons/ai'
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../../firebase'
+import { AuthContext } from "../../context/AuthContext"
+
 
 
 
 
 function Register() {
-
-
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(false);
     const [alreadyResgister, setAlreadyResgister] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
-
+    const {dispatch} = useContext(AuthContext)
 
     const handleRegister = (e) => {
         e.preventDefault();
 
         setLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          // Signed in 
+            .then((userCredential) => {
+                // Signed in 
 
-          const user = userCredential.user;
-          alert("sign up successful")
-          setAlreadyResgister(false);
-          navigate("/profile")
-          // ...
-        })
-        .catch((err) => {
-          const errorCode = err.code;
-          const errorMessage = err.message;
-        //   console.log(errorCode);
-            if (errorCode==="auth/email-already-in-use") {
-                setAlreadyResgister(true);
-            }
-            
-          // ..
-        });
+                const user = userCredential.user;
+                //   alert("sign up successful")
+                dispatch({ type: "SIGNIN", payload: user })
+                setAlreadyResgister(false);
+                navigate("/profile")
+                // ...
+            })
+            .catch((err) => {
+                const errorCode = err.code;
+                const errorMessage = err.message;
+                //   console.log(errorCode);
+                if (errorCode === "auth/email-already-in-use") {
+                    setAlreadyResgister(true);
+                }
+
+                // ..
+            });
         setLoading(false);
     }
 
@@ -162,7 +163,7 @@ function Register() {
                             <div className="w-1/2">
                                 <Link
                                     to="/auth/resetpassword"
-                                    
+
                                     className="text-slate-200"
                                 >
                                     <small>Forgot password?</small>
