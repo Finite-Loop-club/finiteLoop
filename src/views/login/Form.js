@@ -149,15 +149,15 @@ function Form() {
                         <div className="flex flex-wrap mt-6 relative">
                             <div className="w-1/2">
                                 <Link
-                                    to="/resetPassword"
-                                    onClick={(e) => e.preventDefault()}
+                                    to="/auth/resetpassword"
+                                    // onClick={(e) => e.preventDefault()}
                                     className="text-slate-200"
                                 >
                                     <small>Forgot password?</small>
                                 </Link>
                             </div>
                             <div className="w-1/2 text-right">
-                                <Link to="/register" className="text-slate-200">
+                                <Link to="/auth/signup" className="text-slate-200">
                                     <small>Create new account</small>
                                 </Link>
                             </div>

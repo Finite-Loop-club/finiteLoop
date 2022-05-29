@@ -86,15 +86,15 @@ function ResetPassword() {
                         <div className="flex flex-wrap mt-6 relative">
                             <div className="w-1/2">
                                 <Link
-                                    to="/login"
-                                    onClick={(e) => e.preventDefault()}
+                                    to="/auth/signin"
+                                    
                                     className="text-slate-200"
                                 >
                                     <small> Sign in</small>
                                 </Link>
                             </div>
                             <div className="w-1/2 text-right">
-                                <Link to="/register" className="text-slate-200">
+                                <Link to="/auth/signup" className="text-slate-200">
                                     <small>New User? Create new account</small>
                                 </Link>
                             </div>

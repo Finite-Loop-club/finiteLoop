@@ -131,13 +131,13 @@ function AuthNavbar() {
                             })}
 
                             <li className="flex items-center">
-                                <Link to='/login'  >
+                                <Link to='/auth/signin'  >
                                     <button
                                         className="bg-white text-slate-700 active:bg-slate-50 text-md font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
                                         type="button"
                                     >
                                         <FaTeamspeak className='inline text-slate-900 mr-2 text-lg' /> 
-                                        Profile
+                                        Sign in
                                     </button>
                                 </Link>
                             </li>

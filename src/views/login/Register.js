@@ -86,7 +86,7 @@ function Register() {
                             </div>
                             <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                                 <div className="text-slate-400 text-center mb-3 font-bold">
-                                    <small>Or Sign up with credentials</small>
+                                    <small>Or sign up with credentials</small>
                                 </div>
                                 <form  >
                                     <div className="relative w-full mb-3">
@@ -159,15 +159,15 @@ function Register() {
                         <div className="flex flex-wrap mt-6 relative">
                             <div className="w-1/2">
                                 <Link
-                                    to="/resetPassword"
-                                    onClick={(e) => e.preventDefault()}
+                                    to="/auth/resetpassword"
+                                    
                                     className="text-slate-200"
                                 >
                                     <small>Forgot password?</small>
                                 </Link>
                             </div>
                             <div className="w-1/2 text-right">
-                                <Link to="/login" className="text-slate-200">
+                                <Link to="/auth/signin" className="text-slate-200">
                                     <small>Already User? Sign in</small>
                                 </Link>
                             </div>

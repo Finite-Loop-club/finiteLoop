@@ -27,9 +27,11 @@ function App() {
           <Route exact path="/gallery" element={<Events/>}></Route>
           <Route exact path="/team" element={<Team/>}></Route>
           {/* <Route exact path="/register" element={<Registration/>}></Route> */}
-          <Route exact path="/error" element={<Error/>}></Route>
-          <Route exact path="/login" element={<Login/>}></Route>
+          <Route exact path="/auth/signin" element={<Login/>}></Route>
+          <Route exact path="/auth/resetpassword" element={<Login/>}></Route>
+          <Route exact path="/auth/signup" element={<Login/>}></Route>
           <Route exact path="/profile" element={<Profile/>}></Route>
+          <Route path="*" element={<Error/>}></Route>
 
         </Routes>
 
