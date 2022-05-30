@@ -19,7 +19,7 @@ function Form() {
 
     //error states
     const [error, setError] = useState(false);
-    const [errorMessage, setErrorMessage] = useState("nope");
+    const [errorMessage, setErrorMessage] = useState("Error !!!");
     //loading
     const [loading, setLoading] = useState(false);
 
@@ -58,7 +58,7 @@ function Form() {
                     setErrorMessage("Wrong password")
                 }
                 if (errorCode === "auth/internal-error") {
-                    setErrorMessage("Error")
+                    setErrorMessage("Enter password")
                 }
                 setLoading(false);
 

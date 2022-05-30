@@ -12,13 +12,17 @@ import { AuthContext } from "../../context/AuthContext"
 
 
 function Register() {
-    const [error, setError] = useState(false);
+    
     const [loading, setLoading] = useState(false);
-    const [alreadyResgister, setAlreadyResgister] = useState(false);
+    // const [alreadyResgister, setAlreadyResgister] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
     const { dispatch } = useContext(AuthContext)
+
+    // error states
+    const [error, setError] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("Error !!!");
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -26,6 +30,7 @@ function Register() {
 
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
+                setError(false);
                 // Signed in 
 
                 const user = userCredential.user;
@@ -33,18 +38,24 @@ function Register() {
                 dispatch({ type: "SIGNIN", payload: user })
                 navigate("/profile")
                 // ...
-                setAlreadyResgister(false);
                 setLoading(false);
             })
             .catch((err) => {
                 const errorCode = err.code;
                 const errorMessage = err.message;
-                //   console.log(errorCode);
+                console.log(errorCode);
+                setError(true)
                 if (errorCode === "auth/email-already-in-use") {
-                    setAlreadyResgister(true);
-                    setLoading(false);
+                    setErrorMessage("Already signed up try signing in! ")
                 }
-                
+                if (errorCode === "auth/invalid-email") {
+                    setErrorMessage("Enter a valid email ")
+                }
+                if (errorCode === "auth/internal-error") {
+                    setErrorMessage("Enter password ")
+                }
+                setLoading(false);
+
                 // ..
             });
     }
@@ -135,13 +146,10 @@ function Register() {
                                         </label>
                                     </div> */}
 
+                                    
                                     <div className={` ${error ? "flex" : "hidden"}  justify-center `} >
                                         <AiOutlineWarning className='inline text-red-600 text-xl mr-2 my-auto' />
-                                        <p className='text-center text-red-600' >  Invalid Email or Password </p>
-                                    </div>
-                                    <div className={` ${alreadyResgister ? "flex" : "hidden"}  justify-center `} >
-                                        <AiOutlineWarning className='inline text-red-600 text-xl mr-2 my-auto' />
-                                        <p className='text-center text-red-600' >  Email Already Registered </p>
+                                        <p className='text-center text-red-600' > {errorMessage} </p>
                                     </div>
 
                                     <div className="text-center mt-6">
