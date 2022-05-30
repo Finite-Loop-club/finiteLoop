@@ -3,8 +3,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import google_icons from '../../assets/img/google.svg'
 import github_icons from '../../assets/img/github.svg'
 import { AiOutlineWarning, AiOutlineLoading3Quarters } from 'react-icons/ai'
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from '../../firebase'
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { auth, provider } from '../../firebase'
 import { AuthContext } from "../../context/AuthContext"
 
 
@@ -12,9 +12,9 @@ import { AuthContext } from "../../context/AuthContext"
 
 
 function Register() {
-    
+
+    // firebase google auth
     const [loading, setLoading] = useState(false);
-    // const [alreadyResgister, setAlreadyResgister] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
@@ -57,6 +57,36 @@ function Register() {
             });
     }
 
+    const handleGoogleAuth = (e) => {
+        e.preventDefault();
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                // This gives you a Google Access Token. You can use it to access the Google API.
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                const token = credential.accessToken;
+                console.log(token);
+                // The signed-in user info.
+                const user = result.user;
+                dispatch({ type: "SIGNIN", payload: user })
+                navigate("/profile")
+                console.log(user);
+
+                // ...
+            }).catch((error) => {
+                // Handle Errors here.
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // The email of the user's account used.
+                const email = error.customData.email;
+                // The AuthCredential type that was used.
+                const credential = GoogleAuthProvider.credentialFromError(error);
+                console.log(errorCode);
+                console.log(email);
+                console.log(credential);
+                // ...
+            });
+    }
+
 
     return (
         <>
@@ -85,6 +115,7 @@ function Register() {
                                     <button
                                         className="bg-white active:bg-slate-50 text-slate-700  px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
                                         type="button"
+                                        onClick={handleGoogleAuth}
                                     >
                                         <img
                                             alt="..."
@@ -143,7 +174,7 @@ function Register() {
                                         </label>
                                     </div> */}
 
-                                    
+
                                     <div className={` ${error ? "flex" : "hidden"}  justify-center `} >
                                         <AiOutlineWarning className='inline text-red-600 text-xl mr-2 my-auto' />
                                         <p className='text-center text-red-600' > {errorMessage} </p>

@@ -4,7 +4,8 @@ import google_icons from '../../assets/img/google.svg'
 import github_icons from '../../assets/img/github.svg'
 import { AiOutlineWarning, AiOutlineLoading3Quarters } from 'react-icons/ai'
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from '../../firebase'
+import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { auth, provider, providerGithub } from '../../firebase'
 import { AuthContext } from "../../context/AuthContext"
 
 
@@ -23,7 +24,6 @@ function Form() {
     //loading
     const [loading, setLoading] = useState(false);
 
-
     const handleLogin = (e) => {
         e.preventDefault();
         setLoading(true);
@@ -41,7 +41,7 @@ function Form() {
                 const errorCode = err.code;
                 const errorMessage = err.message;
                 console.log(errorCode);
-                
+
                 setError(true);
                 // console.log(errorMessage);
                 if (errorCode === "auth/user-not-found") {
@@ -50,20 +50,80 @@ function Form() {
                 if (errorCode === "auth/invalid-email") {
                     setErrorMessage("Invalid Email")
                 }
-                
+
                 if (errorCode === "auth/wrong-password") {
                     setErrorMessage("Wrong password")
                 }
                 if (errorCode === "auth/internal-error") {
                     setErrorMessage("Enter password")
                 }
-                
+
                 setLoading(false);
             });
-        }
+    }
 
 
 
+    const handleGoogleAuth = (e) => {
+        e.preventDefault();
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                // This gives you a Google Access Token. You can use it to access the Google API.
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                const token = credential.accessToken;
+                console.log(token);
+                // The signed-in user info.
+                const user = result.user;
+                dispatch({ type: "SIGNIN", payload: user })
+                navigate("/profile")
+                console.log(user);
+
+                // ...
+            }).catch((error) => {
+                // Handle Errors here.
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // The email of the user's account used.
+                const email = error.customData.email;
+                // The AuthCredential type that was used.
+                const credential = GoogleAuthProvider.credentialFromError(error);
+                console.log(errorCode);
+                console.log(email);
+                console.log(credential);
+                // ...
+            });
+    }
+
+    // const handleGithubAuth = (e) => {
+    //     e.preventDefault();
+
+    //     signInWithPopup(auth, providerGithub)
+    //         .then((result) => {
+    //             // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+    //             const credential = GithubAuthProvider.credentialFromResult(result);
+    //             const token = credential.accessToken;
+
+    //             // The signed-in user info.
+    //             const user = result.user;
+    //             dispatch({ type: "SIGNIN", payload: user });
+    //             navigate("/profile");
+    //             console.log(user);
+
+    //             // ...
+    //         }).catch((error) => {
+    //             // Handle Errors here.
+    //             const errorCode = error.code;
+    //             const errorMessage = error.message;
+    //             // The email of the user's account used.
+    //             const email = error.customData.email;
+    //             // The AuthCredential type that was used.
+    //             const credential = GithubAuthProvider.credentialFromError(error);
+    //             console.log(errorCode);
+    //             console.log(email);
+    //             console.log(credential);
+    //             // ...
+    //         });
+    // }
 
     return (
         <>
@@ -81,6 +141,7 @@ function Form() {
                                     <button
                                         className="bg-white active:bg-slate-50 text-slate-700  px-4 py-2 rounded outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
                                         type="button"
+                                        // onClick={handleGithubAuth}
                                     >
                                         <img
                                             alt="..."
@@ -92,6 +153,7 @@ function Form() {
                                     <button
                                         className="bg-white active:bg-slate-50 text-slate-700  px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
                                         type="button"
+                                        onClick={handleGoogleAuth}
                                     >
                                         <img
                                             alt="..."
