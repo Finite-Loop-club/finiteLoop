@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import google_icons from '../../assets/img/google.svg'
 import github_icons from '../../assets/img/github.svg'
-import { AiOutlineWarning } from 'react-icons/ai'
+import { AiOutlineWarning, AiOutlineLoading3Quarters } from 'react-icons/ai'
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../../firebase'
 import { AuthContext } from "../../context/AuthContext"
@@ -18,12 +18,12 @@ function Register() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
-    const {dispatch} = useContext(AuthContext)
+    const { dispatch } = useContext(AuthContext)
 
     const handleRegister = (e) => {
         e.preventDefault();
-
         setLoading(true);
+
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in 
@@ -31,9 +31,10 @@ function Register() {
                 const user = userCredential.user;
                 //   alert("sign up successful")
                 dispatch({ type: "SIGNIN", payload: user })
-                setAlreadyResgister(false);
                 navigate("/profile")
                 // ...
+                setAlreadyResgister(false);
+                setLoading(false);
             })
             .catch((err) => {
                 const errorCode = err.code;
@@ -41,11 +42,11 @@ function Register() {
                 //   console.log(errorCode);
                 if (errorCode === "auth/email-already-in-use") {
                     setAlreadyResgister(true);
+                    setLoading(false);
                 }
-
+                
                 // ..
             });
-        setLoading(false);
     }
 
 
@@ -152,6 +153,8 @@ function Register() {
                                                 className="  bg-slate-800 text-white active:bg-slate-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
 
                                             >
+                                                {loading ? <AiOutlineLoading3Quarters className="inline mr-2  text-md animate-spin align-middle  " /> : ""}
+
                                                 Sign up
                                             </button>
                                         </Link>

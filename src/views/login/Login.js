@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import pattern_Bg from '../../assets/img/register_bg_2.png'
 import AuthNavbar from '../../Components/navbars/AuthNavbar'
 import Form from './Form'
@@ -9,6 +10,9 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 function Login() {
     const pathname = window.location.pathname
+
+    // cosnt [pathname, setPathname] =useState(window.location.pathname)
+
     return (
         <>
             <div style={{

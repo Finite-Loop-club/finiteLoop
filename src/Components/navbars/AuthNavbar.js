@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BiHomeAlt, } from 'react-icons/bi'
 import { AiOutlineTeam, } from 'react-icons/ai'
@@ -62,25 +62,28 @@ const social = [
 
 
 function AuthNavbar() {
-    const [navbarOpen, setNavbarOpen] = React.useState(false);
+    const [navbarOpen, setNavbarOpen] = useState(false);
+    // const [link, setLink] =useState("/auth/signin");
     const { dispatch } = useContext(AuthContext);
     const { currentUser } = useContext(AuthContext);
     const pathname = window.location.pathname
 
     const handleSignOut = (e) => {
-        // e.preventDefault();
-
-        if (!currentUser) {
-            console.log("already logout");
-
+        
+        if (!currentUser || pathname==="/" ) {
+            if (!currentUser) {
+                console.log("already logout");
+            }
+            console.log(pathname);
+            
         }
         else {
             signOut(auth).then(() => {
-
+                
                 // Sign-out successful.
                 console.log("signout is successfull");
                 dispatch({ type: "SIGNOUT", payload: null })
-
+                
             }).catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
@@ -90,7 +93,8 @@ function AuthNavbar() {
             });
         }
     }
-
+    
+    
 
     return (
         <>
@@ -162,7 +166,7 @@ function AuthNavbar() {
                             })}
 
                             <li className="flex items-center">
-                                <Link to='/auth/signin'  >
+                                <Link to = "/auth/signin" >
                                     <button
                                         className="bg-white text-slate-700 active:bg-slate-50 text-md font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
                                         type="button"

@@ -1,53 +1,71 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import google_icons from '../../assets/img/google.svg'
 import github_icons from '../../assets/img/github.svg'
-import { AiOutlineWarning } from 'react-icons/ai'
+import { AiOutlineWarning, AiOutlineLoading3Quarters } from 'react-icons/ai'
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../../firebase'
-import {AuthContext} from "../../context/AuthContext"
+import { AuthContext } from "../../context/AuthContext"
 
 
 
 function Form() {
 
 
-    const [error, setError] = useState(false);
-    const [notFound, setNotFound] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
-    const {dispatch} = useContext(AuthContext)
+    const { dispatch } = useContext(AuthContext)
+
+    //error states
+    const [error, setError] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("nope");
+    //loading
+    const [loading, setLoading] = useState(false);
 
 
     const handleLogin = (e) => {
         e.preventDefault();
-
-
+        setLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
-                dispatch({type:"SIGNIN", payload:user })
+                dispatch({ type: "SIGNIN", payload: user })
                 console.log(user);
-                setError(false);
                 // alert("login successful");
                 navigate("/profile")
-                setNotFound(false);
+                setError(false);
+                
+
                 // ...
             })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
+            .catch((err) => {
+                const errorCode = err.code;
+                const errorMessage = err.message;
                 console.log(errorCode);
-                console.log(errorMessage);
-                if(errorCode==="auth/user-not-found"){
-                    setNotFound(true);
+                
+                setError(true);
+                // console.log(errorMessage);
+                if (errorCode === "auth/user-not-found") {
+                    setErrorMessage("user not found")
                 }
+                if (errorCode === "auth/invalid-email") {
+                    setErrorMessage("Invalid Email")
+                }
+                
+                if (errorCode === "auth/wrong-password") {
+                    setErrorMessage("Wrong password")
+                }
+                if (errorCode === "auth/internal-error") {
+                    setErrorMessage("Error")
+                }
+                setLoading(false);
 
-                // setError(true);
             });
     }
+
+
 
 
     return (
@@ -135,16 +153,13 @@ function Form() {
                                         </label>
                                     </div> */}
 
-                                    <div className={` ${notFound ? "flex" : "hidden"}  justify-center `} >
-                                        <AiOutlineWarning className='inline text-red-600 text-xl mr-2 my-auto' />
-                                        <p className='text-center text-red-600' >  Email doesn't exist </p>
-                                    </div>
                                     <div className={` ${error ? "flex" : "hidden"}  justify-center `} >
                                         <AiOutlineWarning className='inline text-red-600 text-xl mr-2 my-auto' />
-                                        <p className='text-center text-red-600' >  Invalid Email or Password </p>
+                                        <p className='text-center text-red-600' >  {errorMessage} </p>
                                     </div>
 
-                                    <div className="text-center mt-6">
+
+                                    <div className="text-center mt-6" >
                                         <Link to="">
                                             <button
                                                 onClick={handleLogin}
@@ -152,6 +167,7 @@ function Form() {
                                                 className="bg-slate-800 text-white active:bg-slate-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
 
                                             >
+                                                {loading ? <AiOutlineLoading3Quarters className="inline mr-2  text-md animate-spin align-middle  " /> : ""}
                                                 Sign In
                                             </button>
                                         </Link>
