@@ -36,9 +36,6 @@ function Form() {
                 // alert("login successful");
                 navigate("/profile")
                 setError(false);
-                
-
-                // ...
             })
             .catch((err) => {
                 const errorCode = err.code;
@@ -60,10 +57,10 @@ function Form() {
                 if (errorCode === "auth/internal-error") {
                     setErrorMessage("Enter password")
                 }
+                
                 setLoading(false);
-
             });
-    }
+        }
 
 
 

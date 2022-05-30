@@ -1,35 +1,49 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import google_icons from '../../assets/img/google.svg'
-import github_icons from '../../assets/img/github.svg'
-import { AiOutlineWarning } from 'react-icons/ai'
+
+import { AiOutlineLoading3Quarters, AiOutlineWarning } from 'react-icons/ai'
 import { sendPasswordResetEmail } from "firebase/auth";
 import { auth } from '../../firebase'
-
-
-
 
 function ResetPassword() {
 
 
     const [email, setEmail] = useState("");
 
+    // error states
+
+    const [error, setError] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("Error !!!");
+
+    // loading state
+    const [loading, setLoading] = useState(false);
+
 
     const handleReset = (e) => {
         e.preventDefault();
-
+        setLoading(true);
 
         sendPasswordResetEmail(auth, email)
             .then(() => {
                 // Password reset email sent!
                 alert("check Inbox reset link is sent");
-                // ..
+                setError(false);
+                setLoading(false);
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                // ..
+                console.log(errorCode);
+                setError(true);
+                if (errorCode === "auth/user-not-found") {
+                    setErrorMessage("user not found")
+                }
+                if (errorCode === "auth/missing-email") {
+                    setErrorMessage("Enter your Email")
+                }
+                setLoading(false);
             });
+
     }
 
 
@@ -67,15 +81,18 @@ function ResetPassword() {
                                     </div>
 
 
-
+                                    <div className={` ${error ? "flex" : "hidden"}  justify-center `} >
+                                        <AiOutlineWarning className='inline text-red-600 text-xl mr-2 my-auto' />
+                                        <p className='text-center text-red-600' >  {errorMessage} </p>
+                                    </div>
                                     <div className="text-center mt-6">
                                         <Link to="">
                                             <button
                                                 onClick={handleReset}
                                                 type="submit"
                                                 className="bg-slate-800 text-white active:bg-slate-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
-
                                             >
+                                                {loading ? <AiOutlineLoading3Quarters className="inline mr-2  text-md animate-spin align-middle  " /> : ""}
                                                 Sign In
                                             </button>
                                         </Link>
@@ -87,7 +104,7 @@ function ResetPassword() {
                             <div className="w-1/2">
                                 <Link
                                     to="/auth/signin"
-                                    
+
                                     className="text-slate-200"
                                 >
                                     <small> Sign in</small>

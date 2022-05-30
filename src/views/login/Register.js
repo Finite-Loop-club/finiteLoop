@@ -37,7 +37,6 @@ function Register() {
                 //   alert("sign up successful")
                 dispatch({ type: "SIGNIN", payload: user })
                 navigate("/profile")
-                // ...
                 setLoading(false);
             })
             .catch((err) => {
@@ -55,8 +54,6 @@ function Register() {
                     setErrorMessage("Enter password ")
                 }
                 setLoading(false);
-
-                // ..
             });
     }
 
