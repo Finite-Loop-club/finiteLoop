@@ -194,10 +194,10 @@ function Profile() {
                       <AiOutlineBranches className="inline-flex mb-1  mr-1" />
                       Branch - {info.branch}
                     </div>
-                    <div className=" text-slate-600">
-                      {/* <AiOutlineUser className="inline-flex mb-1  mr-1" /> */}
+                    {/* <div className=" text-slate-600">
+                      <AiOutlineUser className="inline-flex mb-1  mr-1" />
                       Membership - {info.membership}
-                    </div>
+                    </div> */}
                   </div>
 
                 </div>
