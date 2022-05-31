@@ -1,9 +1,12 @@
-import React, { useState,useEffect, useContext } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import profilePic from '../../assets/member/core/johnWick.png'
 import AuthNavbar from '../../Components/navbars/AuthNavbar'
 import { AuthContext, } from '../../context/AuthContext'
 import { getUserInfo } from '../../firebase'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
+// icons
+import {AiOutlineUser, AiOutlineMail, AiOutlineBranches, AiOutlineEdit  } from 'react-icons/ai'
 
 
 // name: `${user ? user.displayName : "Name" }`,
@@ -16,6 +19,7 @@ function Profile() {
 
   const [name, setName] = useState("Name");
   const [usn, setUsn] = useState("Usn");
+  const [membership, setMembership] = useState("False");
   const [email, setEmail] = useState("Email");
   useEffect(() => {
     if (currentUser) {
@@ -42,10 +46,10 @@ function Profile() {
     rank: 0,
     email: email,
     usn: usn,
+    membership: membership,
     points: 0,
     badge: 0,
     branch: "Information Science Enginnering.",
-    college: "N.M.A.M. Institute of Technology",
     // portfolio: "https://anjuman-23.web.app/"
   }
 
@@ -109,6 +113,7 @@ function Profile() {
                           className="bg-sky-500 active:bg-sky-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150"
                           type="button"
                         >
+                          <AiOutlineEdit className="inline-flex mb-1 text-lg font-extrabold mr-3" />
                           Edit profile
                         </button>
                       </Link>
@@ -153,21 +158,25 @@ function Profile() {
                   </div>
 
 
-                  <div className="mb-2 text-slate-600 mt-10">
-                    <i className="fas fa-university mr-2 text-lg text-slate-400"></i>
-                    USN - {info.usn}
-                  </div>
-                  <div className="mb-2 text-slate-600 ">
-                    <i className="fas fa-briefcase mr-2 text-lg text-slate-400"></i>
-                    Email - {info.email}
-                  </div>
-                  <div className="mb-2 text-slate-600">
-                    <i className="fas fa-university mr-2 text-lg text-slate-400"></i>
-                    Branch - {info.branch}
-                  </div>
-                  <div className="mb-2 text-slate-600">
-                    <i className="fas fa-university mr-2 text-lg text-slate-400"></i>
-                    College - {info.college}
+                  {/*  */}
+                  <div className='mt-10 text-left  max-w-fit mx-auto ' >
+                    <div className=" text-slate-600 ">
+                      
+                      <AiOutlineUser className="inline-flex mb-1  mr-1" />
+                      USN - {info.usn}
+                    </div>
+                    <div className=" text-slate-600 ">
+                      <AiOutlineMail className="inline-flex mb-1  mr-1" />
+                      Email - {info.email}
+                    </div>
+                    <div className=" text-slate-600">
+                      <AiOutlineBranches className="inline-flex mb-1  mr-1" />
+                      Branch - {info.branch}
+                    </div>
+                    <div className=" text-slate-600">
+                      {/* <AiOutlineUser className="inline-flex mb-1  mr-1" /> */}
+                      Membership - {info.membership}
+                    </div>
                   </div>
 
                 </div>
