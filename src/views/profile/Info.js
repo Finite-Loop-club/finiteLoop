@@ -38,9 +38,10 @@ function Info() {
         e.preventDefault();
 
         console.log(currentUser.uid);
-        await setDoc(doc(db, "Members", currentUser.uid), {
+        await setDoc(doc(db, "members", currentUser.uid), {
             name: name,
             usn: usn,
+            uid: currentUser.uid,
 
         });
         navigate("/profile")

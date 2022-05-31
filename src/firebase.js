@@ -1,7 +1,13 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth,  GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { getAuth, GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  query,
+  where,
+} from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAR7VNsScGpK8mz602kaipmgcGOtvdBwwg",
@@ -17,9 +23,22 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-export const auth = getAuth() 
+export const auth = getAuth()
 export const provider = new GoogleAuthProvider();
 export const providerGithub = new GithubAuthProvider();
 export const db = getFirestore(app);
 
-
+export async function getUserInfo(uid) {
+  if (uid) {
+    const members = [];
+    const membersRef = collection(db, 'members');
+    const q = query(membersRef, where('uid', '==', uid));
+    const participantDocRef = await getDocs(q);
+    participantDocRef.forEach((participant) => {
+      members.push(participant.data());
+    });
+    return members[0];
+  } else {
+    throw new Error('No user logged in');
+  }
+}
