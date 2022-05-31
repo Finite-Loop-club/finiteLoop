@@ -3,6 +3,7 @@ import profilePic from '../../assets/member/core/johnWick.png'
 import AuthNavbar from '../../Components/navbars/AuthNavbar'
 import { AuthContext, } from '../../context/AuthContext'
 import { getUserInfo } from '../../firebase'
+import {Link} from 'react-router-dom'
 
 
 // name: `${user ? user.displayName : "Name" }`,
@@ -14,7 +15,8 @@ function Profile() {
   // const docRef = doc(db, "Members", currentUser.uid);
 
   const [name, setName] = useState("Name");
-  const [usn, setUsn] = useState("Name");
+  const [usn, setUsn] = useState("Usn");
+  const [email, setEmail] = useState("Email");
   useEffect(() => {
     if (currentUser) {
       getUserInfo(currentUser.uid)
@@ -23,9 +25,8 @@ function Profile() {
 
           setName(members.name);
           setUsn(members.usn);
+          setEmail(members.email);
           console.log(members.name);
-          console.log(members.usn);
-          console.log(members.uid);
         })
         .catch((e) => {
         });
@@ -39,12 +40,13 @@ function Profile() {
     name: name,
     position: "Technical Head",
     rank: 0,
-    email: usn,
+    email: email,
+    usn: usn,
     points: 0,
     badge: 0,
     branch: "Information Science Enginnering.",
     college: "N.M.A.M. Institute of Technology",
-    portfolio: "https://anjuman-23.web.app/"
+    // portfolio: "https://anjuman-23.web.app/"
   }
 
 
@@ -102,14 +104,14 @@ function Profile() {
                   </div>
                   <div className="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
                     <div className="py-6 px-3 mt-32 sm:mt-0">
-                      <a href={info.portfolio} target="_blank" >
+                      <Link to="/profile/getinfo" >
                         <button
                           className="bg-sky-500 active:bg-sky-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150"
                           type="button"
                         >
-                          portfolio
+                          Edit profile
                         </button>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="w-full lg:w-4/12 px-4 lg:order-1">
@@ -152,16 +154,20 @@ function Profile() {
 
 
                   <div className="mb-2 text-slate-600 mt-10">
+                    <i className="fas fa-university mr-2 text-lg text-slate-400"></i>
+                    USN - {info.usn}
+                  </div>
+                  <div className="mb-2 text-slate-600 ">
                     <i className="fas fa-briefcase mr-2 text-lg text-slate-400"></i>
-                    {info.email}
+                    Email - {info.email}
                   </div>
                   <div className="mb-2 text-slate-600">
                     <i className="fas fa-university mr-2 text-lg text-slate-400"></i>
-                    {info.branch}
+                    Branch - {info.branch}
                   </div>
                   <div className="mb-2 text-slate-600">
                     <i className="fas fa-university mr-2 text-lg text-slate-400"></i>
-                    {info.college}
+                    College - {info.college}
                   </div>
 
                 </div>

@@ -42,6 +42,8 @@ function Info() {
             name: name,
             usn: usn,
             uid: currentUser.uid,
+            email: currentUser.email,
+            emailVerified: currentUser.emailVerified,
 
         });
         navigate("/profile")
@@ -134,7 +136,7 @@ function Info() {
                                             </div>
 
                                             <div className="text-center mt-6">
-                                                <Link to="">
+                                                
                                                     <button
                                                         onClick={handleGetInfo}
                                                         type="submit"
@@ -145,6 +147,19 @@ function Info() {
                                                         {/* {loading ? <AiOutlineLoading3Quarters className="inline mr-2  text-md animate-spin align-middle  " /> : ""} */}
 
                                                         Register
+                                                    </button>
+                                                
+                                                <Link to="/profile">
+                                                    <button
+                                                        
+                                                        
+                                                        // disabled={loading}
+                                                        className="  bg-white text-slate-800 active:bg-slate-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+
+                                                    >
+                                                        {/* {loading ? <AiOutlineLoading3Quarters className="inline mr-2  text-md animate-spin align-middle  " /> : ""} */}
+
+                                                        Cancel
                                                     </button>
                                                 </Link>
                                             </div>

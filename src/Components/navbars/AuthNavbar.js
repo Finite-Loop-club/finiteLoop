@@ -70,7 +70,7 @@ function AuthNavbar() {
 
     const handleSignOut = (e) => {
         
-        if (!currentUser || pathname==="/" ) {
+        if (!currentUser || pathname==="/" || pathname==="/profile/getinfo"  ) {
             if (!currentUser) {
                 console.log("already logout");
             }
