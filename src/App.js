@@ -10,6 +10,7 @@ import Profile from './views/profile/Profile';
 import SmallFooter from './Components/footers/SmallFooter';
 import {AuthContext, } from './context/AuthContext'
 import Info from './views/profile/Info';
+import GetInfo from './views/profile/getInfo';
 
 
 function App() {
@@ -44,7 +45,8 @@ function App() {
         <Route exact path="/auth/resetpassword" element={<Login />}></Route>
         <Route exact path="/auth/signup" element={<NotRequireAuth> <Login /> </NotRequireAuth>}></Route>
         <Route exact path="/profile" element={<RequireAuth> <Profile /> </RequireAuth>} ></Route>
-        <Route exact path="/profile/getinfo" element={<InfoAuth> <Info/> </InfoAuth>} ></Route>
+        <Route exact path="/profile/getinfoneo" element={<InfoAuth> <Info/> </InfoAuth>} ></Route>
+        <Route exact path="/profile/getinfo" element={ <GetInfo/> }></Route>
         <Route path="*" element={<Error />}></Route>
 
       </Routes>

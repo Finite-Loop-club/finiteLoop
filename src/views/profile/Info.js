@@ -1,15 +1,12 @@
 import React, { useState, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import google_icons from '../../assets/img/google.svg'
-import github_icons from '../../assets/img/github.svg'
 import { AiOutlineWarning, AiOutlineLoading3Quarters } from 'react-icons/ai'
-import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { db } from '../../firebase'
 import { AuthContext } from "../../context/AuthContext"
 import pattern_Bg from '../../assets/img/register_bg_2.png'
 import AuthNavbar from '../../Components/navbars/AuthNavbar'
 import { doc, setDoc } from "firebase/firestore";
-import { async } from '@firebase/util'
+
 
 
 
