@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom'
 
 function SmallFooter(props) {
 
-    const main = [
-        {
+    const main = [{
             item: "Home",
             link: "/",
         },
@@ -15,9 +14,7 @@ function SmallFooter(props) {
         {
             item: "Other Links",
             link: "/",
-        },
-
-    ]
+        }]
 
     return (
         <>

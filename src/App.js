@@ -9,6 +9,7 @@ import Login from './views/login/Login';
 import Profile from './views/profile/Profile';
 import SmallFooter from './Components/footers/SmallFooter';
 import {AuthContext, } from './context/AuthContext'
+import Info from './views/profile/Info';
 
 
 function App() {
@@ -22,11 +23,12 @@ function App() {
   const NotRequireAuth = ({ children }) => {
     return (!currentUser ? children : <Navigate to="/profile" />)
   }
+  const InfoAuth = ({ children }) =>{
+    return (currentUser ? children : <Navigate to="/auth/resetpassword" />)
+
+  }
 
   
-
-
-
   return (
     <div className="App bg-[#eff0f3]">
       {/* <ScrollToTop> */}
@@ -38,11 +40,11 @@ function App() {
         <Route exact path="/events" element={<Events />}></Route>
         <Route exact path="/gallery" element={<Events />}></Route>
         <Route exact path="/team" element={<Team />}></Route>
-        {/* <Route exact path="/register" element={<Registration/>}></Route> */}
         <Route exact path="/auth/signin" element={<NotRequireAuth> <Login  /> </NotRequireAuth>}></Route>
         <Route exact path="/auth/resetpassword" element={<Login />}></Route>
         <Route exact path="/auth/signup" element={<NotRequireAuth> <Login /> </NotRequireAuth>}></Route>
         <Route exact path="/profile" element={<RequireAuth> <Profile /> </RequireAuth>} ></Route>
+        <Route exact path="/profile/getinfo" element={<InfoAuth> <Info/> </InfoAuth>} ></Route>
         <Route path="*" element={<Error />}></Route>
 
       </Routes>
