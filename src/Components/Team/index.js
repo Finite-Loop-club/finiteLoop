@@ -19,7 +19,7 @@ function Team() {
         return(
           <Teamcard key={id} name={member.name} role={member.role} 
           github={member.github} linkedin= {member.linkedin}
-          src={member.img}
+          src={member.img} bgImage={member.bgImage}
           />
         )
       })}

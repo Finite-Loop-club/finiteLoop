@@ -5,13 +5,15 @@ export const members = [
     img: "/team/team2022/shrilaxmi.png",
     github: "https://github.com/ShrilakshmiPai",
     linkedin: "https://www.linkedin.com/in/shrilakshmipai",
+    bgImage: "/team/bg/bgBlue2.jpg"
   },
   {
-    name: "Shrilakshmi Pai",
-    role: "President",
-    img: "/team/team2022/shrilaxmi.png",
-    github: "https://github.com/ShrilakshmiPai",
-    linkedin: "https://www.linkedin.com/in/shrilakshmipai",
+    name: "Anjuman Raj",
+    role: "Technical Head",
+    img: "/team/team2022/johnWick.png",
+    github: "https://github.com/ayusmann/",
+    linkedin: "https://www.linkedin.com/in/anjuman-raj-ba390b1b5/",
+    bgImage: "/team/bg/bgBlue.jpg"
   },
   {
     name: "Shrilakshmi Pai",
