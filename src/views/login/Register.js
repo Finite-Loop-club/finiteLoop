@@ -36,7 +36,7 @@ function Register() {
                 const user = userCredential.user;
                 //   alert("sign up successful")
                 dispatch({ type: "SIGNIN", payload: user })
-                navigate("/profile")
+                navigate("/profile/getinfo")
                 setLoading(false);
             })
             .catch((err) => {
@@ -68,7 +68,7 @@ function Register() {
                 // The signed-in user info.
                 const user = result.user;
                 dispatch({ type: "SIGNIN", payload: user })
-                navigate("/profile")
+                navigate("/profile/getinfo")
                 console.log(user);
 
                 // ...

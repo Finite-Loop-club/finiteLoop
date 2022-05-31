@@ -20,6 +20,8 @@ import { AuthContext } from "../../context/AuthContext"
 function Home() {
 
     const { currentUser } = useContext(AuthContext);
+    console.log(currentUser.displayName)
+    console.log(currentUser)
 
     return (
         <>

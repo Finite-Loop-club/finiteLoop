@@ -17,10 +17,26 @@ function Profile() {
 
   // const docRef = doc(db, "Members", currentUser.uid);
 
-  const [name, setName] = useState("Name");
+  const handleName = () =>{
+    if(currentUser.displayName){
+      return currentUser.displayName;
+    }
+    else{
+      return "Name"
+    }
+
+  }
+
+
+  const [name, setName] = useState(`${currentUser.displayName ? currentUser.displayName : "Name"}`);
   const [usn, setUsn] = useState("Usn");
   const [membership, setMembership] = useState("False");
   const [email, setEmail] = useState("Email");
+  const [phone, setPhone] = useState("---Phone---");
+  const [branch, setBranch] = useState("---Branch---");
+  const [intro, setIntro] = useState("---...---");
+
+
   useEffect(() => {
     if (currentUser) {
       getUserInfo(currentUser.uid)
@@ -30,6 +46,9 @@ function Profile() {
           setName(members.name);
           setUsn(members.usn);
           setEmail(members.email);
+          setBranch(members.branch);
+          setPhone(members.phone);
+          setIntro(members.intro);
           console.log(members.name);
         })
         .catch((e) => {
@@ -43,13 +62,15 @@ function Profile() {
   const info = {
     name: name,
     position: "Technical Head",
-    rank: 0,
     email: email,
     usn: usn,
+    intro:intro,
+    // phone: phone,
     membership: membership,
+    rank: 0,
     points: 0,
     badge: 0,
-    branch: "Information Science Enginnering.",
+    branch: branch,
     // portfolio: "https://anjuman-23.web.app/"
   }
 
@@ -173,10 +194,10 @@ function Profile() {
                       <AiOutlineBranches className="inline-flex mb-1  mr-1" />
                       Branch - {info.branch}
                     </div>
-                    <div className=" text-slate-600">
-                      {/* <AiOutlineUser className="inline-flex mb-1  mr-1" /> */}
+                    {/* <div className=" text-slate-600">
+                      <AiOutlineUser className="inline-flex mb-1  mr-1" />
                       Membership - {info.membership}
-                    </div>
+                    </div> */}
                   </div>
 
                 </div>
@@ -184,7 +205,7 @@ function Profile() {
                   <div className="flex flex-wrap justify-center">
                     <div className="w-full lg:w-9/12 px-4">
                       <p className="mb-4 text-lg leading-relaxed text-slate-700">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint tenetur officiis ullam, quos sunt vero quam tempora rerum explicabo laboriosam culpa cumque reprehenderit temporibus blanditiis ducimus animi natus a quasi!.
+                        {info.intro}
                       </p>
 
                     </div>
