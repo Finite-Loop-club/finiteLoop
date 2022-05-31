@@ -93,7 +93,7 @@ function AuthNavbar() {
             });
         }
     }
-    
+
     
 
     return (
@@ -173,7 +173,8 @@ function AuthNavbar() {
                                         onClick={handleSignOut}
                                     >
                                         <FaTeamspeak className='inline text-slate-900 mr-2 text-lg' />
-                                        {!currentUser ? "Sign in" : (pathname === "/profile" ? "Sign Out" : "Profile")}
+                                        {/* {!currentUser ? (pathname === "/auth/signin" ? "Sign up" : "Sign in"  ) : (pathname === "/profile" ? "Sign out" : "Profile")} */}
+                                        {!currentUser ? "Sign in"  : (pathname === "/profile" ? "Sign out" : "Profile")}
                                     </button>
                                 </Link>
                             </li>

@@ -24,7 +24,7 @@ function App() {
     return (!currentUser ? children : <Navigate to="/profile" />)
   }
   const InfoAuth = ({ children }) =>{
-    return (currentUser ? children : <Navigate to="/auth/resetpassword" />)
+    return (currentUser ? children : <Navigate to="/auth/signup" />)
 
   }
 

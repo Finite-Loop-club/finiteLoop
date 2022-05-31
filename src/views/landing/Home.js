@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { Link } from 'react-router-dom'
 import AuthNavbar from '../../Components/navbars/AuthNavbar'
 import profilepic from '../../assets/member/core/johnWick.png'
@@ -13,10 +13,13 @@ import { FaFistRaised, FaChalkboardTeacher } from 'react-icons/fa'
 import { AiOutlineBranches, AiOutlineFundProjectionScreen } from 'react-icons/ai'
 import { FiGithub } from 'react-icons/fi'
 import { MdWorkOutline } from 'react-icons/md'
-import Contact from '../../Components/Home/Contact'
 import ContactForm from './ContactForm'
+import { AuthContext } from "../../context/AuthContext"
+
 
 function Home() {
+
+    const { currentUser } = useContext(AuthContext);
 
     return (
         <>
@@ -40,13 +43,14 @@ function Home() {
                                 >
                                     Join Us
                                 </Link>
-                                <a
-                                    href="https://www.linkedin.com/showcase/finite-loop-club"
+                                <Link
+                                    to="/auth/signin"
                                     className=" ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-slate-700 active:bg-slate-600  text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
-                                    target="_blank"
+                                    
                                 >
-                                    LinkedIn
-                                </a>
+                                    {!currentUser ? "Sign in" : "Profile"}
+                                    
+                                </Link>
                             </div>
                         </div>
                     </div>

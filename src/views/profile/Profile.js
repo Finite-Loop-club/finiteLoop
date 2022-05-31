@@ -2,9 +2,8 @@ import React, { useState,useEffect, useContext } from 'react'
 import profilePic from '../../assets/member/core/johnWick.png'
 import AuthNavbar from '../../Components/navbars/AuthNavbar'
 import { AuthContext, } from '../../context/AuthContext'
-import { collection, doc, getDoc, getDocs } from "firebase/firestore";
-import { db, getUserInfo } from '../../firebase'
-import { data } from 'autoprefixer';
+import { getUserInfo } from '../../firebase'
+
 
 // name: `${user ? user.displayName : "Name" }`,
 
@@ -12,13 +11,7 @@ function Profile() {
 
   const { currentUser } = useContext(AuthContext);
 
-
-
   // const docRef = doc(db, "Members", currentUser.uid);
-
-
-
-
 
   const [name, setName] = useState("Name");
   const [usn, setUsn] = useState("Name");
