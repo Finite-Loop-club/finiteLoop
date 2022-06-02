@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { AiOutlineWarning, AiOutlineLoading3Quarters } from 'react-icons/ai'
+// import { AiOutlineWarning, AiOutlineLoading3Quarters } from 'react-icons/ai'
 import { db } from '../../firebase'
 import { AuthContext } from "../../context/AuthContext"
 import pattern_Bg from '../../assets/img/register_bg_2.png'
@@ -22,11 +22,11 @@ export default function GetInfo() {
 
 
     const navigate = useNavigate();
-    const { dispatch } = useContext(AuthContext)
+    // const { dispatch } = useContext(AuthContext)
 
     // error states
-    const [error, setError] = useState(false);
-    const [errorMessage, setErrorMessage] = useState("Error !!!");
+    // const [error, setError] = useState(false);
+    // const [errorMessage, setErrorMessage] = useState("Error !!!");
 
     const { currentUser } = useContext(AuthContext)
 
