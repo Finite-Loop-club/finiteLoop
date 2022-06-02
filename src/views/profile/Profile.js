@@ -11,7 +11,6 @@ import {AiOutlineUser, AiOutlineMail, AiOutlineBranches, AiOutlineEdit  } from '
 
 // name: `${user ? user.displayName : "Name" }`,
 
-
 function Profile() {
 
   const { currentUser } = useContext(AuthContext);
@@ -182,7 +181,7 @@ function Profile() {
 
                   {/*  */}
                   <div className='mt-10 text-left  max-w-fit mx-auto ' >
-                    <div className=" text-slate-600 uppercase ">
+                    <div className=" text-slate-600 ">
                       
                       <AiOutlineUser className="inline-flex mb-1  mr-1" />
                       USN - {info.usn}
