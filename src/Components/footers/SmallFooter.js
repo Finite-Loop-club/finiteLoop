@@ -1,20 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function SmallFooter(props) {
-
+const SmallFooter = (props) => {
     const main = [{
-            item: "Home",
-            link: "/",
-        },
-        {
-            item: "Login",
-            link: "/login",
-        },
-        {
-            item: "Other Links",
-            link: "/",
-        }]
+        item: "Home",
+        link: "/",
+    },
+    {
+        item: "Login",
+        link: "/login",
+    },
+    {
+        item: "Other Links",
+        link: "/",
+    }]
 
     return (
         <>

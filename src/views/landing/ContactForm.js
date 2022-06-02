@@ -119,7 +119,7 @@ function ContactForm() {
                                     <div className="relative w-full mb-3">
                                         <label
                                             className="block uppercase text-slate-600 text-xs font-bold mb-2"
-                                            for="name"
+                                            htmlFor="name"
                                         >
                                             Name
                                         </label>
@@ -133,7 +133,7 @@ function ContactForm() {
                                     <div className="relative w-full mb-3">
                                         <label
                                             className="block uppercase text-slate-600 text-xs font-bold mb-2"
-                                            for="email"
+                                            htmlFor="email"
                                         >
                                             Email
                                         </label>
@@ -147,7 +147,7 @@ function ContactForm() {
                                     <div className="relative w-full mb-3">
                                         <label
                                             className="block uppercase text-slate-600 text-xs font-bold mb-2"
-                                            for="message"
+                                            htmlFor="message"
                                         >
                                             Message
                                         </label>

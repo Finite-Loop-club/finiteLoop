@@ -13,55 +13,58 @@ import { signOut } from "firebase/auth";
 import { auth } from '../../firebase'
 
 
-const menu = [
-    {
-        option: "Home",
-        link: "/",
-        icons: <BiHomeAlt className='inline text-slate-50 mr-2 text-lg' />
-    },
-    {
-        option: "Events",
-        link: "/events",
-        icons: <MdOutlineEmojiEvents className='inline text-slate-50 mr-2 text-lg' />,
-
-    },
-    {
-        option: "Gallery",
-        link: "/",
-        icons: <RiGalleryLine className='inline text-slate-50 mr-2 text-lg' />,
-
-    },
-    {
-        option: "Team",
-        link: "/team",
-        icons: <AiOutlineTeam className='inline text-slate-50 mr-2 text-lg' />,
-
-    },
-]
-
-const social = [
-    {
-        name: "linkedin",
-        link: "https://www.linkedin.com/showcase/finite-loop-club",
-        icons: <FiLinkedin className='inline text-slate-50 mr-2 text-lg' />
-    },
-    {
-        name: "instagram",
-        link: "https://www.instagram.com/finiteloop_club/",
-        icons: <FiInstagram className='inline text-slate-50 mr-2 text-lg' />
-    },
-    {
-        name: "facebook",
-        link: "https://www.facebook.com/FiniteLoopClub.Nmamit/",
-        icons: <FiFacebook className='inline text-slate-50 mr-2 text-lg' />
-    },
-
-]
-
 
 
 
 function AuthNavbar() {
+
+
+    const menu = [
+        {
+            option: "Home",
+            link: "/",
+            icons: <BiHomeAlt className='inline text-slate-50 mr-2 text-lg' />
+        },
+        {
+            option: "Events",
+            link: "/events",
+            icons: <MdOutlineEmojiEvents className='inline text-slate-50 mr-2 text-lg' />,
+
+        },
+        {
+            option: "Gallery",
+            link: "/",
+            icons: <RiGalleryLine className='inline text-slate-50 mr-2 text-lg' />,
+
+        },
+        {
+            option: "Team",
+            link: "/team",
+            icons: <AiOutlineTeam className='inline text-slate-50 mr-2 text-lg' />,
+
+        },
+    ]
+
+    const social = [
+        {
+            name: "linkedin",
+            link: "https://www.linkedin.com/showcase/finite-loop-club",
+            icons: <FiLinkedin className='inline text-slate-50 mr-2 text-lg' />
+        },
+        {
+            name: "instagram",
+            link: "https://www.instagram.com/finiteloop_club/",
+            icons: <FiInstagram className='inline text-slate-50 mr-2 text-lg' />
+        },
+        {
+            name: "facebook",
+            link: "https://www.facebook.com/FiniteLoopClub.Nmamit/",
+            icons: <FiFacebook className='inline text-slate-50 mr-2 text-lg' />
+        },
+
+    ]
+
+
     const [navbarOpen, setNavbarOpen] = useState(false);
     // const [link, setLink] =useState("/auth/signin");
     const { dispatch } = useContext(AuthContext);
@@ -69,21 +72,21 @@ function AuthNavbar() {
     const pathname = window.location.pathname
 
     const handleSignOut = (e) => {
-        
-        if (!currentUser || pathname==="/" || pathname==="/profile/getinfo"  ) {
+
+        if (!currentUser || pathname === "/" || pathname === "/profile/getinfo") {
             if (!currentUser) {
                 console.log("already logout");
             }
             console.log(pathname);
-            
+
         }
         else {
             signOut(auth).then(() => {
-                
+
                 // Sign-out successful.
                 console.log("signout is successfull");
                 dispatch({ type: "SIGNOUT", payload: null })
-                
+
             }).catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
@@ -94,7 +97,7 @@ function AuthNavbar() {
         }
     }
 
-    
+
 
     return (
         <>
@@ -166,7 +169,7 @@ function AuthNavbar() {
                             })}
 
                             <li className="flex items-center">
-                                <Link to = "/auth/signin" >
+                                <Link to="/auth/signin" >
                                     <button
                                         className="bg-white text-slate-700 active:bg-slate-50 text-md font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
                                         type="button"
@@ -174,7 +177,7 @@ function AuthNavbar() {
                                     >
                                         <FaTeamspeak className='inline text-slate-900 mr-2 text-lg' />
                                         {/* {!currentUser ? (pathname === "/auth/signin" ? "Sign up" : "Sign in"  ) : (pathname === "/profile" ? "Sign out" : "Profile")} */}
-                                        {!currentUser ? "Sign in"  : (pathname === "/profile" ? "Sign out" : "Profile")}
+                                        {!currentUser ? "Sign in" : (pathname === "/profile" ? "Sign out" : "Profile")}
                                     </button>
                                 </Link>
                             </li>
