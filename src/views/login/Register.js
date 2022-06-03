@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import google_icons from '../../assets/img/google.svg'
 import github_icons from '../../assets/img/github.svg'
 import { AiOutlineWarning, AiOutlineLoading3Quarters } from 'react-icons/ai'
@@ -181,7 +182,7 @@ function Register() {
                                     </div>
 
                                     <div className="text-center mt-6">
-                                        <Link to="">
+                                        <NavLink to="">
                                             <button
                                                 onClick={handleRegister}
                                                 type="submit"
@@ -193,25 +194,25 @@ function Register() {
 
                                                 Sign up
                                             </button>
-                                        </Link>
+                                        </NavLink>
                                     </div>
                                 </form>
                             </div>
                         </div>
                         <div className="flex flex-wrap mt-6 relative">
                             <div className="w-1/2">
-                                <Link
+                                <NavLink
                                     to="/auth/resetpassword"
 
                                     className="text-slate-200"
                                 >
                                     <small>Forgot password?</small>
-                                </Link>
+                                </NavLink>
                             </div>
                             <div className="w-1/2 text-right">
-                                <Link to="/auth/signin" className="text-slate-200">
+                                <NavLink to="/auth/signin" className="text-slate-200">
                                     <small>Already User? Sign in</small>
-                                </Link>
+                                </NavLink>
                             </div>
                         </div>
                     </div>

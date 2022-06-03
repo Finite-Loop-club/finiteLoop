@@ -2,7 +2,7 @@ import React from 'react'
 import error from './Home/png/pagenotfound.png'
 import Button from './BasicComponents/Button'
 import AuthNavbar from './navbars/AuthNavbar'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function Error() {
     return (
@@ -15,9 +15,9 @@ function Error() {
                             Sorry we couldn't find the page you're looking for
                         </p>
                         <div className='mt-4 w-44 md:w-44' >
-                            <Link to="/">
+                            <NavLink to="/">
                                 <Button text="Back to Home" />
-                            </Link>
+                            </NavLink>
                         </div>
                     </div>
                     <div className="w-full lg:flex lg:justify-end lg:w-1/2 mx-5 my-12">

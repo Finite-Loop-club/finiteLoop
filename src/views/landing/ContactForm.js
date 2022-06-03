@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import google_icons from '../../assets/img/phone.png'
 import github_icons from '../../assets/img/gmail.png'
 import { BsTelephoneForward } from 'react-icons/bs'

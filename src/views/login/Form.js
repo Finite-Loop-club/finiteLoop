@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import google_icons from '../../assets/img/google.svg'
 import github_icons from '../../assets/img/github.svg'
 import { AiOutlineWarning, AiOutlineLoading3Quarters } from 'react-icons/ai'
@@ -220,7 +220,7 @@ function Form() {
 
 
                                     <div className="text-center mt-6" >
-                                        <Link to="">
+                                        <NavLink to="">
                                             <button
                                                 onClick={handleLogin}
                                                 type="submit"
@@ -230,25 +230,25 @@ function Form() {
                                                 {loading ? <AiOutlineLoading3Quarters className="inline mr-2  text-md animate-spin align-middle  " /> : ""}
                                                 Sign In
                                             </button>
-                                        </Link>
+                                        </NavLink>
                                     </div>
                                 </form>
                             </div>
                         </div>
                         <div className="flex flex-wrap mt-6 relative">
                             <div className="w-1/2">
-                                <Link
+                                <NavLink
                                     to="/auth/resetpassword"
                                     // onClick={(e) => e.preventDefault()}
                                     className="text-slate-200"
                                 >
                                     <small>Forgot password?</small>
-                                </Link>
+                                </NavLink>
                             </div>
                             <div className="w-1/2 text-right">
-                                <Link to="/auth/signup" className="text-slate-200">
+                                <NavLink to="/auth/signup" className="text-slate-200">
                                     <small>Create new account</small>
-                                </Link>
+                                </NavLink>
                             </div>
                         </div>
                     </div>

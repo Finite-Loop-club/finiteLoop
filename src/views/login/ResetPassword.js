@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import { AiOutlineLoading3Quarters, AiOutlineWarning } from 'react-icons/ai'
 import { sendPasswordResetEmail } from "firebase/auth";
@@ -86,7 +86,7 @@ function ResetPassword() {
                                         <p className='text-center text-red-600' >  {errorMessage} </p>
                                     </div>
                                     <div className="text-center mt-6">
-                                        <Link to="">
+                                        <NavLink to="">
                                             <button
                                                 onClick={handleReset}
                                                 type="submit"
@@ -95,25 +95,25 @@ function ResetPassword() {
                                                 {loading ? <AiOutlineLoading3Quarters className="inline mr-2  text-md animate-spin align-middle  " /> : ""}
                                                 Sign In
                                             </button>
-                                        </Link>
+                                        </NavLink>
                                     </div>
                                 </form>
                             </div>
                         </div>
                         <div className="flex flex-wrap mt-6 relative">
                             <div className="w-1/2">
-                                <Link
+                                <NavLink
                                     to="/auth/signin"
 
                                     className="text-slate-200"
                                 >
                                     <small> Sign in</small>
-                                </Link>
+                                </NavLink>
                             </div>
                             <div className="w-1/2 text-right">
-                                <Link to="/auth/signup" className="text-slate-200">
+                                <NavLink to="/auth/signup" className="text-slate-200">
                                     <small>New User? Create new account</small>
-                                </Link>
+                                </NavLink>
                             </div>
                         </div>
                     </div>

@@ -45,7 +45,6 @@ function App() {
         <Route exact path="/auth/resetpassword" element={<Login />}></Route>
         <Route exact path="/auth/signup" element={<NotRequireAuth> <Login /> </NotRequireAuth>}></Route>
         <Route exact path="/profile" element={<RequireAuth> <Profile /> </RequireAuth>} ></Route>
-        {/* <Route exact path="/profile/getinfoneo" element={<InfoAuth> <Info/> </InfoAuth>} ></Route> */}
         <Route exact path="/profile/getinfo" element={ <InfoAuth> <GetInfo/> </InfoAuth> }></Route>
         <Route path="*" element={<Error />}></Route>
 

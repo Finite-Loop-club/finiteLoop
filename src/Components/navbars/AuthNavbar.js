@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { BiHomeAlt, } from 'react-icons/bi'
 import { AiOutlineTeam, } from 'react-icons/ai'
 import { MdOutlineEmojiEvents, } from 'react-icons/md'
@@ -104,12 +104,12 @@ function AuthNavbar() {
             <nav className="top-0 sticky z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg backdrop-brightness-50 drop-shadow-md ">
                 <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
                     <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-                        <Link
+                        <NavLink
                             className="text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
                             to="/"
                         >
                             Finite Loop
-                        </Link>
+                        </NavLink>
                         <button
                             className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none transition-all duration-150 "
                             type="button"
@@ -131,13 +131,13 @@ function AuthNavbar() {
                                 return (
                                     <>
                                         <li key={key} className="flex items-center">
-                                            <Link
+                                            <NavLink
                                                 className="text-white lg:hover:text-slate-200  px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                                                 to={menu.link}
                                             >
                                                 {menu.icons}
                                                 {menu.option}
-                                            </Link>
+                                            </NavLink>
                                         </li>
                                     </>
                                 )
@@ -169,7 +169,7 @@ function AuthNavbar() {
                             })}
 
                             <li className="flex items-center">
-                                <Link to="/auth/signin" >
+                                <NavLink to="/auth/signin" >
                                     <button
                                         className="bg-white text-slate-700 active:bg-slate-50 text-md font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
                                         type="button"
@@ -179,7 +179,7 @@ function AuthNavbar() {
                                         {/* {!currentUser ? (pathname === "/auth/signin" ? "Sign up" : "Sign in"  ) : (pathname === "/profile" ? "Sign out" : "Profile")} */}
                                         {!currentUser ? "Sign in" : (pathname === "/profile" ? "Sign out" : "Profile")}
                                     </button>
-                                </Link>
+                                </NavLink>
                             </li>
                         </ul>
                     </div>

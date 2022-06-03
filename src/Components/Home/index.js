@@ -377,7 +377,7 @@ function Home() {
                             <br />
                             <p style={{ textShadow: "2px 2px 15px #000000" }} className='font-normal text-white py-2 text-2xl md:text-3xl font-body'>Lorem ipsum dolor sit amet consectetur.</p>
 
-                            <Link to="/gallery">   <Button text="Gallery" />   </Link>
+                            <NavLink to="/gallery">   <Button text="Gallery" />   </NavLink>
                         </div>
                     </div>
                 </Parallax> */}

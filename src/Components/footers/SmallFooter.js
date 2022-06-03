@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const SmallFooter = (props) => {
     const main = [{
@@ -30,12 +30,12 @@ const SmallFooter = (props) => {
                         <div className="w-full md:w-4/12 px-4">
                             <div className="text-sm text-black font-semibold py-1 text-center md:text-left">
                                 Copyright © {new Date().getFullYear()}{" "}
-                                <Link
+                                <NavLink
                                     to="/"
                                     className="text-black hover:text-slate-700 text-sm font-semibold py-1"
                                 >
                                     Finite Loop
-                                </Link>
+                                </NavLink>
                             </div>
                         </div>
                         <div className="w-full md:w-8/12 px-4">
@@ -44,12 +44,12 @@ const SmallFooter = (props) => {
                                     return (
                                         <>
                                             <li key={key} >
-                                                <Link
+                                                <NavLink
                                                     to={index.link}
                                                     className="text-black hover:text-slate-600 text-sm font-semibold block py-1 px-3"
                                                 >
                                                     {index.item}
-                                                </Link>
+                                                </NavLink>
                                             </li>
                                         </>
                                     )

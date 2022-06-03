@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import AuthNavbar from '../../Components/navbars/AuthNavbar'
 import profilepic from '../../assets/member/core/johnWick.png'
 import team from '../../assets/team/team.jpg'
@@ -20,7 +20,7 @@ import { AuthContext } from "../../context/AuthContext"
 function Home() {
 
     const { currentUser } = useContext(AuthContext);
-    console.log(currentUser.displayName)
+    // console.log(currentUser.displayName)
     console.log(currentUser)
 
     return (
@@ -38,21 +38,21 @@ function Home() {
 
                             </p>
                             <div className="mt-12">
-                                <Link
+                                <NavLink
                                     to="/"
                                     target="_blank"
                                     className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-sky-500 active:bg-sky-600  text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                                 >
                                     Join Us
-                                </Link>
-                                <Link
+                                </NavLink>
+                                <NavLink
                                     to="/auth/signin"
                                     className=" ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-slate-700 active:bg-slate-600  text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                                     
                                 >
                                     {!currentUser ? "Sign in" : "Profile"}
                                     
-                                </Link>
+                                </NavLink>
                             </div>
                         </div>
                     </div>
@@ -493,7 +493,7 @@ function Home() {
                                     <h5 className="text-xl font-semibold pb-4 text-center">
                                         Login Page
                                     </h5>
-                                    <Link to="/auth/login">
+                                    <NavLink to="/auth/login">
                                         <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
                                             <img
                                                 alt="..."
@@ -501,14 +501,14 @@ function Home() {
                                                 src={require("../../assets/img/login.jpg").default}
                                             />
                                         </div>
-                                    </Link>
+                                    </NavLink>
                                 </div>
 
                                 <div className="w-full lg:w-4/12 px-4">
                                     <h5 className="text-xl font-semibold pb-4 text-center">
                                         Profile Page
                                     </h5>
-                                    <Link to="/profile">
+                                    <NavLink to="/profile">
                                         <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
                                             <img
                                                 alt="..."
@@ -516,14 +516,14 @@ function Home() {
                                                 src={require("../../assets/img/profile.jpg").default}
                                             />
                                         </div>
-                                    </Link>
+                                    </NavLink>
                                 </div>
 
                                 <div className="w-full lg:w-4/12 px-4">
                                     <h5 className="text-xl font-semibold pb-4 text-center">
                                         Landing Page
                                     </h5>
-                                    <Link to="/landing">
+                                    <NavLink to="/landing">
                                         <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
                                             <img
                                                 alt="..."
@@ -531,7 +531,7 @@ function Home() {
                                                 src={require("../../assets/img/landing.jpg").default}
                                             />
                                         </div>
-                                    </Link>
+                                    </NavLink>
                                 </div>
                             </div>
                         </div>
@@ -555,13 +555,13 @@ function Home() {
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores veritatis consequuntur, quisquam sit quibusdam similique eveniet nulla error?
                             </p>
 
-                            <Link
+                            <NavLink
                                 to="/"
                                 target="_blank"
                                 className="github-star mt-4 inline-block text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-slate-700 active:bg-slate-600 uppercase text-sm shadow hover:shadow-lg"
                             >
                                 Register Now
-                            </Link>
+                            </NavLink>
                         </div>
 
                         <div className="w-full md:w-4/12 px-4 mx-auto  mt-32 relative">

@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { AiOutlineWarning, AiOutlineLoading3Quarters } from 'react-icons/ai'
 import { db } from '../../firebase'
 import { AuthContext } from "../../context/AuthContext"
@@ -146,7 +146,7 @@ function Info() {
                                                         Register
                                                     </button>
                                                 
-                                                <Link to="/profile">
+                                                <NavLink to="/profile">
                                                     <button
                                                         
                                                         
@@ -158,7 +158,7 @@ function Info() {
 
                                                         Cancel
                                                     </button>
-                                                </Link>
+                                                </NavLink>
                                             </div>
                                         </form>
                                     </div>

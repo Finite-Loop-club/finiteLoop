@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-// import { AiOutlineWarning, AiOutlineLoading3Quarters } from 'react-icons/ai'
+import { useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { db } from '../../firebase'
 import { AuthContext } from "../../context/AuthContext"
 import pattern_Bg from '../../assets/img/register_bg_2.png'
@@ -58,19 +58,20 @@ export default function GetInfo() {
                     `url(${pattern_Bg})`,
                 backgroundSize: 'cover'
             }}
-                className='bg-slate-800 h-screen '
+                className='bg-slate-800 '
 
             >
                 <AuthNavbar />
 
-                <div className="relative w-1/2 mx-auto flex flex-col min-w-0 break-words mb-6 shadow-lg rounded-lg bg-slate-100 border-0 mt-10 ">
+                <div className="w-10/12 md:w-1/2 mx-auto flex flex-col min-w-0 break-words shadow-lg rounded-lg bg-slate-100 border-0
+                mt-10 h-fit mb-6  ">
                     <div className="rounded-t  mb-0 px-6 py-6">
                         <div className="text-center flex flex-wrap flex-col md:flex-row justify-center md:justify-between space-y-2 ">
                             <h6 className="text-slate-700 text-xl font-bold">My account</h6>
 
                         </div>
                     </div>
-                    <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
+                    <div className="flex-auto px-4 lg:px-10 py-6 pt-0">
                         <form>
                             <h6 className="text-slate-400 text-sm mt-3 mb-6 font-bold uppercase">
                                 User Information
@@ -177,26 +178,32 @@ export default function GetInfo() {
                                     </div>
                                 </div>
                             </div>
-                            <div className=" flex flex-wrap justify-center  flex-col md:flex-row " >
+                            <div className=" flex flex-wrap justify-center   md:flex-row " >
+
+
                                 <button
-                                    className="bg-slate-700 text-white  font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150 mx-3 my-3 md:my-0 "
+                                    className="bg-slate-700 text-white  font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150 mx-3 my-3 md:my-0"
                                     type="button"
                                     onClick={handleGetInfo}
                                 >
                                     Update
                                 </button>
-                                <Link to="/profile">
+
+                                <NavLink to="/profile">
                                     <button
                                         className="bg-white text-slate-700  font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150 mx-3 my-3 md:my-0"
                                         type="button"
                                     >
                                         Cancel
                                     </button>
-                                </Link>
+                                </NavLink>
                             </div>
                         </form>
                     </div>
                 </div>
+            <div className='h-10' >
+
+            </div>
             </div>
         </>
     );
