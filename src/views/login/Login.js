@@ -24,7 +24,7 @@ function Login() {
                 className='bg-slate-800'
             >
                 <AuthNavbar />
-                <div className="h-screen bg-none flex bg-no-repeat  ">
+                <div className="h-fit bg-none flex bg-no-repeat  ">
                     {pathname==='/auth/signup' ? <Register /> : (pathname==='/auth/resetpassword' ? <ResetPassword /> :( pathname==='/auth/signin' ?  <Form />: <Form />) ) }
                     
                     {/* {console.log(pathname)} */}

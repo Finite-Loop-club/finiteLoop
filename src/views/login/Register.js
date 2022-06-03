@@ -17,9 +17,15 @@ function Register() {
     // firebase google auth
     const [loading, setLoading] = useState(false);
     const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [password, setPassword] = useState("123456");
     const navigate = useNavigate();
     const { dispatch } = useContext(AuthContext)
+
+    const [name, setName] = useState("");
+    const [usn, setUsn] = useState("");
+    const [phone, setPhone] = useState("");
+    const [branch, setBranch] = useState("");
+    const [intro, setIntro] = useState("");
 
     // error states
     const [error, setError] = useState(false);
@@ -28,7 +34,7 @@ function Register() {
     const handleRegister = (e) => {
         e.preventDefault();
         setLoading(true);
-
+                    
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 setError(false);
@@ -91,9 +97,9 @@ function Register() {
 
     return (
         <>
-            <div className="container mx-auto px-4 h-full">
-                <div className="flex content-center items-center justify-center h-full">
-                    <div className="w-full lg:w-4/12 px-4">
+            <div className="container mx-auto px-4 h-fit">
+                <div className="flex content-center items-center justify-center h-fit">
+                    <div className="w-full h-fit py-7 lg:w-5/12  px-4">
                         <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-slate-200 border-0">
                             <div className="rounded-t mb-0 px-6 py-6">
                                 <div className="text-center mb-3">
@@ -116,7 +122,7 @@ function Register() {
                                     <button
                                         className="bg-white active:bg-slate-50 text-slate-700  px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
                                         type="button"
-                                        onClick={handleGoogleAuth}
+                                    // onClick={handleGoogleAuth}
                                     >
                                         <img
                                             alt="..."
@@ -133,6 +139,77 @@ function Register() {
                                     <small>Or sign up with credentials</small>
                                 </div>
                                 <form  >
+                                    <div className="flex flex-wrap md:flex-nowrap justify-between gap-2 ">
+                                        <div className="w-full lg:w-6/12 ">
+                                            <div className="relative w-full mb-3">
+                                                <label
+                                                    className="block uppercase text-slate-600 text-xs font-bold mb-2"
+                                                    htmlFor="grid-password"
+                                                >
+                                                    Name
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    className="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                                                    placeholder="Name" onChange={e => setName(e.target.value)}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="w-full lg:w-6/12 ">
+                                            <div className=" w-full mb-3">
+                                                <label
+                                                    className="block uppercase text-slate-600 text-xs font-bold mb-2"
+                                                    htmlFor="branch"
+                                                >
+                                                    Branch
+                                                </label>
+
+                                                <select
+                                                    className="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                                                    onChange={e => setBranch(e.target.value)}
+                                                >
+                                                    <option value="">--Select Branch--</option>
+                                                    <option value="CSE">CSE</option>
+                                                    <option value="Information Science Enginnering.">Information Science Enginnering.</option>
+                                                    <option value="ECE">ECE</option>
+                                                    <option value="AIML">AIML</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-wrap md:flex-nowrap gap-2">
+                                        <div className="relative w-full lg:w-6/12 mb-3">
+                                            <label
+                                                className="block uppercase text-slate-600 text-xs font-bold mb-2"
+                                                htmlFor="grid-password"
+                                            >
+                                                USN
+                                            </label>
+                                            <input
+                                                type="text"
+                                                className="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                                                placeholder="USN"
+                                                onChange={e => setUsn(e.target.value)}
+                                            />
+                                        </div>
+
+                                        <div className=" w-full lg:w-6/12 mb-3">
+                                            <label
+                                                className="block uppercase text-slate-600 text-xs font-bold mb-2"
+                                                htmlFor="grid-password"
+                                            >
+                                                Phone
+                                            </label>
+                                            <input
+                                                type="tel"
+                                                className="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                                                placeholder="Phone"
+                                                onChange={e => setPhone(e.target.value)}
+                                            />
+                                        </div>
+                                    </div>
+
                                     <div className="relative w-full mb-3">
                                         <label
                                             className="block uppercase text-slate-600 text-xs font-bold mb-2"
@@ -148,20 +225,7 @@ function Register() {
                                         />
                                     </div>
 
-                                    <div className="relative w-full mb-3">
-                                        <label
-                                            className="block uppercase text-slate-600 text-xs font-bold mb-2"
-                                            htmlFor="grid-password"
-                                        >
-                                            Password
-                                        </label>
-                                        <input
-                                            type="password"
-                                            className="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                            placeholder="Password"
-                                            onChange={e => setPassword(e.target.value)}
-                                        />
-                                    </div>
+
                                     {/* <div>
                                         <label className="inline-flex items-center cursor-pointer">
                                             <input
