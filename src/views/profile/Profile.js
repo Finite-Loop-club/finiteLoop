@@ -6,7 +6,8 @@ import { getUserInfo } from '../../firebase'
 import { NavLink } from 'react-router-dom'
 
 // icons
-import {AiOutlineUser, AiOutlineMail, AiOutlineBranches, AiOutlineEdit  } from 'react-icons/ai'
+import { AiOutlineUser, AiOutlineMail, AiOutlineBranches, AiOutlineEdit } from 'react-icons/ai'
+import SmallFooter from '../../Components/footers/SmallFooter'
 
 
 // name: `${user ? user.displayName : "Name" }`,
@@ -17,11 +18,11 @@ function Profile() {
 
   // const docRef = doc(db, "Members", currentUser.uid);
 
-  const handleName = () =>{
-    if(currentUser.displayName){
+  const handleName = () => {
+    if (currentUser.displayName) {
       return currentUser.displayName;
     }
-    else{
+    else {
       return "Name"
     }
 
@@ -64,7 +65,7 @@ function Profile() {
     position: "Technical Head",
     email: email,
     usn: usn,
-    intro:intro,
+    intro: intro,
     // phone: phone,
     membership: membership,
     rank: 0,
@@ -182,7 +183,7 @@ function Profile() {
                   {/*  */}
                   <div className='mt-10 text-left  max-w-fit mx-auto ' >
                     <div className=" text-slate-600 ">
-                      
+
                       <AiOutlineUser className="inline-flex mb-1  mr-1" />
                       USN - {info.usn}
                     </div>
@@ -216,7 +217,7 @@ function Profile() {
           </div>
         </section>
       </main>
-
+      <SmallFooter />
 
     </>
   )

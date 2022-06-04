@@ -3,6 +3,7 @@ import Eventcard from './Eventcard'
 import Tab from './Tab'
 import {eventData} from "./eventData"
 import AuthNavbar from '../navbars/AuthNavbar'
+import SmallFooter from '../footers/SmallFooter'
 
 
 function Events() {
@@ -22,7 +23,7 @@ function Events() {
         )
       } )}
     </div>
-
+      <SmallFooter/>
     </>
   )
 }

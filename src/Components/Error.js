@@ -3,6 +3,7 @@ import error from './Home/png/pagenotfound.png'
 import Button from './BasicComponents/Button'
 import AuthNavbar from './navbars/AuthNavbar'
 import { NavLink } from 'react-router-dom'
+import SmallFooter from './footers/SmallFooter'
 
 function Error() {
     return (
@@ -26,7 +27,7 @@ function Error() {
 
                 </div>
             </div>
-
+        <SmallFooter/>
         </>
     )
 }

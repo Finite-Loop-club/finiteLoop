@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import AuthNavbar from '../../Components/navbars/AuthNavbar'
 import profilepic from '../../assets/member/core/johnWick.png'
@@ -15,6 +15,8 @@ import { FiGithub } from 'react-icons/fi'
 import { MdWorkOutline } from 'react-icons/md'
 import ContactForm from './ContactForm'
 import { AuthContext } from "../../context/AuthContext"
+import SmallFooter from '../../Components/footers/SmallFooter'
+
 
 
 function Home() {
@@ -48,10 +50,10 @@ function Home() {
                                 <NavLink
                                     to="/auth/signin"
                                     className=" ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-slate-700 active:bg-slate-600  text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
-                                    
+
                                 >
                                     {!currentUser ? "Sign in" : "Profile"}
-                                    
+
                                 </NavLink>
                             </div>
                         </div>
@@ -650,6 +652,8 @@ function Home() {
                     </div>
                 </div>
             </section>
+            <SmallFooter />
+
         </>
     )
 }

@@ -14,6 +14,8 @@ import Admin from './views/dashboard/Admin';
 import Dashboard from './views/dashboard/Dashboard';
 import Table from './views/dashboard/Tables';
 
+import ImportingDb from './scripts/ImportingDb';
+
 
 function App() {
 
@@ -49,20 +51,16 @@ function App() {
         <Route exact path="/profile" element={<RequireAuth> <Profile /> </RequireAuth>} ></Route>
         <Route exact path="/profile/getinfo" element={<InfoAuth> <GetInfo /> </InfoAuth>}></Route>
         <Route path="*" element={<Error />}></Route>
-
+        <Route path="/scripts" element={<ImportingDb />}></Route>
 
         {/* dashboard */}
         <Route exact path="/admin" element={<Admin />}>
-
-          <Route path="dashboard" element={ <Dashboard/> } />
-          <Route path="tables" element={ <Table/> } />
-          
-
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="tables" element={<Table />} />
         </Route>
       </Routes>
 
       {/* <Footer /> */}
-      <SmallFooter  />
       {/* </ScrollToTop> */}
 
     </div>

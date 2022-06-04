@@ -6,6 +6,7 @@ import { AuthContext } from "../../context/AuthContext"
 import pattern_Bg from '../../assets/img/register_bg_2.png'
 import AuthNavbar from '../../Components/navbars/AuthNavbar'
 import { doc, setDoc } from "firebase/firestore";
+import SmallFooter from '../../Components/footers/SmallFooter'
 
 
 
@@ -201,10 +202,11 @@ export default function GetInfo() {
                         </form>
                     </div>
                 </div>
-            <div className='h-10' >
+                <div className='h-10' >
 
+                </div>
             </div>
-            </div>
+            <SmallFooter/>
         </>
     );
 }

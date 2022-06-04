@@ -45,7 +45,7 @@ const SmallFooter = (props) => {
                             <ul className="flex flex-wrap list-none md:justify-end  justify-center">
                                 {main.map((index, key) => {
                                     return (
-                                        <>
+                                        < >
                                             <li key={key} >
                                                 <NavLink
                                                     to={index.link}

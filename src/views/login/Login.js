@@ -5,6 +5,7 @@ import Form from './Form'
 import Register from './Register'
 import ResetPassword from './ResetPassword'
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import SmallFooter from '../../Components/footers/SmallFooter'
 
 
 
@@ -40,6 +41,7 @@ function Login() {
 
                 </div>
             </div>
+            <SmallFooter/>
         </>
     )
 }

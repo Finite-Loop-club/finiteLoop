@@ -3,6 +3,7 @@ import Teamcard from './Teamcard'
 import Tab from './Tab'
 import {members} from "./teamdata"
 import AuthNavbar from '../navbars/AuthNavbar'
+import SmallFooter from '../footers/SmallFooter'
 
 function Team() {
   return (
@@ -23,9 +24,8 @@ function Team() {
           />
         )
       })}
-
-        
     </div>
+    <SmallFooter/>
     </>
   )
 }
