@@ -15,14 +15,17 @@ const SmallFooter = (props) => {
         link: "/",
     }]
 
+    const pathname = window.location.pathname
+
     return (
         <>
             <footer
                 className={
                     (props.absolute
                         ? "absolute w-full bottom-0 bg-none"
-                        : "relative") + " pb-6"
+                        : ( pathname==="/admin/dashboard"? "hidden":"relative" ) ) + " pb-6" 
                 }
+                
             >
                 <div className="container mx-auto px-4">
                     <hr className="mb-6 border-b-1 border-slate-600" />
