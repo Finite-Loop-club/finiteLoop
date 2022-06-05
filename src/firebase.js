@@ -42,3 +42,5 @@ export async function getUserInfo(uid) {
     throw new Error('No user logged in');
   }
 }
+
+

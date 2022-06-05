@@ -16,6 +16,8 @@ import Table from './views/dashboard/Tables';
 
 import ImportingDb from './scripts/ImportingDb';
 
+import NewRegister from './views/registration/NewRegister';
+
 
 function App() {
 
@@ -51,7 +53,10 @@ function App() {
         <Route exact path="/profile" element={<RequireAuth> <Profile /> </RequireAuth>} ></Route>
         <Route exact path="/profile/getinfo" element={<InfoAuth> <GetInfo /> </InfoAuth>}></Route>
         <Route path="*" element={<Error />}></Route>
-        <Route path="/scripts" element={<ImportingDb />}></Route>
+        {/* <Route path="/scripts" element={<ImportingDb />}></Route> */}
+
+        
+        <Route exact path="/joinus" element={ <NewRegister/> }></Route>
 
         {/* dashboard */}
         <Route exact path="/admin" element={<Admin />}>

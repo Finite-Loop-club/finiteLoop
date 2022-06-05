@@ -9,20 +9,19 @@ import TableDropdown from "../Dropdowns/TableDropdown";
 import { data } from "autoprefixer";
 
 export default function CardTable({ color }) {
-
+  
   // const [data,setData] = useState([{}])
   const [members, setMembers] = useState([]);
+  
   // const temp = [];
   const fetchMembers = async () => {
-
-
-
-    const querySnapshot = await getDocs(collection(db, "members"));
+    
+    const querySnapshot = await getDocs(collection(db, "newMembers2022_23"));
     querySnapshot.forEach((doc) => {
       // console.log(doc.id, " => ", doc.data().name);
       setMembers((e)=>[...e,doc.data()])
     });
-
+    
 
     // setMembers(temp)
     // console.log(members)
@@ -30,18 +29,20 @@ export default function CardTable({ color }) {
   }
   // const temp=[];
   // const temp=members.map((data,id)=>id==2)
-  console.log(members)
-
-
+  console.log(members.length)
+  
+  
+  
+  
   useEffect(() => {
     // setData(fetchMembers())
     fetchMembers()
     // setMembers(fetchMembers());
-
+    
   }, [])
   // console.log(members);
-
-
+  
+  
   return (
     <>
       <div
@@ -49,7 +50,7 @@ export default function CardTable({ color }) {
           "relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded " +
           (color === "light" ? "bg-white" : "bg-sky-900 text-white")
         }
-      >
+        >
         <div className="rounded-t mb-0 px-4 py-3 border-0">
           <div className="flex flex-wrap items-center">
             <div className="relative w-full px-4 max-w-full flex-grow flex-1">
@@ -58,53 +59,53 @@ export default function CardTable({ color }) {
                   "font-semibold text-lg " +
                   (color === "light" ? "text-slate-700" : "text-white")
                 }
-              >
-                Members Details
+                >
+                Responses
               </h3>
             </div>
           </div>
         </div>
         <div className="block w-full overflow-x-auto">
           {/* Projects table */}
-          <table className="items-center w-full bg-transparent border-collapse">
+          <table className="items-center  w-full bg-transparent border-collapse ">
             <thead>
               <tr>
                 <th
                   className={
                     "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
                     (color === "light"
-                      ? "bg-slate-50 text-slate-500 border-slate-100"
-                      : "bg-sky-800 text-sky-300 border-sky-700")
+                    ? "bg-slate-50 text-slate-500 border-slate-100"
+                    : "bg-sky-800 text-sky-300 border-sky-700")
                   }
-                >
+                  >
                   Name
                 </th>
                 <th
                   className={
                     "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
                     (color === "light"
-                      ? "bg-slate-50 text-slate-500 border-slate-100"
-                      : "bg-sky-800 text-sky-300 border-sky-700")
+                    ? "bg-slate-50 text-slate-500 border-slate-100"
+                    : "bg-sky-800 text-sky-300 border-sky-700")
                   }
-                >
+                  >
                   USN
                 </th>
                 <th
                   className={
                     "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
                     (color === "light"
-                      ? "bg-slate-50 text-slate-500 border-slate-100"
+                    ? "bg-slate-50 text-slate-500 border-slate-100"
                       : "bg-sky-800 text-sky-300 border-sky-700")
                   }
-                >
+                  >
                   Phone
                 </th>
                 <th
                   className={
                     "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
                     (color === "light"
-                      ? "bg-slate-50 text-slate-500 border-slate-100"
-                      : "bg-sky-800 text-sky-300 border-sky-700")
+                    ? "bg-slate-50 text-slate-500 border-slate-100"
+                    : "bg-sky-800 text-sky-300 border-sky-700")
                   }
                 >
                   Email
@@ -125,7 +126,7 @@ export default function CardTable({ color }) {
                         src={src}
                         className="h-12 w-12 bg-white rounded-full border"
                         alt="..."
-                      ></img>{" "}
+                        ></img>{" "}
                       <span
                         className={
                           "ml-3 font-bold " +
@@ -172,3 +173,4 @@ CardTable.defaultProps = {
 CardTable.propTypes = {
   color: PropTypes.oneOf(["light", "dark"]),
 };
+

@@ -1,10 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { db } from "../../../firebase";
+import { doc, getDoc, collection, getDocs } from "firebase/firestore";
 
 // components
 
 import CardStats from "../cards/CardStats";
 
 export default function HeaderStats() {
+
+  const [count, setCount] = useState(0)
+
+  async function getNewRegNum() {
+
+    
+
+    if (1) {
+      const querySnapshot = await getDocs(collection(db, "newMembers2022_23"));
+      querySnapshot.forEach((doc) => {
+          
+          setCount(count+1)
+      });
+      
+    } else {
+      throw new Error('No user logged in');
+    }
+  }
+
+  useEffect(() => {
+    
+    getNewRegNum()
+    
+    
+  }, [])
+  
+
   return (
     <>
       {/* Header */}
@@ -15,17 +44,17 @@ export default function HeaderStats() {
             <div className="flex flex-wrap">
               <div className="w-full lg:w-6/12 xl:w-3/12 px-4">
                 <CardStats
-                  statSubtitle="TRAFFIC"
-                  statTitle="350,897"
-                  statArrow="up"
-                  statPercent="3.48"
-                  statPercentColor="text-emerald-500"
-                  statDescripiron="Since last month"
-                  statIconName="far fa-chart-bar"
-                  statIconColor="bg-red-500"
+                  statSubtitle="Registered"
+                  statTitle={count}
+                  // statArrow="up"
+                  // statPercent="3.48"
+                  // statPercentColor="text-emerald-500"
+                  // statDescripiron="Since last month"
+                  // statIconName="far fa-chart-bar"
+                  // statIconColor="bg-red-500"
                 />
               </div>
-              <div className="w-full lg:w-6/12 xl:w-3/12 px-4">
+              {/* <div className="w-full lg:w-6/12 xl:w-3/12 px-4">
                 <CardStats
                   statSubtitle="NEW USERS"
                   statTitle="2,356"
@@ -60,7 +89,7 @@ export default function HeaderStats() {
                   statIconName="fas fa-percent"
                   statIconColor="bg-sky-500"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
