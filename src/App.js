@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import './index.css';
 import Home from './views/landing/Home';
 import { Routes, Route, Navigate } from "react-router-dom";
-import Events from './Components/Events';
+import Events from './views/event/index';
 import Team from './Components/Team';
 import Error from './Components/Error';
 import Login from './views/login/Login';

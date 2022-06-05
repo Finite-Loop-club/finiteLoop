@@ -3,7 +3,7 @@ import React from 'react'
 function Modal(props) {
     return (
         <>
-            <div id="popup-modal" tabindex="-1" className="visible backdrop-blur-sm overflow-y-auto overflow-x-hidden fixed top-50 right-50  z-50 md:inset-0 h-modal md:h-full">
+            <div id="popup-modal" tabIndex="-1" className="visible backdrop-blur-sm overflow-y-auto overflow-x-hidden fixed top-50 right-50  z-50 md:inset-0 h-modal md:h-full">
                 <div className="relative p-4 w-full max-w-md h-full md:h-auto">
                     <div className="relative bg-white rounded-lg shadow ">
                         <button type="button" className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center " data-modal-toggle="popup-modal">

@@ -1,7 +1,7 @@
-import React from 'react'
-import "./card.css"
-import Button from "../BasicComponents/Button"
+import './card.css'
 import { Fade, Slide } from "react-awesome-reveal";
+
+import EventModal from '../../Components/modal/EventModal';
 
 function Eventcard(props) {
     return (
@@ -12,7 +12,10 @@ function Eventcard(props) {
                     <img className="rounded-lg" src={props.src} alt="" />
                     <div className="flex justify-between items-center">
                         <div>
-                            <h1 className="mt-5 text-gray-600 text-2xl font-semibold">{props.name}</h1>
+                            <h1 className={`mt-5 text-gray-600 ${`${props.name}`.length > 15 ? "text-md font-semibold" : "text-2xl"
+                                } font-semibold`}>
+                                {props.name}
+                            </h1>
                             <p className="mt-2 text-sm text-gray-600">{props.catogary}</p>
                         </div>
                         <div className="mt-4 w-40 md:w-36" >
@@ -27,9 +30,22 @@ function Eventcard(props) {
                 </div>
             </Fade>
 
+            <EventModal
 
+                name={props.name}
+                src={props.src}
+                date={props.date}
+                category={props.category}
+                attended={props.attended}
+                oragnizer={props.oragnizer}
+                desc ={props.desc}
+
+            />
 
         </>
+
+
+
     )
 }
 
