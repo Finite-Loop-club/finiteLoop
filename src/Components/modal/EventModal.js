@@ -5,9 +5,9 @@ import { ImCross } from "react-icons/im"
 function EventModal(props) {
     return (
         <>
-            {/* onClick={() => closeModal(false)} */}
-            <div className='backdrop-blur-sm h-[100vh] fixed top-0 right-0 left-0 z-[999] w-screen'>
-                <Zoom as="div" duration={200} className='flex flex-col h-[100vh] justify-center items-center fixed top-0 right-0 left-0 z-[999] w-screen'>
+
+            <div onClick={() => props.closeModal(false)} className='backdrop-blur-sm h-[100vh] fixed top-0 right-0 left-0 z-[999] w-screen'>
+                <Zoom as="div" duration={200} className='flex flex-col h-[100vh] justify-center items-center fixed top-0 right-0 left-0 z-[999] w-[100vw]'>
                     <div onClick={(e) => e.stopPropagation()} id="extralarge-modal" tabIndex="-1" className=" overflow-y-auto   md:inset-0  flex items-center justify-center justify-items-center overflow-x-hidden  ">
                         <div className="relative p-4 w-full max-w-7xl h-full md:h-auto backdrop-lg  shadow-lg  border-0  " >
                             {/* <!-- Modal content --> */}
@@ -19,22 +19,23 @@ function EventModal(props) {
                                             {props.name}
                                         </h3>
                                     </div>
-                                    <button type="button" className="text-gray-100  gap-1 text-md p-1.5 ml-auto inline-flex items-center " data-modal-toggle="extralarge-modal"  >
+                                    <button type="button" className="text-gray-100  gap-1 text-md p-1.5 ml-auto inline-flex items-center " data-modal-toggle="extralarge-modal"
+                                        onClick={() => { props.closeModal(false) }} >
 
                                         <ImCross className=" inline" />
                                     </button>
                                 </div>
                                 {/* <!-- Modal body --> */}
-                                <div className="overflow-y-scroll sm:overflow-y-auto  h-[80vh] sm:h-auto p-1 sm:flex sm:flex-col md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row">
+                                <div className="overflow-y-scroll sm:overflow-y-auto  h-[80vh] sm:h-auto p-1 sm:flex sm:flex-row md:flex md:flex-row  ">
 
-                                    <div className=" pt-10 pb-3 flex flex-col justify-center  sm:min-w-max sm:w-32 md:w-48 lg:w-6/12">
+                                    
                                         <img src={props.src} alt={""} className=" " />
-                                    </div>
-                                    <div className="align-middle px-2 md:p-10 pt-4   space-y-6  sm:overflow-y-scroll  sm:h-[75vh]">
+                                    
+                                    <div className="align-middle px-2 md:p-10 pt-4   space-y-6  sm:overflow-y-scroll   sm:h-[75vh] md:h-full">
                                         <div>
                                             <div className="py-3 text-gray-100 text-4xl bold"> <span className='font-bold'>Events Details </span>
                                                 <br />
-                                                
+
                                             </div>
 
                                             <div className=" text-gray-100"> <span className='font-semibold' >Name - </span> {props.name}</div>
@@ -48,7 +49,7 @@ function EventModal(props) {
 
                                             <h1 className="text-gray-100/100 text-4xl font-bold py-3">Description</h1>
                                             <p className=" text-base leading-relaxed text-gray-100 ">
-                                                {props.desc}
+                                                {props.desp}
 
                                             </p>
                                         </div>

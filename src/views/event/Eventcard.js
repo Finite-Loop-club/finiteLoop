@@ -1,9 +1,26 @@
+import { useState, useEffect } from 'react';
 import './card.css'
 import { Fade, Slide } from "react-awesome-reveal";
 
 import EventModal from '../../Components/modal/EventModal';
 
 function Eventcard(props) {
+
+
+    const [openModal, setModal] = useState(false);
+
+    useEffect(() => {
+        const handleEscapePress = (e) => {
+            if (e.key === "Escape") {
+                setModal(false);
+            }
+        };
+        window.addEventListener("keydown", handleEscapePress);
+
+        return () => window.removeEventListener("keydown", handleEscapePress);
+    }, []);
+
+
     return (
         <>
 
@@ -22,6 +39,9 @@ function Eventcard(props) {
                             <button
                                 className="bg-white text-slate-700 active:bg-slate-50 text-md font-bold  px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
                                 type="button"
+                                onClick={() => {
+                                    setModal(true);
+                                }}
                             >
                                 Know More
                             </button>
@@ -30,18 +50,19 @@ function Eventcard(props) {
                 </div>
             </Fade>
 
-            <EventModal
 
+            {openModal && <EventModal
                 name={props.name}
                 src={props.src}
                 date={props.date}
                 category={props.category}
                 attended={props.attended}
                 oragnizer={props.oragnizer}
-                desc ={props.desc}
-
+                desp={props.desc}
+                closeModal={setModal}
             />
 
+            }
         </>
 
 
