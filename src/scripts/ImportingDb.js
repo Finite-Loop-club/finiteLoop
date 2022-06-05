@@ -2,14 +2,6 @@ import React, { useState, useContext } from 'react'
 import { db } from '../firebase'
 import { data } from './csvjson'
 import { doc, setDoc } from "firebase/firestore";
-import { AuthContext } from "../context/AuthContext"
-
-
-
-
-
-
-
 
 
 function ImportingDb() {

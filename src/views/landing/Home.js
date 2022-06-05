@@ -1,10 +1,8 @@
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import AuthNavbar from '../../Components/navbars/AuthNavbar'
-import profilepic from '../../assets/member/core/johnWick.png'
 import team from '../../assets/team/team.jpg'
 import pattern from '../../assets/img/pattern_react.png'
-import Button from '../../Components/BasicComponents/Button'
 import { GiThink, GiTeacher } from 'react-icons/gi'
 import { GrWorkshop } from 'react-icons/gr'
 import { BsCardChecklist, } from 'react-icons/bs'
@@ -28,10 +26,10 @@ function Home() {
     return (
         <>
             <AuthNavbar />
-            <section className="header relative  items-center flex h-screen max-h-[860px]">
+            <section className="header relative  items-center flex h-screen max-h-[660px] md:max-h-[560px] ">
                 <div className="container mx-auto items-center flex flex-wrap">
-                    <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 pl-20">
-                        <div className="pt-32 sm:pt-0">
+                    <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-10">
+                        <div className="pt-5 sm:pt-0 z-50 ">
                             <h2 className="font-semibold text-4xl text-slate-600">
                                 Finite Loop - A beautiful Coding Club
                             </h2>
@@ -61,16 +59,14 @@ function Home() {
                 </div>
 
                 <img
-                    className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-[860px]"
+                    className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-[860px] "
                     src={pattern}
                     alt="..."
                 />
             </section>
 
-            <section className="mt-48 md:mt-9 pb-16 relative bg-slate-100">
-
-
-                <div className="container mx-auto px-4 pb-32 pt-48">
+            <section className="mt-10 md:mt-9 pb-16 relative bg-slate-100">
+                <div className="container mx-auto px-4 pb-44 pt-10">
                     <div className="items-center flex flex-wrap">
                         <div className="w-full md:w-5/12 ml-auto px-12 md:px-4">
                             <div className="md:pr-12">
@@ -126,7 +122,7 @@ function Home() {
                             </div>
                         </div>
 
-                        <div className="w-full md:w-6/12 mr-auto px-4 pt-24 md:pt-0">
+                        <div className="w-full md:w-6/12 mr-auto px-4 pt-16 md:pt-0">
                             <img
                                 alt="..."
                                 className="max-w-full rounded-lg shadow-xl"
@@ -161,7 +157,7 @@ function Home() {
                 </div>
                 <div className="container mx-auto">
                     <div className="flex flex-wrap items-center">
-                        <div className="w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32">
+                        <div className="w-11/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32">
                             <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-sky-500">
                                 <img
                                     alt="..."
@@ -170,13 +166,11 @@ function Home() {
                                 />
 
                                 <blockquote className="relative p-8 mb-4">
-
-
                                     <h4 className="text-xl font-bold text-white">
                                         Great for your awesome project
                                     </h4>
                                     <p className="text-md font-light mt-2 text-white">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam necessitatibus sit voluptatibus ut architecto iusto dolores, amet unde dolorum voluptates nemo dignissimos perferendis voluptate quod accusantium vero molestiae reprehenderit sed.
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.  voluptate quod accusantium vero molestiae reprehenderit sed.
                                     </p>
                                 </blockquote>
                             </div>
@@ -209,8 +203,6 @@ function Home() {
                                             </h6>
                                             <p className="mb-4 text-slate-500">
                                                 Explain your ideas to others and participate in activities through which you can learn from your peers.
-
-
                                             </p>
                                         </div>
                                     </div>
@@ -355,99 +347,80 @@ function Home() {
                     <div className="flex flex-wrap items-center ">
                         <div className="w-full md:w-6/12 px-4 mx-auto mt-32">
                             <div className="justify-center flex flex-wrap relative">
-                                <div className="my-4 w-full lg:w-6/12 px-4">
-                                    <a
-                                        href="https://www.creative-tim.com/learning-lab/tailwind/svelte/alerts/notus?ref=vtw-index"
-                                        target="_blank"
-                                    >
-                                        <div className="bg-red-600 shadow-lg rounded-lg text-center p-8">
-                                            <img
-                                                alt="..."
-                                                className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                                                src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/svelte.jpg"
-                                            />
-                                            <p className="text-lg text-white mt-4 font-semibold">
-                                                Svelte
-                                            </p>
-                                        </div>
-                                    </a>
-                                    <a
-                                        href="https://www.creative-tim.com/learning-lab/tailwind/react/alerts/notus?ref=vtw-index"
-                                        target="_blank"
-                                    >
-                                        <div className="bg-sky-500 shadow-lg rounded-lg text-center p-8 mt-8">
-                                            <img
-                                                alt="..."
-                                                className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                                                src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react.jpg"
-                                            />
-                                            <p className="text-lg text-white mt-4 font-semibold">
-                                                ReactJS
-                                            </p>
-                                        </div>
-                                    </a>
-                                    <a
-                                        href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=vtw-index"
-                                        target="_blank"
-                                    >
-                                        <div className="bg-slate-700 shadow-lg rounded-lg text-center p-8 mt-8">
-                                            <img
-                                                alt="..."
-                                                className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                                                src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/nextjs.jpg"
-                                            />
-                                            <p className="text-lg text-white mt-4 font-semibold">
-                                                NextJS
-                                            </p>
-                                        </div>
-                                    </a>
+                                <div className="my-4 w-full lg:w-6/12 px-4 hidden md:block">
+
+                                    <div className="bg-red-600 shadow-lg rounded-lg text-center p-8">
+                                        <img
+                                            alt="..."
+                                            className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
+                                            src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/svelte.jpg"
+                                        />
+                                        <p className="text-lg text-white mt-4 font-semibold">
+                                            Svelte
+                                        </p>
+                                    </div>
+
+
+                                    <div className="bg-sky-500 shadow-lg rounded-lg text-center p-8 mt-8">
+                                        <img
+                                            alt="..."
+                                            className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
+                                            src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react.jpg"
+                                        />
+                                        <p className="text-lg text-white mt-4 font-semibold">
+                                            ReactJS
+                                        </p>
+                                    </div>
+
+
+                                    <div className="bg-slate-700 shadow-lg rounded-lg text-center p-8 mt-8">
+                                        <img
+                                            alt="..."
+                                            className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
+                                            src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/nextjs.jpg"
+                                        />
+                                        <p className="text-lg text-white mt-4 font-semibold">
+                                            NextJS
+                                        </p>
+                                    </div>
+
                                 </div>
                                 <div className="my-4 w-full lg:w-6/12 px-4 lg:mt-16">
-                                    <a
-                                        href="https://www.creative-tim.com/learning-lab/tailwind/js/alerts/notus?ref=vtw-index"
-                                        target="_blank"
-                                    >
-                                        <div className="bg-yellow-500 shadow-lg rounded-lg text-center p-8">
-                                            <img
-                                                alt="..."
-                                                className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                                                src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/js.png"
-                                            />
-                                            <p className="text-lg text-white mt-4 font-semibold">
-                                                JavaScript
-                                            </p>
-                                        </div>
-                                    </a>
-                                    <a
-                                        href="https://www.creative-tim.com/learning-lab/tailwind/angular/alerts/notus?ref=vtw-index"
-                                        target="_blank"
-                                    >
-                                        <div className="bg-red-700 shadow-lg rounded-lg text-center p-8 mt-8">
-                                            <img
-                                                alt="..."
-                                                className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                                                src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/angular.jpg"
-                                            />
-                                            <p className="text-lg text-white mt-4 font-semibold">
-                                                Angular
-                                            </p>
-                                        </div>
-                                    </a>
-                                    <a
-                                        href="https://www.creative-tim.com/learning-lab/tailwind/vue/alerts/notus?ref=vtw-index"
-                                        target="_blank"
-                                    >
-                                        <div className="bg-emerald-500 shadow-lg rounded-lg text-center p-8 mt-8">
-                                            <img
-                                                alt="..."
-                                                className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                                                src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/vue.jpg"
-                                            />
-                                            <p className="text-lg text-white mt-4 font-semibold">
-                                                Vue.js
-                                            </p>
-                                        </div>
-                                    </a>
+
+                                    <div className="bg-yellow-500 shadow-lg rounded-lg text-center p-8">
+                                        <img
+                                            alt="..."
+                                            className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
+                                            src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/js.png"
+                                        />
+                                        <p className="text-lg text-white mt-4 font-semibold">
+                                            JavaScript
+                                        </p>
+                                    </div>
+
+
+                                    <div className="bg-red-700 shadow-lg rounded-lg text-center p-8 mt-8">
+                                        <img
+                                            alt="..."
+                                            className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
+                                            src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/angular.jpg"
+                                        />
+                                        <p className="text-lg text-white mt-4 font-semibold">
+                                            Angular
+                                        </p>
+                                    </div>
+
+
+                                    <div className="bg-emerald-500 shadow-lg rounded-lg text-center p-8 mt-8">
+                                        <img
+                                            alt="..."
+                                            className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
+                                            src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/vue.jpg"
+                                        />
+                                        <p className="text-lg text-white mt-4 font-semibold">
+                                            Vue.js
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -543,8 +516,8 @@ function Home() {
 
             {/* call to action */}
 
-            <section className="py-0 bg-slate-600 overflow-hidden">
-                <div className="container mx-auto pb-24">
+            <section className="py-10 bg-slate-600 overflow-hidden pb-40 md:pb-0 ">
+                <div className="container mx-auto pb-40">
                     <div className="flex flex-wrap justify-center">
                         <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64">
                             <div className="text-slate-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
@@ -566,14 +539,14 @@ function Home() {
                             </NavLink>
                         </div>
 
-                        <div className="w-full md:w-4/12 px-4 mx-auto  mt-32 relative">
+                        <div className="w-full md:w-4/12 px-4 mx-auto  mt-12 relative">
                             < FiGithub className='inline-block w-fit text-white absolute mx-auto text-[300px] lg:text-[500px] opacity-70 ' />
 
                         </div>
                     </div>
                 </div>
             </section>
-            {/* 
+{/*             
             <section className="pb-16 bg-slate-200 relative pt-32">
                 <div
                     className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"

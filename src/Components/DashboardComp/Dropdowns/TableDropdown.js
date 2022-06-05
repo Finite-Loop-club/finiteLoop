@@ -1,5 +1,6 @@
 import React from "react";
 import { createPopper } from "@popperjs/core";
+import {BiDotsVerticalRounded} from 'react-icons/bi'
 
 const NotificationDropdown = () => {
   // dropdown props
@@ -26,7 +27,7 @@ const NotificationDropdown = () => {
           dropdownPopoverShow ? closeDropdownPopover() : openDropdownPopover();
         }}
       >
-        <i className="fas fa-ellipsis-v"></i>
+        <BiDotsVerticalRounded className="inline text-xl text-black " />
       </a>
       <div
         ref={popoverDropdownRef}
