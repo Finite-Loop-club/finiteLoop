@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { GiTechnoHeart } from 'react-icons/gi'
 
 const SmallFooter = (props) => {
     const main = [{
@@ -23,15 +24,15 @@ const SmallFooter = (props) => {
                 className={
                     (props.absolute
                         ? "absolute w-full bottom-0 bg-none"
-                        : ( pathname==="/admin/dashboard"? "hidden":"relative" ) ) + " pb-6" 
+                        : (pathname === "/admin/dashboard" ? "hidden" : "relative")) + " pb-6"
                 }
-                
+
             >
                 <div className="container mx-auto px-4">
                     <hr className="mb-6 border-b-1 border-slate-600" />
-                    <div className="flex flex-wrap items-center md:justify-between justify-center">
-                        <div className="w-full md:w-4/12 px-4">
-                            <div className="text-sm text-black font-semibold py-1 text-center md:text-left">
+                    <div className="flex flex-wrap items-center flex-col md:flex-row  md:justify-between justify-center">
+                        <div className=" px-4">
+                            <div className="text-sm text-black font-semibold py-1 text-center">
                                 Copyright © {new Date().getFullYear()}{" "}
                                 <NavLink
                                     to="/"
@@ -41,8 +42,14 @@ const SmallFooter = (props) => {
                                 </NavLink>
                             </div>
                         </div>
-                        <div className="w-full md:w-8/12 px-4">
-                            <ul className="flex flex-wrap list-none md:justify-end  justify-center">
+                        <div>
+
+                            Created with <GiTechnoHeart className=" inline text-red-700 " /> by <a href='/' > Anjuman </a> from Finite Loop
+                        </div>
+                        <div className="  px-4">
+
+
+                            <ul className="flex flex-wrap list-none ">
                                 {main.map((index, key) => {
                                     return (
                                         < >
