@@ -22,10 +22,10 @@ function Login() {
                     `url(${pattern_Bg})`,
                 backgroundSize: 'cover'
             }}
-                className='bg-slate-800'
+                className='bg-slate-800 min-h-screen '
             >
                 <AuthNavbar />
-                <div className="h-fit bg-none flex bg-no-repeat  ">
+                <div className="h-fit mt-12 pb-10 bg-none flex bg-no-repeat  ">
                     {pathname==='/auth/signup' ? <Register /> : (pathname==='/auth/resetpassword' ? <ResetPassword /> :( pathname==='/auth/signin' ?  <Form />: <Form />) ) }
                     
                     {/* {console.log(pathname)} */}

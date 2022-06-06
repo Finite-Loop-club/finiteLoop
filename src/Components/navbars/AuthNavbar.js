@@ -1,5 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import logo from '../../assets/images/logo.png'
+import logoBig from '../../assets/images/logo1.png'
 import { BiHomeAlt, } from 'react-icons/bi'
 import { AiOutlineTeam, } from 'react-icons/ai'
 import { MdOutlineEmojiEvents, } from 'react-icons/md'
@@ -105,10 +107,12 @@ function AuthNavbar() {
                 <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
                     <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                         <NavLink
-                            className="text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
+                            className="inline-block mr-4   "
                             to="/"
                         >
-                            Finite Loop
+                            {/* <img src={logo}  /> */}
+
+                            <img src={logo} alt="logo"  className='h-16' />
                         </NavLink>
                         <button
                             className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none transition-all duration-150 "

@@ -23,12 +23,9 @@ export default function CardTable({ color }) {
     });
     
 
-    // setMembers(temp)
-    // console.log(members)
-    // return members
+
   }
-  // const temp=[];
-  // const temp=members.map((data,id)=>id==2)
+
   console.log(members.length)
   
   
@@ -60,7 +57,7 @@ export default function CardTable({ color }) {
                   (color === "light" ? "text-slate-700" : "text-white")
                 }
                 >
-                Responses
+                Responses ( {members.length} )
               </h3>
             </div>
           </div>

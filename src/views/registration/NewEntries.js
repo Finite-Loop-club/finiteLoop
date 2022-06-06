@@ -196,7 +196,7 @@ function NewEntries() {
                                         <p className='text-center text-red-600' > {errorMessage} </p>
                                     </div>
 
-                                    <div className="text-center mt-6">
+                                    <div className="text-center mt-6 space-y-2  ">
 
                                         <button
                                             onClick={handleSubmission}
@@ -207,6 +207,19 @@ function NewEntries() {
                                             {loading ? <AiOutlineLoading3Quarters className="inline mr-2  text-md animate-spin align-middle  " /> : ""}
 
                                             {loading ? "Submiting " : " Submit"}
+
+                                        </button>
+
+                                        <button
+                                            // onClick={handleSubmission}
+                                            type='reset'
+
+                                            className={`bg-gray-50 text-gray-700 active:bg-slate-300 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150 ${loading ? "cursor-not-allowed" : ""} `}
+
+                                        >
+                                            {/* {loading ? <AiOutlineLoading3Quarters className="inline mr-2  text-md animate-spin align-middle  " /> : ""} */}
+
+                                            Reset
 
                                         </button>
                                     </div>

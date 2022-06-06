@@ -69,7 +69,7 @@ function ContactForm() {
 
     return (
         <>
-            <div className="container mx-auto px-4 h-full">
+            <div className="mx-auto px-4 h-full">
                 <div className="flex content-center items-center justify-center h-full">
                     <div className="w-full md:w-8/12  lg:w-4/12 px-4">
                         <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-slate-200 border-0">

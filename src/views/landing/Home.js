@@ -40,8 +40,7 @@ function Home() {
                             <div className="mt-12">
                                 <NavLink
                                     to="/joinus"
-                                    target="_blank"
-                                    className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-sky-500 active:bg-sky-600  text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                                    className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-orange-500 active:bg-orange-600  text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                                 >
                                     Join Us
                                 </NavLink>
@@ -158,7 +157,7 @@ function Home() {
                 <div className="container mx-auto">
                     <div className="flex flex-wrap items-center">
                         <div className="w-11/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32">
-                            <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-sky-500">
+                            <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-orange-500">
                                 <img
                                     alt="..."
                                     src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
@@ -588,7 +587,7 @@ function Home() {
                                 <a
                                     href="https://www.creative-tim.com/learning-lab/tailwind/react/overview/notus?ref=nr-index"
                                     target="_blank"
-                                    className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-sky-500 active:bg-sky-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                                    className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-orange-500 active:bg-sky-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                                 >
                                     Get started
                                 </a>
