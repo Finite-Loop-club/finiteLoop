@@ -17,7 +17,7 @@ function Register() {
     // firebase google auth
     const [loading, setLoading] = useState(false);
     const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("123456");
+    const [password, setPassword] = useState("");
     const navigate = useNavigate();
     const { dispatch } = useContext(AuthContext)
 
@@ -99,15 +99,15 @@ function Register() {
         <>
             <div className="container mx-auto px-4 h-fit">
                 <div className="flex content-center items-center justify-center h-fit">
-                    <div className="w-full h-fit  lg:w-5/12  px-4">
+                    <div className="w-full h-fit  lg:w-4/12  px-4">
                         <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-slate-200 border-0">
                             <div className="rounded-t mb-0 px-6 py-6">
                                 <div className="text-center mb-3">
                                     <h6 className="text-slate-500 text-sm font-bold">
-                                        Sign up with
+                                        Sign up
                                     </h6>
                                 </div>
-                                <div className="btn-wrapper text-center">
+                                {/* <div className="btn-wrapper text-center">
                                     <button
                                         className="bg-white active:bg-slate-50 text-slate-700  px-4 py-2 rounded outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
                                         type="button"
@@ -131,16 +131,16 @@ function Register() {
                                         />
                                         Google
                                     </button>
-                                </div>
-                                <hr className="mt-6 border-b-1 border-slate-300" />
+                                </div> */}
+                                {/* <hr className="mt-6 border-b-1 border-slate-300" /> */}
                             </div>
                             <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
-                                <div className="text-slate-400 text-center mb-3 font-bold">
+                                {/* <div className="text-slate-400 text-center mb-3 font-bold">
                                     <small>Or sign up with credentials</small>
-                                </div>
+                                </div> */}
                                 <form  >
                                     <div className="flex flex-wrap md:flex-nowrap justify-between gap-2 ">
-                                        <div className="w-full lg:w-6/12 ">
+                                        <div className="w-full ">
                                             <div className="relative w-full mb-3">
                                                 <label
                                                     className="block uppercase text-slate-600 text-xs font-bold mb-2"
@@ -155,7 +155,7 @@ function Register() {
                                                 />
                                             </div>
                                         </div>
-                                        <div className="w-full lg:w-6/12 ">
+                                        {/* <div className="w-full lg:w-6/12 ">
                                             <div className=" w-full mb-3">
                                                 <label
                                                     className="block uppercase text-slate-600 text-xs font-bold mb-2"
@@ -176,10 +176,10 @@ function Register() {
 
                                                 </select>
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
                                     <div className="flex flex-wrap md:flex-nowrap gap-2">
-                                        <div className="relative w-full lg:w-6/12 mb-3">
+                                        <div className="relative w-full  mb-3">
                                             <label
                                                 className="block uppercase text-slate-600 text-xs font-bold mb-2"
                                                 htmlFor="grid-password"
@@ -194,7 +194,7 @@ function Register() {
                                             />
                                         </div>
 
-                                        <div className=" w-full lg:w-6/12 mb-3">
+                                        {/* <div className=" w-full lg:w-6/12 mb-3">
                                             <label
                                                 className="block uppercase text-slate-600 text-xs font-bold mb-2"
                                                 htmlFor="grid-password"
@@ -207,7 +207,7 @@ function Register() {
                                                 placeholder="Phone"
                                                 onChange={e => setPhone(e.target.value)}
                                             />
-                                        </div>
+                                        </div> */}
                                     </div>
 
                                     <div className="relative w-full mb-3">
@@ -222,6 +222,21 @@ function Register() {
                                             className="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                                             placeholder="Email"
                                             onChange={e => setEmail(e.target.value)}
+                                        />
+                                    </div>
+
+                                    <div className="relative w-full mb-3">
+                                        <label
+                                            className="block uppercase text-slate-600 text-xs font-bold mb-2"
+                                            htmlFor="grid-password"
+                                        >
+                                            Password
+                                        </label>
+                                        <input
+                                            type="password"
+                                            className="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                                            placeholder="Password"
+                                            onChange={e => setPassword(e.target.value)}
                                         />
                                     </div>
 
