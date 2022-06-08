@@ -8,6 +8,7 @@ export const eventData = [
     oragnizer: "Sanath R Pai, Shravya S Rao , Shrilaxmi Pai ",
     desc:
       "Information Security competition that challenges the contestants to solve a variety of tasks ranging from a scavenger hunt on Wikipedia to basic programming exercises, to hack their way into a server to steal the data.",
+    year:""
   },
  
   {
