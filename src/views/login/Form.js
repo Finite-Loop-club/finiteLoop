@@ -7,7 +7,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth, provider, providerGithub } from '../../firebase'
 import { AuthContext } from "../../context/AuthContext"
-
+import { signOut } from "firebase/auth";
 
 
 
@@ -18,6 +18,7 @@ function Form() {
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
     const { dispatch } = useContext(AuthContext)
+    const { currentUser } = useContext(AuthContext)
 
     //error states
     const [error, setError] = useState(false);
@@ -35,7 +36,7 @@ function Form() {
                 dispatch({ type: "SIGNIN", payload: user })
                 console.log(user);
                 // alert("login successful");
-                navigate("/profile")
+                navigate("/admin/dashboard")
                 setError(false);
             })
             .catch((err) => {
@@ -63,10 +64,26 @@ function Form() {
             });
     }
 
+    const handleSignOut = (e) => {       
+            signOut(auth).then(() => {
 
+                // Sign-out successful.
+                console.log("signout is successfull");
+                dispatch({ type: "SIGNOUT", payload: null })
+
+            }).catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log("error in signing out");
+                console.log(errorCode);
+                // An error happened.
+            });
+        
+    }
 
     const handleGoogleAuth = (e) => {
         e.preventDefault();
+        
 
         signInWithPopup(auth, provider)
             .then((result) => {
@@ -76,9 +93,15 @@ function Form() {
                 console.log(token);
                 // The signed-in user info.
                 const user = result.user;
-                dispatch({ type: "SIGNIN", payload: user })
-                navigate("/profile")
-                console.log(user);
+                if (user.email==="ayusmann23@gmail.com") {
+                    dispatch({ type: "SIGNIN", payload: user })  
+                    navigate("/admin/dashboard")
+                }
+                else{
+                    handleSignOut();
+                }
+                console.log(user.email);
+
 
                 // ...
             }).catch((error) => {
@@ -95,6 +118,7 @@ function Form() {
                 // ...
             });
     }
+    
 
 
     return (
@@ -216,11 +240,11 @@ function Form() {
                                     <small>Forgot password?</small>
                                 </NavLink>
                             </div>
-                            <div className="w-1/2 text-right">
+                            {/* <div className="w-1/2 text-right">
                                 <NavLink to="/auth/signup" className="text-slate-200">
                                     <small>Create new account</small>
                                 </NavLink>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
@@ -230,4 +254,3 @@ function Form() {
 }
 
 export default Form
-// export const user = auth.currentUser;

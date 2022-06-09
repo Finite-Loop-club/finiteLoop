@@ -55,6 +55,7 @@ function App() {
 
         </Route>
         <Route exact path="/profile" element={<RequireAuth> <Profile /> </RequireAuth>} ></Route>
+        
         <Route exact path="/profile/getinfo" element={<InfoAuth> <GetInfo /> </InfoAuth>}></Route>
         <Route path="*" element={<Error />}></Route>
         {/* <Route path="/scripts" element={<ImportingDb />}></Route> */}
@@ -63,7 +64,7 @@ function App() {
         <Route exact path="/joinus" element={<NewRegister />}></Route>
 
         {/* dashboard */}
-        <Route exact path="/admin" element={<Admin />}>
+        <Route exact path="/admin" element={ <RequireAuth> <Admin /> </RequireAuth> }>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="tables" element={<Table />} />
         </Route>

@@ -110,11 +110,11 @@ function ResetPassword() {
                                     <small> Sign in</small>
                                 </NavLink>
                             </div>
-                            <div className="w-1/2 text-right">
+                            {/* <div className="w-1/2 text-right">
                                 <NavLink to="/auth/signup" className="text-slate-200">
                                     <small>New User? Create new account</small>
                                 </NavLink>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

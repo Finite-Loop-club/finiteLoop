@@ -141,11 +141,11 @@ export default function Sidebar() {
                 <NavLink
                   className={
                     "text-xs uppercase py-3 font-bold block " +
-                    (window.location.href.indexOf("/admin/tables") !== -1
+                    (window.location.href.indexOf("/admin/coremembers") !== -1
                       ? "text-sky-500 hover:text-sky-600"
                       : "text-slate-700 hover:text-slate-500")
                   }
-                  to="/admin/tables"
+                  to=""
                 >
                   <FaTable className='inline mr-2 ' />
                   {" "}
