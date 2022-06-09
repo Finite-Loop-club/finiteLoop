@@ -52,7 +52,7 @@ function NewEntries() {
         e.preventDefault();
 
         if (name && usn && phone && branch) {
-            await setDoc(doc(db, "newMembers2022_23", usn.toUpperCase()), {
+            await setDoc(doc(db, "coreMembers", usn), {
                 name: name,
                 usn: usn.toUpperCase(),
                 email: email,

@@ -3,6 +3,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import {GiHamburgerMenu  } from 'react-icons/gi'
 import {ImCross } from 'react-icons/im'
+import {FaTv,FaTable, FaTools , FaMapMarkedAlt } from 'react-icons/fa'
 
 
 import NotificationDropdown from "../Dropdowns/NotificationDropdown";
@@ -97,14 +98,16 @@ export default function Sidebar() {
                   }
                   to="/admin/dashboard"
                 >
-                  <i
+                  <FaTv className="inline mr-2" />
+                  {/* <i
                     className={
                       "fas fa-tv mr-2 text-sm " +
                       (window.location.href.indexOf("/admin/dashboard") !== -1
                         ? "opacity-75"
                         : "text-slate-300")
                     }
-                  ></i>{" "}
+                  ></i> */}
+                  {" "}
                   Dashboard
                 </NavLink>
               </li>
@@ -117,17 +120,20 @@ export default function Sidebar() {
                       ? "text-sky-500 hover:text-sky-600"
                       : "text-slate-700 hover:text-slate-500")
                   }
-                  to="/admin/settings"
+                  to=""
                 >
-                  <i
+
+                  <FaTools className='inline mr-2' />
+                  {/* <i
                     className={
                       "fas fa-tools mr-2 text-sm " +
                       (window.location.href.indexOf("/admin/settings") !== -1
                         ? "opacity-75"
                         : "text-slate-300")
                     }
-                  ></i>{" "}
-                  Settings
+                  ></i> */}
+                  {" "}
+                  Coming soon
                 </NavLink>
               </li>
 
@@ -141,15 +147,26 @@ export default function Sidebar() {
                   }
                   to="/admin/tables"
                 >
-                  <i
-                    className={
-                      "fas fa-table mr-2 text-sm " +
-                      (window.location.href.indexOf("/admin/tables") !== -1
-                        ? "opacity-75"
-                        : "text-slate-300")
-                    }
-                  ></i>{" "}
-                  Tables
+                  <FaTable className='inline mr-2 ' />
+                  {" "}
+                  Core Members
+                </NavLink>
+              </li>
+
+              
+              <li className="items-center">
+                <NavLink
+                  className={
+                    "text-xs uppercase py-3 font-bold block " +
+                    (window.location.href.indexOf("/admin/tables") !== -1
+                      ? "text-sky-500 hover:text-sky-600"
+                      : "text-slate-700 hover:text-slate-500")
+                  }
+                  to="/admin/tables"
+                >
+                  <FaTable className='inline mr-2 ' />
+                  {" "}
+                  Form Responses 
                 </NavLink>
               </li>
 
@@ -161,17 +178,12 @@ export default function Sidebar() {
                       ? "text-sky-500 hover:text-sky-600"
                       : "text-slate-700 hover:text-slate-500")
                   }
-                  to="/admin/maps"
+                  to=""
                 >
-                  <i
-                    className={
-                      "fas fa-map-marked mr-2 text-sm " +
-                      (window.location.href.indexOf("/admin/maps") !== -1
-                        ? "opacity-75"
-                        : "text-slate-300")
-                    }
-                  ></i>{" "}
-                  Maps
+                  
+                  <FaMapMarkedAlt className="inline mr-2" />
+                  {" "}
+                  Coming soon
                 </NavLink>
               </li>
             </ul>
@@ -218,7 +230,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <NavLink
                   className="text-slate-700 hover:text-slate-500 text-xs uppercase py-3 font-bold block"
-                  to="/landing"
+                  to="/"
                 >
                   <i className="fas fa-newspaper text-slate-400 mr-2 text-sm"></i>{" "}
                   Landing Page
@@ -236,102 +248,7 @@ export default function Sidebar() {
               </li>
             </ul>
 
-            {/* Divider */}
-            <hr className="my-4 md:min-w-full" />
-            {/* Heading */}
-            <h6 className="md:min-w-full text-slate-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
-              Documentation
-            </h6>
-            {/* Navigation */}
-            <ul className="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
-              <li className="inline-flex">
-                <a
-                  href="https://www.creative-tim.com/learning-lab/tailwind/react/colors/notus"
-                  target="_blank"
-                  className="text-slate-700 hover:text-slate-500 text-sm block mb-4 no-underline font-semibold"
-                >
-                  <i className="fas fa-paint-brush mr-2 text-slate-300 text-base"></i>
-                  Styles
-                </a>
-              </li>
-
-              <li className="inline-flex">
-                <a
-                  href="https://www.creative-tim.com/learning-lab/tailwind/react/alerts/notus"
-                  target="_blank"
-                  className="text-slate-700 hover:text-slate-500 text-sm block mb-4 no-underline font-semibold"
-                >
-                  <i className="fab fa-css3-alt mr-2 text-slate-300 text-base"></i>
-                  CSS Components
-                </a>
-              </li>
-
-              <li className="inline-flex">
-                <a
-                  href="https://www.creative-tim.com/learning-lab/tailwind/angular/overview/notus"
-                  target="_blank"
-                  className="text-slate-700 hover:text-slate-500 text-sm block mb-4 no-underline font-semibold"
-                >
-                  <i className="fab fa-angular mr-2 text-slate-300 text-base"></i>
-                  Angular
-                </a>
-              </li>
-
-              <li className="inline-flex">
-                <a
-                  href="https://www.creative-tim.com/learning-lab/tailwind/js/overview/notus"
-                  target="_blank"
-                  className="text-slate-700 hover:text-slate-500 text-sm block mb-4 no-underline font-semibold"
-                >
-                  <i className="fab fa-js-square mr-2 text-slate-300 text-base"></i>
-                  Javascript
-                </a>
-              </li>
-
-              <li className="inline-flex">
-                <a
-                  href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/overview/notus"
-                  target="_blank"
-                  className="text-slate-700 hover:text-slate-500 text-sm block mb-4 no-underline font-semibold"
-                >
-                  <i className="fab fa-react mr-2 text-slate-300 text-base"></i>
-                  NextJS
-                </a>
-              </li>
-
-              <li className="inline-flex">
-                <a
-                  href="https://www.creative-tim.com/learning-lab/tailwind/react/overview/notus"
-                  target="_blank"
-                  className="text-slate-700 hover:text-slate-500 text-sm block mb-4 no-underline font-semibold"
-                >
-                  <i className="fab fa-react mr-2 text-slate-300 text-base"></i>
-                  React
-                </a>
-              </li>
-
-              <li className="inline-flex">
-                <a
-                  href="https://www.creative-tim.com/learning-lab/tailwind/svelte/overview/notus"
-                  target="_blank"
-                  className="text-slate-700 hover:text-slate-500 text-sm block mb-4 no-underline font-semibold"
-                >
-                  <i className="fas fa-NavLink mr-2 text-slate-300 text-base"></i>
-                  Svelte
-                </a>
-              </li>
-
-              <li className="inline-flex">
-                <a
-                  href="https://www.creative-tim.com/learning-lab/tailwind/vue/overview/notus"
-                  target="_blank"
-                  className="text-slate-700 hover:text-slate-500 text-sm block mb-4 no-underline font-semibold"
-                >
-                  <i className="fab fa-vuejs mr-2 text-slate-300 text-base"></i>
-                  VueJS
-                </a>
-              </li>
-            </ul>
+            
           </div>
         </div>
       </nav>

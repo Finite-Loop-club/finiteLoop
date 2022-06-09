@@ -1,12 +1,9 @@
 import { useState } from 'react'
 import pattern_Bg from '../../assets/img/register_bg_2.png'
 import AuthNavbar from '../../Components/navbars/AuthNavbar'
-import Form from './Form'
-import Register from './Register'
-import ResetPassword from './ResetPassword'
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Outlet} from "react-router-dom";
 import SmallFooter from '../../Components/footers/SmallFooter'
-
+import { } from 'react-router-dom'
 
 
 function Login() {
@@ -26,7 +23,9 @@ function Login() {
             >
                 <AuthNavbar />
                 <div className="h-fit mt-12 pb-10 bg-none flex bg-no-repeat  ">
-                    {pathname==='/auth/signup' ? <Register /> : (pathname==='/auth/resetpassword' ? <ResetPassword /> :( pathname==='/auth/signin' ?  <Form />: <Form />) ) }
+
+                    <Outlet/>
+                    {/* {pathname==='/auth/signup' ? <Register /> : (pathname==='/auth/resetpassword' ? <ResetPassword /> :( pathname==='/auth/signin' ?  <Form />: <Form />) ) } */}
                     
                     {/* {console.log(pathname)} */}
 
