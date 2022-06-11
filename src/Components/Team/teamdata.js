@@ -16,11 +16,11 @@ export const members = [
     bgImage: "/team/bg/bgBlue.jpg"
   },
   {
-    name: "Shrilakshmi Pai",
-    role: "President",
-    img: "/team/team2022/shrilaxmi.png",
-    github: "https://github.com/ShrilakshmiPai",
-    linkedin: "https://www.linkedin.com/in/shrilakshmipai",
+    name: "Bhargavi Nayak",
+    role: "Vice-President",
+    img: "/team/team2022/bhargavi.jpg",
+    github: "https://github.com/Bhargavi09",
+    linkedin: "https://www.linkedin.com/in/bhargavi-nayak/?original_referer=https%3A%2F%2Ffiniteloop.co.in%2F",
   },
   {
     name: "Shrilakshmi Pai",
