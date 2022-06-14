@@ -34,12 +34,12 @@ function AuthNavbar() {
             icons: <MdOutlineEmojiEvents className='inline text-slate-50 mr-2 text-lg' />,
 
         },
-        {
-            option: "Gallery",
-            link: "/",
-            icons: <RiGalleryLine className='inline text-slate-50 mr-2 text-lg' />,
+        // {
+        //     option: "Gallery",
+        //     link: "/",
+        //     icons: <RiGalleryLine className='inline text-slate-50 mr-2 text-lg' />,
 
-        },
+        // },
         {
             option: "Team",
             link: "/team",

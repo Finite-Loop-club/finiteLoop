@@ -1,5 +1,5 @@
 import React from 'react'
-import error from './Home/png/pagenotfound.png'
+import error from '../assets/img/pagenotfound.png'
 import Button from './BasicComponents/Button'
 import AuthNavbar from './navbars/AuthNavbar'
 import { NavLink } from 'react-router-dom'

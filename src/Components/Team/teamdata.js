@@ -1,11 +1,47 @@
 export const members = [
+
+  //Faculty 
+
+  {
+    name: "Mr. NIRANJAN N CHIPLUNKAR",
+    role: "PRINCIPAL",
+    img: "/team/team2022/shrilaxmi.png",
+    // github: "https://github.com/ShrilakshmiPai",
+    linkedin: "https://www.linkedin.com/in/niranjan-chiplunkar-47b302a/",
+    year:"faculty"
+  },
+  {
+    name: "Mr. Shashank Shetty",
+    role: "Assistant Professor-CSE",
+    img: "/team/team2022/shrilaxmi.png",
+    // github: "https://github.com/ShrilakshmiPai",
+    linkedin: "https://www.linkedin.com/in/niranjan-chiplunkar-47b302a/",
+    year:"faculty"
+  },
+  {
+    name: "Mr. Krishna Prasad Rao",
+    role: "Assistant Professor-CSE",
+    img: "/team/team2022/shrilaxmi.png",
+    // github: "https://github.com/ShrilakshmiPai",
+    linkedin: "https://www.linkedin.com/in/niranjan-chiplunkar-47b302a/",
+    year:"faculty"
+  },
+  {
+    name: "Mr. Puneeth R P",
+    role: "Assistant Professor-CSE",
+    img: "/team/team2022/shrilaxmi.png",
+    // github: "https://github.com/ShrilakshmiPai",
+    linkedin: "https://www.linkedin.com/in/niranjan-chiplunkar-47b302a/",
+    year:"faculty"
+  },
+
+  //Team 2021-22
   {
     name: "Shrilakshmi Pai",
     role: "President",
     img: "/team/team2022/shrilaxmi.png",
     github: "https://github.com/ShrilakshmiPai",
     linkedin: "https://www.linkedin.com/in/shrilakshmipai",
-    bgImage: "/team/bg/bgBlue2.jpg",
     year:"2021-22"
   },
   {
@@ -154,4 +190,10 @@ export const members = [
     year:"2021-22"
   },
   
+
+
+  //Team 2021-20
+
+
+  //Team 2020-2017
 ];

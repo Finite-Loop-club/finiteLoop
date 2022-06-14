@@ -10,7 +10,7 @@ function Teamcard(props) {
 
                 backgroundImage:
                     `url(${props.bgImage})`,
-                    
+
                 backgroundSize: 'cover'
             }} className="shadow-2xl bg-no-repeat  hover:shadow-gray-900 hover:shadow-2xl transition duration-300 max-w-sm scale-90 lg:scale-100 h-full text-center w-[80%] lg:w-[20%] m-5 rounded-md">
                 <div className="transition-transform hover:scale-[1.15]  duration-300">
@@ -18,21 +18,27 @@ function Teamcard(props) {
                         <img className=" object-cover h-60 w-fit m-auto " src={props.src} alt="" />
                     </div>
                     <div className="text-center h-32 bg-white  p-2">
-                        <h1 className="pt-2  font-semibold text-xl text-gray-900 tracking-wide">
+                        <h1 className= {`pt-2 font-semibold ${props.name.length> 20 ? "text-md" : "text-xl" }   text-gray-900 tracking-wide`} >
                             {props.name}
                         </h1>
                         <h3 className="pt-2 pb-4 text-sm text-slate-400 font-semibold tracking-wider">
                             {props.role}
                         </h3>
                         <div className="flex justify-center gap-7 mb-2">
-                            <a href={props.github}>
+                            {
+                                props.github ?
+                                    <a href={props.github}>
 
-                                <FaGithub className="  text-black hover:text-gray-600 cursor cursor-pointer   transition-all ease-in-out  text-2xl " />
-                            </a>
+                                        <FaGithub className="  text-black hover:text-gray-600 cursor cursor-pointer   transition-all ease-in-out  text-2xl " />
+                                    </a> : ""
+                            }
 
-                            <a href={props.linkedin}>
-                                <FiLinkedin className="  text-black hover:text-gray-600 cursor-pointer  transition-all ease-in-out text-2xl " />
-                            </a>
+                            {
+                                props.linkedin ? <a href={props.linkedin}>
+                                    <FiLinkedin className="  text-black hover:text-gray-600 cursor-pointer  transition-all ease-in-out text-2xl " />
+                                </a> : ""
+                            }
+
                         </div>
                     </div>
                 </div>
