@@ -7,10 +7,7 @@ import { } from 'react-router-dom'
 
 
 function Login() {
-    const pathname = window.location.pathname
-
-    // cosnt [pathname, setPathname] =useState(window.location.pathname)
-
+    
     return (
         <>
             <div style={{
@@ -23,21 +20,7 @@ function Login() {
             >
                 <AuthNavbar />
                 <div className="h-fit mt-12 pb-10 bg-none flex bg-no-repeat  ">
-
                     <Outlet/>
-                    {/* {pathname==='/auth/signup' ? <Register /> : (pathname==='/auth/resetpassword' ? <ResetPassword /> :( pathname==='/auth/signin' ?  <Form />: <Form />) ) } */}
-                    
-                    {/* {console.log(pathname)} */}
-
-                    {/* <BrowserRouter>
-                        <Routes>
-                            <Route path="/login/signin" element={<Form />}></Route>
-                            <Route path="/auth/resetPassword" element={<ResetPassword />}></Route>
-                            <Route path="/auth/register" element={<Register />}></Route>
-                        </Routes>
-                    </BrowserRouter> */}
-
-
                 </div>
             </div>
             <SmallFooter/>

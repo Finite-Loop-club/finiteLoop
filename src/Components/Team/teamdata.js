@@ -9,15 +9,6 @@ export const members = [
     year:"2021-22"
   },
   {
-    name: "Anjuman Raj",
-    role: "Technical Head",
-    img: "/team/team2022/johnWick.png",
-    github: "https://github.com/ayusmann/",
-    linkedin: "https://www.linkedin.com/in/anjuman-raj-ba390b1b5/",
-    bgImage: "/team/bg/bgBlue.jpg",
-    year:"2021-22"
-  },
-  {
     name: "Bhargavi Nayak",
     role: "Vice-President",
     img: "/team/team2022/bhargavi.jpg",
@@ -71,6 +62,15 @@ export const members = [
     img: "/team/team2022/vidyesh.jpeg",
     github: "https://github.com/vidyesh-kumar",
     linkedin: "hhttps://www.linkedin.com/in/vidyesh-kumar-83667221a/",
+    year:"2021-22"
+  },
+  {
+    name: "Anjuman Raj",
+    role: "Technical Head",
+    img: "/team/team2022/johnWick.png",
+    github: "https://github.com/ayusmann/",
+    linkedin: "https://www.linkedin.com/in/anjuman-raj-ba390b1b5/",
+    bgImage: "/team/bg/bgBlue.jpg",
     year:"2021-22"
   },
   {

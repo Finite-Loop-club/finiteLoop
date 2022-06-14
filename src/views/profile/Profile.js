@@ -10,13 +10,13 @@ import { AiOutlineUser, AiOutlineMail, AiOutlineBranches, AiOutlineEdit } from '
 import SmallFooter from '../../Components/footers/SmallFooter'
 
 
-// name: `${user ? user.displayName : "Name" }`,
+
 
 function Profile() {
 
   const { currentUser } = useContext(AuthContext);
 
-  // const docRef = doc(db, "Members", currentUser.uid);
+
 
   const handleName = () => {
     if (currentUser.displayName) {
