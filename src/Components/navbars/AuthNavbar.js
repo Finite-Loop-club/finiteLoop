@@ -13,6 +13,7 @@ import { GrClose } from 'react-icons/gr'
 import { AuthContext } from "../../context/AuthContext"
 import { signOut } from "firebase/auth";
 import { auth } from '../../firebase'
+import {Fade} from 'react-awesome-reveal'
 
 
 
@@ -103,7 +104,7 @@ function AuthNavbar() {
 
     return (
         <>
-            <nav className="top-0 sticky z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg backdrop-brightness-50 drop-shadow-md ">
+            <Fade cascade  className="top-0 sticky z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg backdrop-brightness-50 drop-shadow-md ">
                 <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
                     <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                         <NavLink
@@ -188,7 +189,7 @@ function AuthNavbar() {
                         </ul>
                     </div>
                 </div>
-            </nav>
+            </Fade>
         </>
     )
 }

@@ -14,7 +14,7 @@ import { MdWorkOutline } from 'react-icons/md'
 import ContactForm from './ContactForm'
 import { AuthContext } from "../../context/AuthContext"
 import SmallFooter from '../../Components/footers/SmallFooter'
-
+import { Fade, Slide } from 'react-awesome-reveal'
 
 
 function Home() {
@@ -26,239 +26,247 @@ function Home() {
     return (
         <>
             <AuthNavbar />
-            <section className="header relative  items-center flex h-screen max-h-[660px] md:max-h-[560px] ">
-                <div className="container mx-auto items-center flex flex-wrap">
-                    <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-10">
-                        <div className="pt-5 sm:pt-0 z-50 ">
-                            <h2 className="font-semibold text-4xl text-slate-600">
-                                Finite Loop - A beautiful Coding Club
-                            </h2>
-                            <p className="mt-4 text-lg leading-relaxed text-slate-500">
-                                Some description Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore possimus fugiat autem in fuga. Quam. {" "}
+            <Fade cascade={true} duration={3000} >
+                <section className="header relative  items-center flex h-screen max-h-[660px] md:max-h-[560px] ">
 
-                            </p>
-                            <div className="mt-12">
-                                <NavLink
-                                    to="/joinus"
-                                    className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-orange-500 active:bg-orange-600  text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
-                                >
-                                    Join Us
-                                </NavLink>
-                                <NavLink
-                                    to="/auth/signin"
-                                    className=" ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-slate-700 active:bg-slate-600  text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                    <Slide duration={3000} direction={"left"} >
+                        <div className="mx-auto items-center flex flex-wrap">
+                            <div className="w-full md:w-8/12 lg:w-8/12 xl:w-8/12 px-10">
+                                <div className="pt-5 sm:pt-0 z-50 ">
+                                    <h2 className="font-semibold text-4xl text-slate-600">
+                                        Finite Loop - A beautiful Coding Club
+                                    </h2>
+                                    <p className="mt-4 text-lg leading-relaxed text-slate-500">
+                                        Some description Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore possimus fugiat autem in fuga. Quam. {" "}
 
-                                >
-                                    {!currentUser ? "Sign in" : "Profile"}
+                                    </p>
+                                    <div className="mt-12">
+                                        <NavLink
+                                            to="/joinus"
+                                            className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-orange-500 active:bg-orange-600  text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                                        >
+                                            Join Us
+                                        </NavLink>
+                                        <NavLink
+                                            to="/auth/signin"
+                                            className=" ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-slate-700 active:bg-slate-600  text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
 
-                                </NavLink>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                        >
+                                            {!currentUser ? "Sign in" : "Profile"}
 
-                <img
-                    className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-[860px] "
-                    src={pattern}
-                    alt="..."
-                />
-            </section>
-
-            <section className="mt-10 md:mt-9 pb-16 relative bg-slate-100">
-                <div className="container mx-auto px-4 pb-44 pt-10">
-                    <div className="items-center flex flex-wrap">
-                        <div className="w-full md:w-5/12 ml-auto px-12 md:px-4">
-                            <div className="md:pr-12">
-                                <div className="  text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white text-2xl ">
-                                    <BiMessageSquareDetail className='text-slate-900  ' />
+                                        </NavLink>
+                                    </div>
                                 </div>
-                                <h3 className="text-3xl font-semibold">
-                                    About Us
-                                </h3>
-                                <p className="mt-4 text-lg leading-relaxed text-slate-500">
-                                    Finite Loop is a Coding Club, which aims to give a good perspective of development, and encourages students to realize their ideas. We encourage students to participate in competitive programming and thus, inspire the next.
-
-
-                                </p>
-                                <ul className="list-none mt-6">
-                                    <li className="py-2">
-                                        <div className="flex items-center">
-                                            <div>
-                                                <GiThink className='inline-block text-slate-900 mr-2 text-2xl' />
-                                            </div>
-                                            <div>
-                                                <h4 className="text-slate-500">
-                                                    We stay curious, and seek out new solutions
-                                                </h4>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li className="py-2">
-                                        <div className="flex items-center">
-                                            <div>
-                                                <BsCardChecklist className='inline-block text-slate-900 mr-2 text-2xl' />
-                                            </div>
-                                            <div>
-                                                <h4 className="text-slate-500">
-                                                    We work relentlessly to produce fruitful results.
-                                                </h4>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li className="py-2">
-                                        <div className="flex items-center">
-                                            <div>
-                                                <FaFistRaised className='inline-block text-slate-900 mr-2 text-2xl' />
-                                            </div>
-                                            <div>
-                                                <h4 className="text-slate-500">
-                                                    We support each other to grow, with a positive spirit, and embrace our diversities.
-                                                </h4>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
+                    </Slide>
 
-                        <div className="w-full md:w-6/12 mr-auto px-4 pt-16 md:pt-0">
-                            <img
-                                alt="..."
-                                className="max-w-full rounded-lg shadow-xl"
-                                style={{
-                                    transform:
-                                        "scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg)",
-                                }}
-                                src={team}
-                            />
-                        </div>
-                    </div>
-                </div>
 
-                <div
-                    className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
-                    style={{ transform: "translateZ(0)" }}
-                >
-                    <svg
-                        className="absolute bottom-0 overflow-hidden"
-                        xmlns="http://www.w3.org/2000/svg"
-                        preserveAspectRatio="none"
-                        version="1.1"
-                        viewBox="0 0 2560 100"
-                        x="0"
-                        y="0"
-                    >
-                        <polygon
-                            className="text-slate-100 fill-current"
-                            points="2560 0 2560 100 0 100"
-                        ></polygon>
-                    </svg>
-                </div>
-                <div className="container mx-auto">
-                    <div className="flex flex-wrap items-center">
-                        <div className="w-11/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32">
-                            <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-orange-500">
+                    <img
+                        className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-[860px] "
+                        src={pattern}
+                        alt="..."
+                    />
+                </section>
+            </Fade>
+
+
+            <Fade  duration={3000} >
+                <section className="mt-10 md:mt-10 pb-16 relative bg-slate-100">
+                    <div className="container mx-auto px-4 pb-44 pt-10">
+                        <div className="items-center flex flex-wrap">
+                            <div className="w-full md:w-5/12 ml-auto px-12 md:px-4">
+                                <div className="md:pr-12">
+                                    <div className="  text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white text-2xl ">
+                                        <BiMessageSquareDetail className='text-slate-900  ' />
+                                    </div>
+                                    <h3 className="text-3xl font-semibold">
+                                        About Us
+                                    </h3>
+                                    <p className="mt-4 text-lg leading-relaxed text-slate-500">
+                                        Finite Loop is a Coding Club, which aims to give a good perspective of development, and encourages students to realize their ideas. We encourage students to participate in competitive programming and thus, inspire the next.
+
+
+                                    </p>
+                                    <ul className="list-none mt-6">
+                                        <li className="py-2">
+                                            <div className="flex items-center">
+                                                <div>
+                                                    <GiThink className='inline-block text-slate-900 mr-2 text-2xl' />
+                                                </div>
+                                                <div>
+                                                    <h4 className="text-slate-500">
+                                                        We stay curious, and seek out new solutions
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li className="py-2">
+                                            <div className="flex items-center">
+                                                <div>
+                                                    <BsCardChecklist className='inline-block text-slate-900 mr-2 text-2xl' />
+                                                </div>
+                                                <div>
+                                                    <h4 className="text-slate-500">
+                                                        We work relentlessly to produce fruitful results.
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li className="py-2">
+                                            <div className="flex items-center">
+                                                <div>
+                                                    <FaFistRaised className='inline-block text-slate-900 mr-2 text-2xl' />
+                                                </div>
+                                                <div>
+                                                    <h4 className="text-slate-500">
+                                                        We support each other to grow, with a positive spirit, and embrace our diversities.
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div className="w-full md:w-6/12 mr-auto px-4 pt-16 md:pt-0">
                                 <img
                                     alt="..."
-                                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
-                                    className="w-full align-middle rounded-t-lg"
+                                    className="max-w-full rounded-lg shadow-xl"
+                                    style={{
+                                        transform:
+                                            "scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg)",
+                                    }}
+                                    src={team}
                                 />
-
-                                <blockquote className="relative p-8 mb-4">
-                                    <h4 className="text-xl font-bold text-white">
-                                        Great for your awesome project
-                                    </h4>
-                                    <p className="text-md font-light mt-2 text-white">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.  voluptate quod accusantium vero molestiae reprehenderit sed.
-                                    </p>
-                                </blockquote>
                             </div>
                         </div>
+                    </div>
 
+                    <div
+                        className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
+                        style={{ transform: "translateZ(0)" }}
+                    >
+                        <svg
+                            className="absolute bottom-0 overflow-hidden"
+                            xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="none"
+                            version="1.1"
+                            viewBox="0 0 2560 100"
+                            x="0"
+                            y="0"
+                        >
+                            <polygon
+                                className="text-slate-100 fill-current"
+                                points="2560 0 2560 100 0 100"
+                            ></polygon>
+                        </svg>
+                    </div>
+                    <div className="container mx-auto">
+                        <div className="flex flex-wrap items-center">
+                            <div className="w-11/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32">
+                                <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-orange-500">
+                                    <img
+                                        alt="..."
+                                        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
+                                        className="w-full align-middle rounded-t-lg"
+                                    />
 
-                        <div className="w-full md:w-6/12 px-4">
-                            <div className="flex flex-wrap">
-                                <div className="w-full md:w-6/12 px-4">
-                                    <div className="relative flex flex-col mt-4">
-                                        <div className="px-4 py-5 flex-auto">
-                                            <div className="  text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white text-2xl ">
-                                                <FaChalkboardTeacher className='text-slate-900  ' />
-                                            </div>
-                                            <h6 className="text-xl mb-1 font-semibold">
-                                                Workshops
-                                            </h6>
-                                            <p className="mb-4 text-slate-500">
-                                                The members get free access to all the events and workshops conducted by the Finite Loop club.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="relative flex flex-col min-w-0">
-                                        <div className="px-4 py-5 flex-auto">
-                                            <div className="  text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white text-2xl ">
-                                                <GiTeacher className='text-slate-900  ' />
-                                            </div>
-                                            <h6 className="text-xl mb-1 font-semibold">
-                                                Peer to Peer Learning
-                                            </h6>
-                                            <p className="mb-4 text-slate-500">
-                                                Explain your ideas to others and participate in activities through which you can learn from your peers.
-                                            </p>
-                                        </div>
-                                    </div>
+                                    <blockquote className="relative p-8 mb-4">
+                                        <h4 className="text-xl font-bold text-white">
+                                            Great for your awesome project
+                                        </h4>
+                                        <p className="text-md font-light mt-2 text-white">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.  voluptate quod accusantium vero molestiae reprehenderit sed.
+                                        </p>
+                                    </blockquote>
                                 </div>
-                                <div className="w-full md:w-6/12 px-4">
-                                    <div className="relative flex flex-col min-w-0 mt-4">
-                                        <div className="px-4 py-5 flex-auto">
-                                            <div className="  text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white text-2xl ">
-                                                <MdWorkOutline className='text-slate-900  ' />
+                            </div>
+
+
+                            <div className="w-full md:w-6/12 px-4">
+                                <div className="flex flex-wrap">
+                                    <div className="w-full md:w-6/12 px-4">
+                                        <div className="relative flex flex-col mt-4">
+                                            <div className="px-4 py-5 flex-auto">
+                                                <div className="  text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white text-2xl ">
+                                                    <FaChalkboardTeacher className='text-slate-900  ' />
+                                                </div>
+                                                <h6 className="text-xl mb-1 font-semibold">
+                                                    Workshops
+                                                </h6>
+                                                <p className="mb-4 text-slate-500">
+                                                    The members get free access to all the events and workshops conducted by the Finite Loop club.
+                                                </p>
                                             </div>
-                                            <h6 className="text-xl mb-1 font-semibold">Internships</h6>
-                                            <p className="mb-4 text-slate-500">
-                                                Get a chance to grab internships and put your skills into use.
-                                            </p>
+                                        </div>
+                                        <div className="relative flex flex-col min-w-0">
+                                            <div className="px-4 py-5 flex-auto">
+                                                <div className="  text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white text-2xl ">
+                                                    <GiTeacher className='text-slate-900  ' />
+                                                </div>
+                                                <h6 className="text-xl mb-1 font-semibold">
+                                                    Peer to Peer Learning
+                                                </h6>
+                                                <p className="mb-4 text-slate-500">
+                                                    Explain your ideas to others and participate in activities through which you can learn from your peers.
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="relative flex flex-col min-w-0">
-                                        <div className="px-4 py-5 flex-auto">
-
-                                            <div className="  text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white text-2xl ">
-                                                <GrWorkshop className='text-slate-900' />
+                                    <div className="w-full md:w-6/12 px-4">
+                                        <div className="relative flex flex-col min-w-0 mt-4">
+                                            <div className="px-4 py-5 flex-auto">
+                                                <div className="  text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white text-2xl ">
+                                                    <MdWorkOutline className='text-slate-900  ' />
+                                                </div>
+                                                <h6 className="text-xl mb-1 font-semibold">Internships</h6>
+                                                <p className="mb-4 text-slate-500">
+                                                    Get a chance to grab internships and put your skills into use.
+                                                </p>
                                             </div>
-                                            <h6 className="text-xl mb-1 font-semibold">
-                                                Guest Lecture
-                                            </h6>
-                                            <p className="mb-4 text-slate-500">
-                                                Get an opportunity to listen to some of the renowned experts, and engage in discussions.
-                                            </p>
                                         </div>
-                                    </div>
+                                        <div className="relative flex flex-col min-w-0">
+                                            <div className="px-4 py-5 flex-auto">
 
-                                </div>
-                                <div className="w-full md:w-6/12 mx-auto px-4">
-                                    <div className="relative flex flex-col min-w-0 mt-4">
-                                        <div className="px-4 py-5 flex-auto">
-                                            <div className="  text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white text-2xl ">
-                                                <AiOutlineFundProjectionScreen className='text-slate-900  ' />
+                                                <div className="  text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white text-2xl ">
+                                                    <GrWorkshop className='text-slate-900' />
+                                                </div>
+                                                <h6 className="text-xl mb-1 font-semibold">
+                                                    Guest Lecture
+                                                </h6>
+                                                <p className="mb-4 text-slate-500">
+                                                    Get an opportunity to listen to some of the renowned experts, and engage in discussions.
+                                                </p>
                                             </div>
-                                            <h6 className="text-xl mb-1 font-semibold">Real-Time Projects</h6>
-                                            <p className="mb-4 text-slate-500">
-                                                Being in this club, you get to work on real time projects, which allows you to bring out your creative side.
-                                            </p>
                                         </div>
-                                    </div>
 
+                                    </div>
+                                    <div className="w-full md:w-6/12 mx-auto px-4">
+                                        <div className="relative flex flex-col min-w-0 mt-4">
+                                            <div className="px-4 py-5 flex-auto">
+                                                <div className="  text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white text-2xl ">
+                                                    <AiOutlineFundProjectionScreen className='text-slate-900  ' />
+                                                </div>
+                                                <h6 className="text-xl mb-1 font-semibold">Real-Time Projects</h6>
+                                                <p className="mb-4 text-slate-500">
+                                                    Being in this club, you get to work on real time projects, which allows you to bring out your creative side.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                {/* call to action */}
+                    {/* call to action */}
 
-                {/* css components section */}
+                    {/* css components section */}
 
-                <div className="container mx-auto overflow-hidden pb-20">
-                    {/* <div className="flex flex-wrap items-center">
+                    <div className="container mx-auto overflow-hidden pb-20">
+                        {/* <div className="flex flex-wrap items-center">
                         <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48">
                             <div className="text-slate-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                                 <i className="fas fa-sitemap text-xl"></i>
@@ -343,110 +351,110 @@ function Home() {
                         </div>
                     </div> */}
 
-                    <div className="flex flex-wrap items-center ">
-                        <div className="w-full md:w-6/12 px-4 mx-auto mt-32">
-                            <div className="justify-center flex flex-wrap relative">
-                                <div className="my-4 w-full lg:w-6/12 px-4 hidden md:block">
+                        <div className="flex flex-wrap items-center ">
+                            <div className="w-full md:w-6/12 px-4 mx-auto mt-32">
+                                <div className="justify-center flex flex-wrap relative">
+                                    <div className="my-4 w-full lg:w-6/12 px-4 hidden md:block">
 
-                                    <div className="bg-red-600 shadow-lg rounded-lg text-center p-8">
-                                        <img
-                                            alt="..."
-                                            className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                                            src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/svelte.jpg"
-                                        />
-                                        <p className="text-lg text-white mt-4 font-semibold">
-                                            Svelte
-                                        </p>
+                                        <div className="bg-red-600 shadow-lg rounded-lg text-center p-8">
+                                            <img
+                                                alt="..."
+                                                className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
+                                                src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/svelte.jpg"
+                                            />
+                                            <p className="text-lg text-white mt-4 font-semibold">
+                                                Svelte
+                                            </p>
+                                        </div>
+
+
+                                        <div className="bg-sky-500 shadow-lg rounded-lg text-center p-8 mt-8">
+                                            <img
+                                                alt="..."
+                                                className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
+                                                src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react.jpg"
+                                            />
+                                            <p className="text-lg text-white mt-4 font-semibold">
+                                                ReactJS
+                                            </p>
+                                        </div>
+
+
+                                        <div className="bg-slate-700 shadow-lg rounded-lg text-center p-8 mt-8">
+                                            <img
+                                                alt="..."
+                                                className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
+                                                src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/nextjs.jpg"
+                                            />
+                                            <p className="text-lg text-white mt-4 font-semibold">
+                                                NextJS
+                                            </p>
+                                        </div>
+
                                     </div>
+                                    <div className="my-4 w-full lg:w-6/12 px-4 lg:mt-16">
+
+                                        <div className="bg-yellow-500 shadow-lg rounded-lg text-center p-8">
+                                            <img
+                                                alt="..."
+                                                className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
+                                                src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/js.png"
+                                            />
+                                            <p className="text-lg text-white mt-4 font-semibold">
+                                                JavaScript
+                                            </p>
+                                        </div>
 
 
-                                    <div className="bg-sky-500 shadow-lg rounded-lg text-center p-8 mt-8">
-                                        <img
-                                            alt="..."
-                                            className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                                            src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react.jpg"
-                                        />
-                                        <p className="text-lg text-white mt-4 font-semibold">
-                                            ReactJS
-                                        </p>
-                                    </div>
+                                        <div className="bg-red-700 shadow-lg rounded-lg text-center p-8 mt-8">
+                                            <img
+                                                alt="..."
+                                                className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
+                                                src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/angular.jpg"
+                                            />
+                                            <p className="text-lg text-white mt-4 font-semibold">
+                                                Angular
+                                            </p>
+                                        </div>
 
 
-                                    <div className="bg-slate-700 shadow-lg rounded-lg text-center p-8 mt-8">
-                                        <img
-                                            alt="..."
-                                            className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                                            src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/nextjs.jpg"
-                                        />
-                                        <p className="text-lg text-white mt-4 font-semibold">
-                                            NextJS
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <div className="my-4 w-full lg:w-6/12 px-4 lg:mt-16">
-
-                                    <div className="bg-yellow-500 shadow-lg rounded-lg text-center p-8">
-                                        <img
-                                            alt="..."
-                                            className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                                            src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/js.png"
-                                        />
-                                        <p className="text-lg text-white mt-4 font-semibold">
-                                            JavaScript
-                                        </p>
-                                    </div>
-
-
-                                    <div className="bg-red-700 shadow-lg rounded-lg text-center p-8 mt-8">
-                                        <img
-                                            alt="..."
-                                            className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                                            src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/angular.jpg"
-                                        />
-                                        <p className="text-lg text-white mt-4 font-semibold">
-                                            Angular
-                                        </p>
-                                    </div>
-
-
-                                    <div className="bg-emerald-500 shadow-lg rounded-lg text-center p-8 mt-8">
-                                        <img
-                                            alt="..."
-                                            className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                                            src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/vue.jpg"
-                                        />
-                                        <p className="text-lg text-white mt-4 font-semibold">
-                                            Vue.js
-                                        </p>
+                                        <div className="bg-emerald-500 shadow-lg rounded-lg text-center p-8 mt-8">
+                                            <img
+                                                alt="..."
+                                                className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
+                                                src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/vue.jpg"
+                                            />
+                                            <p className="text-lg text-white mt-4 font-semibold">
+                                                Vue.js
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48">
-                            <div className="  text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white text-2xl ">
-                                <BiGitRepoForked className='text-slate-900  ' />
+                            <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48">
+                                <div className="  text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white text-2xl ">
+                                    <BiGitRepoForked className='text-slate-900  ' />
+                                </div>
+                                <h3 className="text-3xl mb-2 font-semibold leading-normal">
+                                    Work on new Trending Tech Stack
+                                </h3>
+                                <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-slate-600">
+                                    In order to create a great User Experience some components
+                                    require JavaScript. In this way you can manipulate the elements
+                                    on the page and give more options to your users.
+                                </p>
+                                <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-slate-600">
+                                    We created a set of Components that are dynamic and come to help
+                                    you.
+                                </p>
+
+
                             </div>
-                            <h3 className="text-3xl mb-2 font-semibold leading-normal">
-                                Work on new Trending Tech Stack
-                            </h3>
-                            <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-slate-600">
-                                In order to create a great User Experience some components
-                                require JavaScript. In this way you can manipulate the elements
-                                on the page and give more options to your users.
-                            </p>
-                            <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-slate-600">
-                                We created a set of Components that are dynamic and come to help
-                                you.
-                            </p>
-
-
                         </div>
                     </div>
-                </div>
 
-                {/* <div className="justify-center text-center flex flex-wrap mt-24">
+                    {/* <div className="justify-center text-center flex flex-wrap mt-24">
                     <div className="w-full md:w-6/12 px-12 md:px-4">
                         <h2 className="font-semibold text-4xl">Beautiful Example Pages</h2>
                         <p className="text-lg leading-relaxed mt-4 mb-4 text-slate-500">
@@ -456,63 +464,10 @@ function Home() {
                         </p>
                     </div>
                 </div> */}
-            </section>
+                </section>
 
-            {/* <section className="block relative z-1 bg-slate-600">
-                <div className="container mx-auto">
-                    <div className="justify-center flex flex-wrap">
-                        <div className="w-full lg:w-12/12 px-4  -mt-24">
-                            <div className="flex flex-wrap">
-                                <div className="w-full lg:w-4/12 px-4">
-                                    <h5 className="text-xl font-semibold pb-4 text-center">
-                                        Login Page
-                                    </h5>
-                                    <NavLink to="/auth/login">
-                                        <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                                            <img
-                                                alt="..."
-                                                className="align-middle border-none max-w-full h-auto rounded-lg"
-                                                src={require("../../assets/img/login.jpg").default}
-                                            />
-                                        </div>
-                                    </NavLink>
-                                </div>
-
-                                <div className="w-full lg:w-4/12 px-4">
-                                    <h5 className="text-xl font-semibold pb-4 text-center">
-                                        Profile Page
-                                    </h5>
-                                    <NavLink to="/profile">
-                                        <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                                            <img
-                                                alt="..."
-                                                className="align-middle border-none max-w-full h-auto rounded-lg"
-                                                src={require("../../assets/img/profile.jpg").default}
-                                            />
-                                        </div>
-                                    </NavLink>
-                                </div>
-
-                                <div className="w-full lg:w-4/12 px-4">
-                                    <h5 className="text-xl font-semibold pb-4 text-center">
-                                        Landing Page
-                                    </h5>
-                                    <NavLink to="/landing">
-                                        <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                                            <img
-                                                alt="..."
-                                                className="align-middle border-none max-w-full h-auto rounded-lg"
-                                                src={require("../../assets/img/landing.jpg").default}
-                                            />
-                                        </div>
-                                    </NavLink>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
-
+            </Fade>
+          
             {/* call to action */}
 
             <section className="py-10 bg-slate-600 overflow-hidden pb-40 md:pb-0 ">
@@ -545,7 +500,7 @@ function Home() {
                     </div>
                 </div>
             </section>
-{/*             
+            {/*             
             <section className="pb-16 bg-slate-200 relative pt-32">
                 <div
                     className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
