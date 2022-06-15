@@ -5,7 +5,7 @@ export const members = [
   {
     name: "Mr. NIRANJAN N CHIPLUNKAR",
     role: "PRINCIPAL",
-    img: "/team/team2022/shrilaxmi.png",
+    img: "/team/faculty/principal.jpg",
     // github: "https://github.com/ShrilakshmiPai",
     linkedin: "https://www.linkedin.com/in/niranjan-chiplunkar-47b302a/",
     year:"Faculty"
@@ -13,7 +13,7 @@ export const members = [
   {
     name: "Mr. Shashank Shetty",
     role: "Assistant Professor-CSE",
-    img: "/team/team2022/shrilaxmi.png",
+    img: "/team/faculty/shashank_sir.png",
     // github: "https://github.com/ShrilakshmiPai",
     linkedin: "https://www.linkedin.com/in/niranjan-chiplunkar-47b302a/",
     year:"Faculty"
@@ -21,7 +21,7 @@ export const members = [
   {
     name: "Mr. Krishna Prasad Rao",
     role: "Assistant Professor-CSE",
-    img: "/team/team2022/shrilaxmi.png",
+    img: "/team/faculty/kp_sir.jpg",
     // github: "https://github.com/ShrilakshmiPai",
     linkedin: "https://www.linkedin.com/in/niranjan-chiplunkar-47b302a/",
     year:"Faculty"
@@ -29,7 +29,7 @@ export const members = [
   {
     name: "Mr. Puneeth R P",
     role: "Assistant Professor-CSE",
-    img: "/team/team2022/shrilaxmi.png",
+    img: "/team/faculty/puneet_sir.jpg",
     // github: "https://github.com/ShrilakshmiPai",
     linkedin: "https://www.linkedin.com/in/niranjan-chiplunkar-47b302a/",
     year:"Faculty"
@@ -103,7 +103,7 @@ export const members = [
   {
     name: "Anjuman Raj",
     role: "Technical Head",
-    img: "/team/team2022/johnWick.png",
+    img: "/team/team2022/anjuman.png",
     github: "https://github.com/ayusmann/",
     linkedin: "https://www.linkedin.com/in/anjuman-raj-ba390b1b5/",
     bgImage: "/team/bg/bgBlue.jpg",
@@ -168,7 +168,7 @@ export const members = [
   {
     name: "Samantri Vinay",
     role: "Technical Team",
-    img: "/team/team2022/shrilaxmi.png",
+    img: "/team/team2021/Vinay_Samantri.jpg",
     github: "https://github.com/ViNi57",
     linkedin: "https://www.linkedin.com/in/vinay-samantri-15845a201/",
     year:"2021-22"
@@ -190,9 +190,37 @@ export const members = [
     year:"2021-22"
   },
   
-
-
+  
+  
   //Team 2021-20
+  
+  {
+    name: "Sanath R Pai",
+    role: "President",
+    img: "/team/team2021/sanath.jpg",
+    github: "https://github.com/sanathpai",
+    linkedin: "https://www.linkedin.com/in/sanath-r-pai-0a415118a",
+    year:"2020-21"
+  },
+  {
+    name: "Shrilakshmi Pai N",
+    role: "Vice President",
+    img: "/team/team2022/shrilaxmi.png",
+    github: "https://github.com/ShrilakshmiPai",
+    linkedin: "https://www.linkedin.com/in/shrilakshmipai",
+    year:"2020-21"
+  },
+
+  {
+    name: "Saheer Abdul Rehman",
+    role: "Core Member",
+    img: "/team/team2021/Saheer Rehman.jpg",
+    github: "https://github.com/Saheer555",
+    linkedin: "https://www.linkedin.com/in/saheer-a-r",
+    year:"2020-21"
+  },
+  
+
 
 
   //Team 2020-2017
