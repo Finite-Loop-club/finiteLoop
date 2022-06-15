@@ -8,7 +8,7 @@ export const members = [
     img: "/team/team2022/shrilaxmi.png",
     // github: "https://github.com/ShrilakshmiPai",
     linkedin: "https://www.linkedin.com/in/niranjan-chiplunkar-47b302a/",
-    year:"faculty"
+    year:"Faculty"
   },
   {
     name: "Mr. Shashank Shetty",
@@ -16,7 +16,7 @@ export const members = [
     img: "/team/team2022/shrilaxmi.png",
     // github: "https://github.com/ShrilakshmiPai",
     linkedin: "https://www.linkedin.com/in/niranjan-chiplunkar-47b302a/",
-    year:"faculty"
+    year:"Faculty"
   },
   {
     name: "Mr. Krishna Prasad Rao",
@@ -24,7 +24,7 @@ export const members = [
     img: "/team/team2022/shrilaxmi.png",
     // github: "https://github.com/ShrilakshmiPai",
     linkedin: "https://www.linkedin.com/in/niranjan-chiplunkar-47b302a/",
-    year:"faculty"
+    year:"Faculty"
   },
   {
     name: "Mr. Puneeth R P",
@@ -32,7 +32,7 @@ export const members = [
     img: "/team/team2022/shrilaxmi.png",
     // github: "https://github.com/ShrilakshmiPai",
     linkedin: "https://www.linkedin.com/in/niranjan-chiplunkar-47b302a/",
-    year:"faculty"
+    year:"Faculty"
   },
 
   //Team 2021-22

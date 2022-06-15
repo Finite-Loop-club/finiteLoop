@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Teamcard from './Teamcard'
 import Tab from './Tab'
 import { members } from "./teamdata"
@@ -10,6 +10,17 @@ function Team() {
   const [year, setYear] = useState("2021-22");
   const [elements, setElements] = useState(members);
 
+  useEffect(() => {
+    //filter code
+    setElements(
+      members.filter(
+        (ele) =>
+          
+          (ele.year === year ) 
+          
+      )
+    );
+  }, [year]);
 
   return (
     <>
@@ -21,7 +32,7 @@ function Team() {
       <Tab {...{year, setYear}} />
       <div className='flex flex-wrap w-[95vw] m-auto mt-0 justify-center ' >
 
-        {members.map((member, id) => {
+        {elements.map((member, id) => {
           return (
             <Teamcard key={id} name={member.name} role={member.role}
               github={member.github} linkedin={member.linkedin}
