@@ -364,14 +364,7 @@ export const members = [
     img: "/team/team17/akshay.jpg",
     linkedin: "https://www.linkedin.com/in/akshay-devadiga-652687115/",
     year:"2017-20"
-  }, {
-    name: "Rashmi Baliga",
-    role: "Social Media Head",
-    img: "/team/team2022/Rashmi.jpg",
-    github: "https://github.com/Rashmibaliga",
-    linkedin: "https://www.linkedin.com/in/rashmi-baliga-0aa082172",
-    year:"2020-21"
-  }, {
+  },  {
     name: "Mr. Mohammad Sabith",
     role: "Core Member",
     img: "/team/team17/sabith.jpg",
