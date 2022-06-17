@@ -407,7 +407,7 @@ export const members = [
   }, {
     name: "Mr. G Amar Prabhu",
     role: "Core Member",
-    img: "/team/team17/amar",
+    img: "/team/team17/amar.jpg",
     linkedin: "https://www.linkedin.com/in/g-amar-prabhu/?originalSubdomain=in",
     year:"2017-20"
   }, {
