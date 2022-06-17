@@ -231,7 +231,7 @@ export const members = [
   {
     name: "Rahul Bhat",
     role: "Secrectary",
-    img: "/team/team2021/rahul.jpg",
+    img: "/team/team2022/rahul.jpg",
     github: "https://github.com/rahulbhat02",
     linkedin: "https://www.linkedin.com/in/rahul-bhat-a050731a9/",
     year:"2020-21"
@@ -247,7 +247,7 @@ export const members = [
   {
     name: "Shreelata Kini",
     role: "Joint Secrectary",
-    img: "/team/team2021/Shreelatha Kini.jpeg",
+    img: "/team/team2021/Shreelata Kini.jpeg",
     year:"2020-21"
   },
   {
@@ -290,7 +290,7 @@ export const members = [
   {
     name: "Rachana Prabhu",
     role: "Social Media Head",
-    img: "/team/team2022/rachana.jpg",
+    img: "/team/team2022/Rachana.jpg",
     github: "https://www.github.com/Rachana-27",
     linkedin: "https://www.linkedin.com/in/rachana-prabhu-65685118a",
     year:"2020-21"
@@ -304,7 +304,7 @@ export const members = [
   {
     name: "Rashmi Baliga",
     role: "Social Media Head",
-    img: "/team/team2021/Rashmi.jpg",
+    img: "/team/team2022/Rashmi.jpg",
     github: "https://github.com/Rashmibaliga",
     linkedin: "https://www.linkedin.com/in/rashmi-baliga-0aa082172",
     year:"2020-21"
