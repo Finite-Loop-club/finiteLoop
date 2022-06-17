@@ -315,4 +315,148 @@ export const members = [
 
 
   //Team 2020-2017
+  {
+    name: "Ms. Pooja Shetty",
+    role: "Core Member",
+    img: "/team/team17/pooja.jpg",
+    linkedin: "https://www.linkedin.com/in/pooja-shetty-16b311161/",
+    year:"2017-20"
+  },
+  {
+    name: "Mr. Venkatesh Prasad M Pai",
+    role: "Core Member",
+    img: "/team/team17/venkatesh.jpg",
+    linkedin: "https://www.linkedin.com/in/paivenky191/",
+    year:"2017-20"
+  }, {
+    name: "Mr. Mukul H S",
+    role: "Core Member",
+    img: "/team/team17/mukul.jpg",
+    linkedin: "https://www.linkedin.com/in/hsmukul22/",
+    year:"2017-20"
+  }, {
+    name: "Mr. Manjunatha U",
+    role: "Core Member",
+    img: "/team/team17/Manjunath.jpg",
+    linkedin: "hhttps://www.linkedin.com/in/manjunatha-u-a5bbb715b/?originalSubdomain=in",
+    year:"2017-20"
+  }, {
+    name: "Mr. Gurudeep U J",
+    role: "Core Member",
+    img: "/team/team17/guru.jpg",
+    linkedin: "https://www.linkedin.com/in/gurudeep-u-j-206709129/",
+    year:"2017-20"
+  }, {
+    name: "Mr. Aneesh Mathai",
+    role: "Core Member",
+    img: "/team/team17/aneesh.jpg",
+    linkedin: "https://www.linkedin.com/in/aneesh-mathai-1b0780a9/",
+    year:"2017-20"
+  }, {
+    name: "Mr. Pawan Raj",
+    role: "Core Member",
+    img: "/team/team17/pawan.jpg",
+    linkedin: "https://www.linkedin.com/in/pawan-raj-300994/",
+    year:"2017-20"
+  }, {
+    name: "Mr. Akshay Devadiga",
+    role: "Core Member",
+    img: "/team/team2022/akshay.jpg",
+    linkedin: "https://www.linkedin.com/in/akshay-devadiga-652687115/",
+    year:"2017-20"
+  }, {
+    name: "Rashmi Baliga",
+    role: "Social Media Head",
+    img: "/team/team2022/Rashmi.jpg",
+    github: "https://github.com/Rashmibaliga",
+    linkedin: "https://www.linkedin.com/in/rashmi-baliga-0aa082172",
+    year:"2020-21"
+  }, {
+    name: "Mr. Mohammad Sabith",
+    role: "Core Member",
+    img: "/team/team17/sabith.jpg",
+    linkedin: "https://www.linkedin.com/in/mohammedsabith/?originalSubdomain=in",
+    year:"2017-20"
+  }, {
+    name: "Mr. Rajath Aithal",
+    role: "Core Member",
+    img: "/team/team17/rajath.jpg",
+    linkedin: "https://www.linkedin.com/in/rajathaithal/",
+    year:"2017-20"
+  }, 
+  {
+    name: "Mr. B. Anudeep",
+    role: "Core Member",
+    img: "/team/team17/anudeep.jpg",
+    linkedin:"https://www.linkedin.com/in/anudeep07/?originalSubdomain=in",
+    year:"2017-20"
+  }, 
+  {
+    name: "Mr. Sriharivishnu",
+    role: "Core Member",
+    img: "/team/team17/srihari.jpg",
+    linkedin: "https://www.linkedin.com/in/srihari-vishnu-2456921a5/?originalSubdomain=in",
+    year:"2017-20"
+  },
+   {
+    name: "Mr. Sachin Prabhu",
+    role: "Core Member",
+    img: "/team/team17/Sachin.jpg",
+    linkedin: "https://www.linkedin.com/in/sachinprabhuk/?originalSubdomain=in",
+    year:"2017-20"
+  }, {
+    name: "Mr. G Amar Prabhu",
+    role: "Core Member",
+    img: "/team/team17/amar",
+    linkedin: "https://www.linkedin.com/in/g-amar-prabhu/?originalSubdomain=in",
+    year:"2017-20"
+  }, {
+    name: "Mr. Shrikantha Budya",
+    role: "Core Member",
+    img: "/team/team17/shrikanth.jpg",
+    linkedin: "https://www.linkedin.com/in/shrikanth-budya/?originalSubdomain=in",
+    year:"2017-20"
+  }, {
+    name: "Mr. Ashwin P M",
+    role: "Core Member",
+    img: "/team/team17/Ashwin.jpg",
+    linkedin: "https://www.linkedin.com/in/ashwin-p-m-0126471b9/?originalSubdomain=in",
+    year:"2017-20"
+  },  {
+    name: "Mr. Rameez Shuhaib",
+    role: "Core Member",
+    img: "/team/team17/rameez.jpg",
+    linkedin: "https://www.linkedin.com/in/rameez-shuhaib-505a29106/?originalSubdomain=in",
+    year:"2017-20"
+  }, {
+    name: "Mr. Puneeth Kumar S R",
+    role: "Core Member",
+    img: "/team/team17/punith.jpg",
+    linkedin: "https://www.linkedin.com/in/punithsr27/?originalSubdomain=in",
+    year:"2017-20"
+  },{
+    name: "Mr. Shashank S Shetty",
+    role: "Core Member",
+    img: "/team/team17/shashank.jpg",
+    linkedin: "https://www.linkedin.com/in/imshashanksshetty/?originalSubdomain=in",
+    year:"2017-20"
+  }, {
+    name: "Ms. Shraddha Bhat",
+    role: "Core Member",
+    img: "/team/team17/shraddha.jpg",
+    linkedin: "https://www.linkedin.com/in/shraddha-bhat-49236015b/",
+    year:"2017-20"
+  },{
+    name: "Mr. Muhammad Junaid",
+    role: "Core Member",
+    img: "/team/team17/junaid.jpg",
+    linkedin: "https://www.linkedin.com/in/junaid1460/",
+    year:"2017-20"
+  }, {
+    name: "Ms. Priyadarshini Kumari",
+    role: "Core Member",
+    img: "/team/team17/priyadarshini.jpg",
+    linkedin: "https://www.linkedin.com/in/priyadarshini-kumari-78b229190/",
+    year:"2017-20"
+  }
 ];
