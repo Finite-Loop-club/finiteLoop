@@ -220,6 +220,97 @@ export const members = [
     year:"2020-21"
   },
   
+  {
+    name: "Melroy Neil Dsouza",
+    role: "Core Member",
+    img: "/team/team2021/melroy.jpeg",
+    github: "https://github.com/meldsza",
+    linkedin: "https://www.linkedin.com/in/melroy-dsouza-9a0752170/",
+    year:"2020-21"
+  },
+  {
+    name: "Rahul Bhat",
+    role: "Secrectary",
+    img: "/team/team2021/rahul.jpg",
+    github: "https://github.com/rahulbhat02",
+    linkedin: "https://www.linkedin.com/in/rahul-bhat-a050731a9/",
+    year:"2020-21"
+  },
+  {
+    name: "Shravya S Rao",
+    role: "Content Writing Head",
+    img: "/team/team2021/shravya.jpg",
+    github: "https://github.com/shravya-s-rao",
+    linkedin: "https://www.linkedin.com/in/shravya-s-rao/",
+    year:"2020-21"
+  },
+  {
+    name: "Shreelata Kini",
+    role: "Joint Secrectary",
+    img: "/team/team2021/Shreelatha Kini.jpeg",
+    year:"2020-21"
+  },
+  {
+    name: "Rishika Kalappa",
+    role: "Treasurer",
+    img: "/team/team2021/Rishika Kalappa.jpg",
+    year:"2020-21"
+  },
+  {
+    name: "Vaishnavi Salvankar",
+    role: "Documentation Head",
+    img: "/team/team2022/vaishnavi.jpg",
+    github: "https://github.com/Vaishnavi031",
+    linkedin: "https://www.linkedin.com/in/vaishnavisalvankar",
+    year:"2020-21"
+  },
+  {
+    name: "Rahul Sheregar",
+    role: "Publicity Head",
+    img: "/team/team2021/rahul s.jpeg",
+    linkedin: "https://www.linkedin.com/in/rahul-sheregar-9655a51a7/",
+    year:"2020-21"
+  },
+  {
+    name: "Thejalaxmi",
+    role: "Publicity Head",
+    img: "/team/team2022/thejalaxmi.jpg",
+    github: "https://github.com/Thejalakshmi28",
+    linkedin: "https://www.linkedin.com/in/theja-lakshmi-41689a1ab/",
+    year:"2020-21"
+  },
+  {
+    name: "Samantri Vinay",
+    role: "Publicity Head",
+    img: "/team/team2021/Vinay_Samantri.jpg",
+    github: "https://github.com/ViNi57",
+    linkedin: "https://www.linkedin.com/in/vinay-samantri-15845a201/",
+    year:"2020-21"
+  },
+  {
+    name: "Rachana Prabhu",
+    role: "Social Media Head",
+    img: "/team/team2022/rachana.jpg",
+    github: "https://www.github.com/Rachana-27",
+    linkedin: "https://www.linkedin.com/in/rachana-prabhu-65685118a",
+    year:"2020-21"
+  },
+  {
+    name: "Moghe Sudheesh Rao",
+    role: "Social Media Head",
+    img: "/team/team2021/Moghe Sudheesh Rao.jpeg",
+    year:"2020-21"
+  },
+  {
+    name: "Rashmi Baliga",
+    role: "Social Media Head",
+    img: "/team/team2021/Rashmi.jpg",
+    github: "https://github.com/Rashmibaliga",
+    linkedin: "https://www.linkedin.com/in/rashmi-baliga-0aa082172",
+    year:"2020-21"
+  },
+
+  
 
 
 
