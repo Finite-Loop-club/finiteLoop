@@ -361,7 +361,7 @@ export const members = [
   }, {
     name: "Mr. Akshay Devadiga",
     role: "Core Member",
-    img: "/team/team2022/akshay.jpg",
+    img: "/team/team17/akshay.jpg",
     linkedin: "https://www.linkedin.com/in/akshay-devadiga-652687115/",
     year:"2017-20"
   }, {
