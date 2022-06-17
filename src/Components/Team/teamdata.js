@@ -434,7 +434,22 @@ export const members = [
     img: "/team/team17/punith.jpg",
     linkedin: "https://www.linkedin.com/in/punithsr27/?originalSubdomain=in",
     year:"2017-20"
-  },{
+  },
+  {
+    name: "Mr. Muthaheer Mohammed",
+    role: "Core Member",
+    img: "/team/team17/muthaheer.jpg",
+    linkedin: "https://www.linkedin.com/in/muthaheer-mohammed-15435a12b/?originalSubdomain=in",
+    year:"2017-20"
+  },
+  {
+    name: "Mr. Mohammed Kashif Minhaj",
+    role: "Core Member",
+    img: "/team/team17/kashif.jpg",
+    linkedin: "https://www.linkedin.com/in/kashif-minhaj-84147129/?originalSubdomain=in",
+    year:"2017-20"
+  },
+  {
     name: "Mr. Shashank S Shetty",
     role: "Core Member",
     img: "/team/team17/shashank.jpg",
