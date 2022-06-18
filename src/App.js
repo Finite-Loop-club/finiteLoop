@@ -30,7 +30,7 @@ function App() {
     return (currentUser ? children : <Navigate to="/auth/signin" />)
   }
   const NotRequireAuth = ({ children }) => {
-    return (!currentUser ? children : <Navigate to="/admin/dashboard" />)
+    return (!currentUser ? children : <Navigate to="/admin/tables" />)
   }
   const InfoAuth = ({ children }) => {
     return (currentUser ? children : <Navigate to="/auth/signup" />)
