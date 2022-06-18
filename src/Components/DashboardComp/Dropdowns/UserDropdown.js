@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import dp from '../../../assets/member/core/johnWick.png'
 import { createPopper } from "@popperjs/core";
 import { signOut } from "firebase/auth";
 import { auth } from '../../../firebase'
@@ -24,8 +23,8 @@ const UserDropdown = () => {
   const { dispatch } = useContext(AuthContext);
 
   const handleSignOut = (e) => {
-
-
+    console.log("triggered");
+    e.preventDefault();
     signOut(auth).then(() => {
 
       // Sign-out successful.
@@ -76,21 +75,22 @@ const UserDropdown = () => {
           "bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
         }
       >
-        <a
-          href="#pablo"
+        <button
+        
           className={
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
           }
           onClick={handleSignOut}
+          // onClick={console.log("triggered1")}
         >
           Sign out
-        </a>
+        </button>
         <a
           href="#pablo"
           className={
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
           }
-          onClick={(e) => e.preventDefault()}
+          onClick={(e) => {console.log("trigged2")}}
         >
           Upcoming Feature
         </a>

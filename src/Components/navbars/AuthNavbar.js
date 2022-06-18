@@ -56,7 +56,7 @@ function AuthNavbar() {
         },
         {
             name: "instagram",
-            link: "https://www.instagram.com/finiteloop_club/",
+            link: "https://www.instagram.com/finiteloop_club_nmamit/",
             icons: <FiInstagram className='inline text-slate-50 mr-2 text-lg' />
         },
         {
