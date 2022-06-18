@@ -52,7 +52,7 @@ function NewEntries() {
         e.preventDefault();
 
         if (name && usn && phone && branch) {
-            await setDoc(doc(db, "coreMembers", usn), {
+            await setDoc(doc(db, "newMember", usn), {
                 name: name,
                 usn: usn.toUpperCase(),
                 email: email,
@@ -61,7 +61,7 @@ function NewEntries() {
                 timeStamp: Date() ,
             })
             setLoading(false)
-            console.log("data recorded" + usn)
+            // console.log("data recorded" + usn)
             setModal(true)
             
         } else {

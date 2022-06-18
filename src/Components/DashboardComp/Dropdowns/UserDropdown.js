@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import dp from '../../../assets/member/core/johnWick.png'
 import { createPopper } from "@popperjs/core";
 import { signOut } from "firebase/auth";
@@ -42,10 +42,12 @@ const UserDropdown = () => {
 
   }
 
-
+  const { currentUser } = useContext(AuthContext)
+  console.log(currentUser.email);
 
 
   return (
+
     <>
       <a
         className="text-slate-500 block"
@@ -60,8 +62,9 @@ const UserDropdown = () => {
           <span className="w-12 h-12 text-sm text-white bg-slate-200 inline-flex items-center justify-center rounded-full">
             <img
               alt="..."
-              className="w-full rounded-full align-middle border-none shadow-lg"
-              src={dp}
+              className="h-fit rounded-full align-middle border-none shadow-lg"
+              // src={dp}
+              src={`${currentUser.email === "ayusmann23@gmail.com" ? "/team/team2022/anjuman.png" : (currentUser.email === "shrilakshmipai@gmail.com" ? "/team/team2022/shrilaxmi.png" : (currentUser.email === "nayakbhargavi01@gmail.com" ? "/team/team2022/bhargavi.jpg" : (currentUser.email === "shashankshetty@nitte.edu.in" ? "/team/faculty/shashank_sir.png" : "/logo2.png")))} `}
             />
           </span>
         </div>

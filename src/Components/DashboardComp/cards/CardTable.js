@@ -16,7 +16,7 @@ export default function CardTable({ color }) {
   // const temp = [];
   const fetchMembers = async () => {
     
-    const querySnapshot = await getDocs(collection(db, "newMembers2022_23"));
+    const querySnapshot = await getDocs(collection(db, "newMember"));
     querySnapshot.forEach((doc) => {
       // console.log(doc.id, " => ", doc.data().name);
       setMembers((e)=>[...e,doc.data()])
@@ -119,11 +119,11 @@ export default function CardTable({ color }) {
                 return(
                   <tr key={id} >
                     <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-                      <img
+                      {/* <img
                         src={src}
                         className="h-12 w-12 bg-white rounded-full border"
                         alt="..."
-                        ></img>{" "}
+                        ></img>{" "} */}
                       <span
                         className={
                           "ml-3 font-bold " +
