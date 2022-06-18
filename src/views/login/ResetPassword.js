@@ -39,7 +39,7 @@ function ResetPassword() {
                     setErrorMessage("user not found")
                 }
                 if (errorCode === "auth/missing-email") {
-                    setErrorMessage("Enter your Email")
+                    setErrorMessage("Enter valid email")
                 }
                 setLoading(false);
             });
@@ -93,7 +93,7 @@ function ResetPassword() {
                                                 className="bg-slate-800 text-white active:bg-slate-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                                             >
                                                 {loading ? <AiOutlineLoading3Quarters className="inline mr-2  text-md animate-spin align-middle  " /> : ""}
-                                                Sign In
+                                                { loading? "Sending reset link" : "Reset"} 
                                             </button>
                                         </NavLink>
                                     </div>

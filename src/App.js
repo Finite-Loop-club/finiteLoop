@@ -30,7 +30,7 @@ function App() {
     return (currentUser ? children : <Navigate to="/auth/signin" />)
   }
   const NotRequireAuth = ({ children }) => {
-    return (!currentUser ? children : <Navigate to="/profile" />)
+    return (!currentUser ? children : <Navigate to="/admin/dashboard" />)
   }
   const InfoAuth = ({ children }) => {
     return (currentUser ? children : <Navigate to="/auth/signup" />)
@@ -54,9 +54,9 @@ function App() {
           <Route path="resetpassword" element={<ResetPassword />} />
 
         </Route>
-        <Route exact path="/profile" element={<RequireAuth> <Profile /> </RequireAuth>} ></Route>
+        {/* <Route exact path="/profile" element={<RequireAuth> <Profile /> </RequireAuth>} ></Route> */}
         
-        <Route exact path="/profile/getinfo" element={<InfoAuth> <GetInfo /> </InfoAuth>}></Route>
+        {/* <Route exact path="/profile/getinfo" element={<InfoAuth> <GetInfo /> </InfoAuth>}></Route> */}
         <Route path="*" element={<Error />}></Route>
         {/* <Route path="/scripts" element={<ImportingDb />}></Route> */}
 

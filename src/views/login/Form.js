@@ -93,14 +93,14 @@ function Form() {
                 console.log(token);
                 // The signed-in user info.
                 const user = result.user;
-                if (user.email==="ayusmann23@gmail.com") {
+                if (user.email==="ayusmann23@gmail.com" || user.email==="nayakbhargavi01@gmail.com" || user.email==="shashankshetty@nitte.edu.in" || user.email==="shrilakshmipai@gmail.com" ) {
                     dispatch({ type: "SIGNIN", payload: user })  
                     navigate("/admin/dashboard")
                 }
                 else{
                     handleSignOut();
                 }
-                console.log(user.email);
+                // console.log(user.email);
 
 
                 // ...

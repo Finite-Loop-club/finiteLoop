@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useContext} from "react";
 import dp from '../../../assets/member/core/johnWick.png'
 import { createPopper } from "@popperjs/core";
-
+import { signOut } from "firebase/auth";
+import { auth } from '../../../firebase'
+import { AuthContext } from "../../../context/AuthContext"
 
 
 const UserDropdown = () => {
@@ -18,6 +20,31 @@ const UserDropdown = () => {
   const closeDropdownPopover = () => {
     setDropdownPopoverShow(false);
   };
+
+  const { dispatch } = useContext(AuthContext);
+
+  const handleSignOut = (e) => {
+
+
+    signOut(auth).then(() => {
+
+      // Sign-out successful.
+      console.log("signout is successfull");
+      dispatch({ type: "SIGNOUT", payload: null })
+
+    }).catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log("error in signing out");
+      console.log(errorCode);
+      // An error happened.
+    });
+
+  }
+
+
+
+
   return (
     <>
       <a
@@ -51,9 +78,9 @@ const UserDropdown = () => {
           className={
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
           }
-          onClick={(e) => e.preventDefault()}
+          onClick={handleSignOut}
         >
-          Action
+          Sign out
         </a>
         <a
           href="#pablo"
@@ -62,7 +89,7 @@ const UserDropdown = () => {
           }
           onClick={(e) => e.preventDefault()}
         >
-          Another action
+          Upcoming Feature
         </a>
         <a
           href="#pablo"
@@ -71,7 +98,7 @@ const UserDropdown = () => {
           }
           onClick={(e) => e.preventDefault()}
         >
-          Something else here
+          Upcoming Feature
         </a>
         <div className="h-0 my-2 border border-solid border-slate-100" />
         <a
@@ -81,7 +108,7 @@ const UserDropdown = () => {
           }
           onClick={(e) => e.preventDefault()}
         >
-          Seprated link
+          Upcoming Feature
         </a>
       </div>
     </>

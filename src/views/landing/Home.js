@@ -72,7 +72,7 @@ function Home() {
 
 
             <section className="mt-10 md:mt-10 pb-16 relative bg-slate-100">
-                <Fade cascade={"true"} duration={2000} >
+                <Fade cascade={"true"} duration={1000} >
                     <Slide direction={"right"} duration={1000}>
                         <div className="container mx-auto px-4 pb-44 pt-10">
                             <div className="items-center flex flex-wrap">
