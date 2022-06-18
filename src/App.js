@@ -19,6 +19,7 @@ import ResetPassword from './views/login/ResetPassword'
 import ImportingDb from './scripts/ImportingDb';
 
 import NewRegister from './views/registration/NewRegister';
+import DevTeam from './views/DevTeam';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
         <Route exact path="/events" element={<Events />}></Route>
         <Route exact path="/gallery" element={<Events />}></Route>
         <Route exact path="/team" element={<Team />}></Route>
+        <Route exact path="/devteam" element={ <DevTeam/> }></Route>
         <Route exact path="/auth" element={<NotRequireAuth> <Login /> </NotRequireAuth>}>
           <Route path="signin" element={<Form />} />
           <Route path="resetpassword" element={<ResetPassword />} />

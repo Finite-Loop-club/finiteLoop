@@ -44,7 +44,7 @@ const SmallFooter = (props) => {
                         </div>
                         <div>
 
-                            Created with <GiTechnoHeart className=" inline text-red-700 " /> by <a href='/' > Anjuman </a> from Finite Loop
+                            Created with <GiTechnoHeart className=" inline text-red-700 " /> by <a href='/devteam' > Anjuman </a> from Finite Loop
                         </div>
                         <div className="  px-4">
 
