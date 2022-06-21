@@ -16,8 +16,7 @@ function Team() {
       members.filter(
         (ele) =>
           
-          (ele.year === year ) 
-          
+          (ele.year === year )    
       )
     );
   }, [year]);

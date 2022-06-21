@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import pattern_Bg from '../../assets/img/register_bg_2.png'
 import AuthNavbar from '../../Components/navbars/AuthNavbar'
-import { Outlet} from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import SmallFooter from '../../Components/footers/SmallFooter'
 import { } from 'react-router-dom'
 
 
 function Login() {
-    
+
     return (
         <>
             <div style={{
@@ -20,10 +20,10 @@ function Login() {
             >
                 <AuthNavbar />
                 <div className="h-fit mt-12 pb-10 bg-none flex bg-no-repeat  ">
-                    <Outlet/>
+                    <Outlet />
                 </div>
+                <SmallFooter white />
             </div>
-            <SmallFooter/>
         </>
     )
 }

@@ -31,20 +31,20 @@ const SmallFooter = (props) => {
                 <div className="container mx-auto px-4">
                     <hr className="mb-6 border-b-1 border-slate-600" />
                     <div className="flex flex-wrap items-center flex-col md:flex-row  md:justify-between justify-center">
-                        <div className=" px-4">
-                            <div className="text-sm text-black font-semibold py-1 text-center">
-                                Copyright © {new Date().getFullYear()}{" "}
+                        <div className={` ${props.white? "text-white px-4 ": "text-black px-4" } `}>
+                            <div className="text-sm  font-semibold py-1 text-center">
+                                Copyright © {new Date().getFullYear()}
                                 <NavLink
                                     to="/"
-                                    className="text-black hover:text-slate-700 text-sm font-semibold py-1"
+                                    className=" hover:text-slate-700 text-sm font-semibold py-1 px-2"
                                 >
                                     Finite Loop
                                 </NavLink>
                             </div>
                         </div>
-                        <div>
+                        <div className={` ${props.white? "text-white": "text-black" } `} >
 
-                            Created with <GiTechnoHeart className=" inline text-red-700 " /> by <a href='/devteam' > Anjuman </a> from Finite Loop
+                            Created with <GiTechnoHeart className=" inline text-red-700 " /> by <NavLink to='/devteam' className='text-orange-500 font-semibold ' > Anjuman </NavLink> from <NavLink to="/" className='text-orange-500 font-semibold ' > Finite Loop </NavLink>
                         </div>
                         <div className="  px-4">
 
@@ -53,10 +53,10 @@ const SmallFooter = (props) => {
                                 {main.map((index, key) => {
                                     return (
                                         < >
-                                            <li key={key} >
+                                            <li key={key} className={` ${props.white? "text-white": "text-black" } `} >
                                                 <NavLink
                                                     to={index.link}
-                                                    className="text-black hover:text-slate-600 text-sm font-semibold block py-1 px-3"
+                                                    className="hover:text-slate-600 text-sm font-semibold block py-1 px-3"
                                                 >
                                                     {index.item}
                                                 </NavLink>

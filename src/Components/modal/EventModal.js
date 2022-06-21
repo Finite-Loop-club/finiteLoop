@@ -8,7 +8,7 @@ function EventModal(props) {
 
             <div onClick={() => props.closeModal(false)} className='backdrop-blur-sm h-[100vh] fixed top-0 right-0 left-0 z-[999] w-screen'>
                 <Zoom as="div" duration={200} className='flex flex-col h-[100vh] justify-center items-center fixed top-0 right-0 left-0 z-[999] w-[100vw]'>
-                    <div onClick={(e) => e.stopPropagation()} id="extralarge-modal" tabIndex="-1" className=" overflow-y-auto   md:inset-0  flex items-center justify-center justify-items-center overflow-x-hidden  ">
+                    <div onClick={(e) => e.stopPropagation()} id="extralarge-modal" tabIndex="-1" className="   md:inset-0  flex items-center justify-center justify-items-center overflow-x-hidden  overflow-y-hidden  ">
                         <div className="relative p-4 w-full max-w-7xl h-full md:h-auto backdrop-lg  shadow-lg  border-0  " >
                             {/* <!-- Modal content --> */}
                             <div className="relative bg-blend-color  shadow  bg-clip-padding backdrop-blur  bg-opacity-90 bg-slate-900 rounded-2xl p-4 ">
@@ -31,7 +31,7 @@ function EventModal(props) {
                                     
                                         <img src={props.src} alt={""} className=" " />
                                     
-                                    <div className="align-middle px-2 md:p-10 pt-4   space-y-6  sm:overflow-y-scroll   sm:h-[75vh] md:h-full">
+                                    <div className="align-middle px-2 md:p-10 pt-4   space-y-6  sm:overflow-y-scroll lg:overflow-hidden  sm:h-[75vh] md:h-full">
                                         <div>
                                             <div className="py-3 text-gray-100 text-4xl bold"> <span className='font-bold'>Events Details </span>
                                                 <br />

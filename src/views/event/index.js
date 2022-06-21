@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Eventcard from './Eventcard'
 import Tab from './Tab'
 import {eventData} from "./eventData"
@@ -7,6 +7,23 @@ import SmallFooter from '../../Components/footers/SmallFooter'
 
 
 function Events() {
+
+  const [year, setYear] = useState("All");
+  const [elements, setElements] = useState(eventData);
+
+  useEffect(() => {
+    //filter code
+    setElements(
+      eventData.filter(
+        (ele) =>
+          ( year === "All" || ele.year===year ) 
+             
+      )
+    );
+  }, [year]);
+
+
+
   return (
     <>
     <AuthNavbar/>
@@ -14,10 +31,10 @@ function Events() {
     <div className='text-7xl text-center text-gray-800 pt-5 font-bold tracking-widest ' >Events</div>
     <div className='text-3xl text-center text-gray-600 pt-3 pb-8   tracking-widest ' >Something that make sense</div>
 
-    <Tab/>
+    <Tab {...{year, setYear}} />
 
     <div className='flex flex-wrap w-[95vw] m-auto mt-0 justify-center ' >
-      {eventData.map((events, id)=>{
+      {elements.map((events, id)=>{
         return(
           <Eventcard key={id} 
           name={events.name} 
@@ -30,6 +47,7 @@ function Events() {
           />
         )
       } )}
+
     </div>
       <SmallFooter/>
     </>
