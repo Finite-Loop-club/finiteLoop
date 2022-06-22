@@ -29,6 +29,7 @@ function Form() {
     const handleLogin = (e) => {
         e.preventDefault();
         setLoading(true);
+        if(email==="ayusmann23@gmail.com" || email==="nayakbhargavi01@gmail.com" || email==="shashankshetty@nitte.edu.in" || email==="shrilakshmipai@gmail.com" || email==="finiteloopclub@gmail.com" ){
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in 
@@ -61,7 +62,11 @@ function Form() {
                 }
 
                 setLoading(false);
-            });
+            });}
+            else{
+                setError(true);
+                setErrorMessage("Access Denied")
+            }
     }
 
     const handleSignOut = (e) => {       

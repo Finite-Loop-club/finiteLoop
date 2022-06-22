@@ -10,7 +10,7 @@ function DevTeam() {
     return (
         <>
             <div
-                className="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover bg-[url('https://images.unsplash.com/photo-1504805572947-34fad45aed93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')]  "
+                className="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover bg-[url('https://images.unsplash.com/photo-1494905998402-395d579af36f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')]  "
             // style{"background-image:url('https://source.unsplash.com/1L71sPT5XKc')}
             // style={backgroundImage}
             >
