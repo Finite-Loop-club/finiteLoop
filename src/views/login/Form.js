@@ -29,66 +29,67 @@ function Form() {
     const handleLogin = (e) => {
         e.preventDefault();
         setLoading(true);
-        if(email==="ayusmann23@gmail.com" || email==="nayakbhargavi01@gmail.com" || email==="shashankshetty@nitte.edu.in" || email==="shrilakshmipai@gmail.com" || email==="finiteloopclub@gmail.com" ){
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                // Signed in 
-                const user = userCredential.user;
-                dispatch({ type: "SIGNIN", payload: user })
-                console.log(user);
-                // alert("login successful");
-                navigate("/admin/dashboard")
-                setError(false);
-            })
-            .catch((err) => {
-                const errorCode = err.code;
-                const errorMessage = err.message;
-                console.log(errorCode);
+        if (email === "ayusmann23@gmail.com" || email === "nayakbhargavi01@gmail.com" || email === "shashankshetty@nitte.edu.in" || email === "shrilakshmipai@gmail.com" || email === "finiteloopclub@gmail.com") {
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed in 
+                    const user = userCredential.user;
+                    dispatch({ type: "SIGNIN", payload: user })
+                    console.log(user);
+                    // alert("login successful");
+                    navigate("/admin/dashboard")
+                    setError(false);
+                })
+                .catch((err) => {
+                    const errorCode = err.code;
+                    const errorMessage = err.message;
+                    console.log(errorCode);
 
-                setError(true);
-                // console.log(errorMessage);
-                if (errorCode === "auth/user-not-found") {
-                    setErrorMessage("user not found")
-                }
-                if (errorCode === "auth/invalid-email") {
-                    setErrorMessage("Invalid Email")
-                }
+                    setError(true);
+                    // console.log(errorMessage);
+                    if (errorCode === "auth/user-not-found") {
+                        setErrorMessage("user not found")
+                    }
+                    if (errorCode === "auth/invalid-email") {
+                        setErrorMessage("Invalid Email")
+                    }
 
-                if (errorCode === "auth/wrong-password") {
-                    setErrorMessage("Wrong password")
-                }
-                if (errorCode === "auth/internal-error") {
-                    setErrorMessage("Enter password")
-                }
+                    if (errorCode === "auth/wrong-password") {
+                        setErrorMessage("Wrong password")
+                    }
+                    if (errorCode === "auth/internal-error") {
+                        setErrorMessage("Enter password")
+                    }
 
-                setLoading(false);
-            });}
-            else{
-                setError(true);
-                setErrorMessage("Access Denied")
-            }
+                    setLoading(false);
+                });
+        }
+        else {
+            setError(true);
+            setErrorMessage("Access Denied")
+        }
     }
 
-    const handleSignOut = (e) => {       
-            signOut(auth).then(() => {
+    const handleSignOut = (e) => {
+        signOut(auth).then(() => {
 
-                // Sign-out successful.
-                console.log("signout is successfull");
-                dispatch({ type: "SIGNOUT", payload: null })
+            // Sign-out successful.
+            console.log("signout is successfull");
+            dispatch({ type: "SIGNOUT", payload: null })
 
-            }).catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log("error in signing out");
-                console.log(errorCode);
-                // An error happened.
-            });
-        
+        }).catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log("error in signing out");
+            console.log(errorCode);
+            // An error happened.
+        });
+
     }
 
     const handleGoogleAuth = (e) => {
         e.preventDefault();
-        
+
 
         signInWithPopup(auth, provider)
             .then((result) => {
@@ -98,11 +99,11 @@ function Form() {
                 console.log(token);
                 // The signed-in user info.
                 const user = result.user;
-                if (user.email==="ayusmann23@gmail.com" || user.email==="nayakbhargavi01@gmail.com" || user.email==="shashankshetty@nitte.edu.in" || user.email==="shrilakshmipai@gmail.com" || user.email==="finiteloopclub@gmail.com" ) {
-                    dispatch({ type: "SIGNIN", payload: user })  
+                if (user.email === "ayusmann23@gmail.com" || user.email === "nayakbhargavi01@gmail.com" || user.email === "shashankshetty@nitte.edu.in" || user.email === "shrilakshmipai@gmail.com" || user.email === "finiteloopclub@gmail.com") {
+                    dispatch({ type: "SIGNIN", payload: user })
                     navigate("/admin/dashboard")
                 }
-                else{
+                else {
                     handleSignOut();
                 }
                 // console.log(user.email);
@@ -123,7 +124,7 @@ function Form() {
                 // ...
             });
     }
-    
+
 
 
     return (
@@ -135,7 +136,7 @@ function Form() {
                             <div className="rounded-t mb-0 px-6 py-6">
                                 <div className="text-center mb-3">
                                     <h6 className="text-slate-500 text-sm font-bold">
-                                        Sign in with For Admin only
+                                        Sign in for Admin only
                                     </h6>
                                 </div>
                                 <div className="btn-wrapper text-center">
