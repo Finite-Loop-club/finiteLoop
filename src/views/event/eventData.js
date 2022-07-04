@@ -51,7 +51,7 @@ export const eventData = [
     date: "28-30 October, 2020",
     attended:"80+ Teams",
     type:"Open source Hackathon",
-    image: "/events/code_innovation/Picture2.png",
+    image: "/events/code_innovation/picture2.png",
     oragnizer: "Finite Loop Team",
     desc:
       "Finite Loop Club under the Centre for Student Innovation (CFSI) in association with the New Age Innovation Network (NAIN), KITS, Dept. of Electronics, IT, BT and S&T, Govt. of Karnataka organized “CODE INNOVATION SERIES – NMAMIT” hosted by IncubateIND under the GitHub Campus Program in collaboration with our college, and thus was a part of India’s largest open source Hackathon.",
