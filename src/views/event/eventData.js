@@ -1,4 +1,28 @@
 export const eventData = [
+
+  {
+    name: " WAR ZONE",
+    date: "26/11/2021",
+    attended:"10+ Teams",
+    type:"Gaming",
+    image: "/events/warzone/warzone.jpeg",
+    oragnizer: "Thejas Kumar, Dhanish S Suvarna",
+    desc:
+      "Call of Duty (COD) was played by the registered teams based on the maps, FiringRange, Standoff, Summit, Nuketown. Teams were made to compete against each other based on toss and after a great fight, Team DPH could battle through excel! Winners: Shravan P, Aravinda Krishna U, Rathan B, M Ankur Baliga, Achal Rai.",
+    year: "2021-22"
+  },
+  {
+    name: "Web Appilcation Hacking and Penetration Testing",
+    date: "16/12/2021",
+    attended:"40+ Teams",
+    type:"Cyber Security",
+    image: "/events/hacking/hacking.jpeg",
+    oragnizer: "Abdeali",
+    desc:
+      "This workshop was conducted by Abdeali, 3rd CSE, NMAMIT. It had a positive impact among the participants and gave the newbies the required knowledge and resources to kickstart their journey in the field of Cyber Security.",
+    year: "2021-22"
+  },
+
   {
     name: "Cyhack",
     date: "26/05/2021",
@@ -32,28 +56,6 @@ export const eventData = [
     desc:
       "Finite Loop Club under the Centre for Student Innovation (CFSI) in association with the New Age Innovation Network (NAIN), KITS, Dept. of Electronics, IT, BT and S&T, Govt. of Karnataka organized “CODE INNOVATION SERIES – NMAMIT” hosted by IncubateIND under the GitHub Campus Program in collaboration with our college, and thus was a part of India’s largest open source Hackathon.",
     year: "2020-21"
-  },
-  {
-    name: " WAR ZONE",
-    date: "26/11/2021",
-    attended:"10+ Teams",
-    type:"Gaming",
-    image: "/events/warzone/warzone.jpeg",
-    oragnizer: "Thejas Kumar, Dhanish S Suvarna",
-    desc:
-      "Call of Duty (COD) was played by the registered teams based on the maps, FiringRange, Standoff, Summit, Nuketown. Teams were made to compete against each other based on toss and after a great fight, Team DPH could battle through excel! Winners: Shravan P, Aravinda Krishna U, Rathan B, M Ankur Baliga, Achal Rai.",
-    year: "2021-22"
-  },
-  {
-    name: "Web Appilcation Hacking and Penetration Testing",
-    date: "16/12/2021",
-    attended:"40+ Teams",
-    type:"Cyber Security",
-    image: "/events/hacking/hacking.jpeg",
-    oragnizer: "Abdeali",
-    desc:
-      "This workshop was conducted by Abdeali, 3rd CSE, NMAMIT. It had a positive impact among the participants and gave the newbies the required knowledge and resources to kickstart their journey in the field of Cyber Security.",
-    year: "2021-22"
   },
   {
     name: "Naari Tattva",
