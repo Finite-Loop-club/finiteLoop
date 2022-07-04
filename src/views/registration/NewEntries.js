@@ -22,11 +22,18 @@ function NewEntries() {
     const { dispatch } = useContext(AuthContext)
 
     const [name, setName] = useState("");
-    const [usn, setUsn] = useState("");
     const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState("");
+    const [year, setYear] = useState("");
     const [branch, setBranch] = useState("");
-    const [intro, setIntro] = useState("");
+    const [usn, setUsn] = useState("");
+    const [phone, setPhone] = useState("");
+    const [language, setLanguage] = useState("");
+    const [githubLink, setGithubLink] = useState("");
+    const [otherSkill, setOtherSkill] = useState("");
+    const [excitement, setExcitement] = useState("");
+    
+    
+
     const [openModal, setModal] = useState(false);
     const [openErrModal, setErrModal] = useState(false);
 

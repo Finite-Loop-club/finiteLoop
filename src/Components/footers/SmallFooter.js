@@ -9,7 +9,7 @@ const SmallFooter = (props) => {
     },
     {
         item: "Login",
-        link: "/login",
+        link: "/auth/signin",
     },
     {
         item: "Other Links",

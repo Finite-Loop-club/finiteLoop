@@ -6,7 +6,7 @@ import pattern from '../../assets/img/pattern_react.png'
 import { GiThink, GiTeacher } from 'react-icons/gi'
 import { GrWorkshop } from 'react-icons/gr'
 import { BsCardChecklist } from 'react-icons/bs'
-import { BiMessageSquareDetail,BiCodeAlt, BiGitRepoForked } from 'react-icons/bi'
+import { BiMessageSquareDetail, BiCodeAlt, BiGitRepoForked } from 'react-icons/bi'
 import { FaFistRaised, FaChalkboardTeacher } from 'react-icons/fa'
 import { AiOutlineBranches, AiOutlineFundProjectionScreen } from 'react-icons/ai'
 import { FiGithub } from 'react-icons/fi'
@@ -15,6 +15,8 @@ import ContactForm from './ContactForm'
 import { AuthContext } from "../../context/AuthContext"
 import SmallFooter from '../../Components/footers/SmallFooter'
 import { Fade, Slide } from 'react-awesome-reveal'
+import google_icons from '../../assets/img/phone.png'
+import github_icons from '../../assets/img/gmail.png'
 
 
 function Home() {
@@ -246,7 +248,7 @@ function Home() {
                                                     </div>
                                                     <h6 className="text-xl mb-1 font-semibold">Coding Contest</h6>
                                                     <p className="mb-4 text-slate-500">
-                                                    We ensure to conduct biweekly coding contests, to improve your analytical and problem solving skills.
+                                                        We ensure to conduct biweekly coding contests, to improve your analytical and problem solving skills.
                                                     </p>
                                                 </div>
                                             </div>
@@ -293,7 +295,7 @@ function Home() {
                                             </div>
 
 
-                                            
+
 
                                         </div>
                                         <div className="my-4 w-full lg:w-6/12 px-4 lg:mt-16">
@@ -310,7 +312,7 @@ function Home() {
                                             </div>
 
 
-                                            
+
 
                                             <div className="bg-emerald-500 shadow-lg rounded-lg text-center p-8 mt-8">
                                                 <img
@@ -363,7 +365,7 @@ function Home() {
                                 <AiOutlineBranches className='inline-block text-slate-900 text-2xl' />
                             </div>
                             <h3 className="text-3xl mb-2 font-semibold leading-normal text-white">
-                                Join Us 
+                                Join Us
                             </h3>
                             <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-slate-400">
                                 Hey! fellow developer join for exciting journey ahead
@@ -371,7 +373,7 @@ function Home() {
 
                             <NavLink
                                 to="/joinus"
-                               
+
                                 className="github-star mt-4 inline-block text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-slate-700 active:bg-slate-600 uppercase text-sm shadow hover:shadow-lg"
                             >
                                 Register Now
@@ -452,7 +454,45 @@ function Home() {
                     <div className="flex flex-row-reverse flex-wrap justify-center">
                         <div className="w-full md:px-4 ml-auto mr-auto md:mt-10">
 
-                            <ContactForm />
+                            {/* <ContactForm /> */}
+                            <div className="rounded-t mb-0 px-6 py-6">
+
+                                <div className="text-center mb-3">
+                                    <h6 className="text-slate-500 text-xl font-bold">
+                                        Contact Us
+                                    </h6>
+                                </div>
+                                <div className="btn-wrapper space-x-5 text-center">
+                                    <a href="tel:8861643971">
+
+                                        <button
+                                            className="bg-white active:bg-slate-50 text-slate-700  px-6 py-2 rounded-lg outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold ease-linear transition-all duration-150 text-xl" 
+                                            type="button"
+                                        >
+                                            <img
+                                                alt="..."
+                                                className="w-8 mr-4"
+                                                src={google_icons}
+                                            />
+                                            Call us
+                                        </button>
+                                    </a>
+                                    <a href="mailto:finiteloopclub@gmail.com">
+
+                                        <button
+                                            className="bg-white active:bg-slate-50 text-slate-700  px-6 py-2 rounded-lg outline-none focus:outline-none mr-1 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xl ease-linear transition-all duration-150"
+                                            type="button"
+                                        >
+                                            <img
+                                                alt="..."
+                                                className="w-8 mr-4"
+                                                src={github_icons}
+                                            />
+                                            Mail us
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
 
 
                         </div>

@@ -4,6 +4,7 @@ import AuthNavbar from '../../Components/navbars/AuthNavbar'
 
 import SmallFooter from '../../Components/footers/SmallFooter'
 import NewEntries from './NewEntries'
+import GoogleForm from './GoogleForm'
 
 
 
@@ -24,7 +25,8 @@ function NewRegister() {
             >
                 <AuthNavbar />
                 <div className="h-fit bg-none flex bg-no-repeat  ">
-                   <NewEntries/>
+                   {/* <NewEntries/> */}
+                   <GoogleForm/>
                 </div>
             </div>
             <SmallFooter/>

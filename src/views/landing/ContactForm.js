@@ -60,8 +60,6 @@ function ContactForm() {
         }
         else {
             alert("Fill all the field");
-
-
         }
 
     }
@@ -109,9 +107,9 @@ function ContactForm() {
                                         </button>
                                     </a>
                                 </div>
-                                <hr className="mt-6 border-b-1 border-slate-300" />
+                                {/* <hr className="mt-6 border-b-1 border-slate-300" /> */}
                             </div>
-                            <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
+                            {/* <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                                 <div className="text-slate-400 text-center mb-3 font-bold">
                                     <small>Or Message us</small>
                                 </div>
@@ -157,18 +155,7 @@ function ContactForm() {
                                             value={Msg.message} onChange={postMsg} required="" placeholder="Message"
                                         />
                                     </div>
-                                    {/* <div>
-                                        <label className="inline-flex items-center cursor-pointer">
-                                            <input
-                                                id="customCheckLogin"
-                                                type="checkbox"
-                                                className="form-checkbox border-0 rounded text-slate-700 ml-1 w-5 h-5 ease-linear transition-all duration-150"
-                                            />
-                                            <span className="ml-2 text-sm font-semibold text-slate-600">
-                                                Remember me
-                                            </span>
-                                        </label>
-                                    </div> */}
+                                    
 
                                     <div className="text-center mt-6">
 
@@ -183,7 +170,7 @@ function ContactForm() {
 
                                     </div>
                                 </form>
-                            </div>
+                            </div> */}
                         </div>
 
                     </div>
