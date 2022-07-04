@@ -1,21 +1,54 @@
 export const eventData = [
 
   {
+    name: "Git and Github - Hands on Workshop",
+    date: "21/05/2022",
+    attended: "75+ Participants",
+    type: "Hands-On Workshop",
+    image: "/events/github/picture1.jpg",
+    oragnizer: "Anjuman Raj, Bhargavi Nayak",
+    desc: "Finite Loop Club, NMAMIT, Nitte successfully conducted yet another hands-on session, “Git and Github”, on 21st May 2022. The organizers of the event were Mr. Nagaraj Pandith, 2nd year, CSE, and Mr. Swasthik Shetty, 2nd year, CSE.",
+    year: "2021-22",
+  },
+  {
+    name: "Javascript Mastery",
+    date: "12/03/2022",
+    attended: "70+ Participants",
+    type: "Hands-On Workshop",
+    image: "/events/jsMastery/picture1.jpeg",
+    oragnizer: "Shrilakshmi Pai",
+    desc: "Finite Loop Club, NMAMIT, Nitte successfully conducted a workshop on “Javascript Mastery” by our alumni, Mr. Shashank S Shetty on March 12, 2022. ",
+    year: "2021-22",
+  },
+  {
     name: " WAR ZONE",
     date: "26/11/2021",
-    attended:"10+ Teams",
-    type:"Gaming",
+    attended: "10+ Teams",
+    type: "Gaming",
     image: "/events/warzone/warzone.jpeg",
     oragnizer: "Thejas Kumar, Dhanish S Suvarna",
     desc:
       "Call of Duty (COD) was played by the registered teams based on the maps, FiringRange, Standoff, Summit, Nuketown. Teams were made to compete against each other based on toss and after a great fight, Team DPH could battle through excel! Winners: Shravan P, Aravinda Krishna U, Rathan B, M Ankur Baliga, Achal Rai.",
     year: "2021-22"
   },
+
+  
+  {
+    name: " Website Launch and Invited Talk on “Company Fit Culture”:",
+    date: "03/03/2022",
+    attended: "60+ Participants",
+    type: "Invited Talk",
+    image: "/events/websiteLaunch/picture1.jpeg",
+    oragnizer: "Finite Loop Team",
+    desc: "Finite Loop Club, NMAMIT, Nitte successfully launched its new website at the event held at Shambhavi Seminar Hall on 3rd March 2022. Mr. Sumukh Bhandarkar, a Software Developer at Oracle was the Chief guest. The core members of Finite Loop Club were handed over their Identity Cards by the Principal on this occasion. The launch was followed by a talk on 'Company Fit Culture' by Mr. Sumukh Bhandarkar. The importance of Test Cases and Open source contributions were the main highlights.",
+    year: "2021-22",
+  },
+
   {
     name: "Web Appilcation Hacking and Penetration Testing",
     date: "16/12/2021",
-    attended:"40+ Teams",
-    type:"Cyber Security",
+    attended: "40+ Teams",
+    type: "Cyber Security",
     image: "/events/hacking/hacking.jpeg",
     oragnizer: "Abdeali",
     desc:
@@ -26,20 +59,20 @@ export const eventData = [
   {
     name: "Cyhack",
     date: "26/05/2021",
-    attended:"60+ Teams",
-    type:"Cyber Security",
+    attended: "60+ Teams",
+    type: "Cyber Security",
     image: "/events/cyhack/picture1.png",
     oragnizer: "Sanath R Pai, Shravya S Rao , Shrilakshmi Pai N",
     desc:
       "Information Security competition that challenges the contestants to solve a variety of tasks ranging from a scavenger hunt on Wikipedia to basic programming exercises, to hack their way into a server to steal the data.",
     year: "2020-21"
   },
- 
+
   {
     name: "Kurukshetra",
     date: "11/03/2021",
-    attended:"150+ participants",
-    type:"Cyber Security",
+    attended: "150+ participants",
+    type: "Cyber Security",
     image: "/events/kurukshetra/picture1.png",
     oragnizer: "Finite Loop Team",
     desc:
@@ -49,8 +82,8 @@ export const eventData = [
   {
     name: "CODE INNOVATION SERIES",
     date: "28-30 October, 2020",
-    attended:"80+ Teams",
-    type:"Open source Hackathon",
+    attended: "80+ Teams",
+    type: "Open source Hackathon",
     image: "/events/code_innovation/picture2.png",
     oragnizer: "Finite Loop Team",
     desc:
@@ -60,8 +93,8 @@ export const eventData = [
   {
     name: "Naari Tattva",
     date: "13/03/2021",
-    attended:"100+ Participants",
-    type:"Seminar",
+    attended: "100+ Participants",
+    type: "Seminar",
     image: "/events/naritatva/picture.png",
     oragnizer: "Finite Loop Team",
     desc:
@@ -71,8 +104,8 @@ export const eventData = [
   {
     name: "DEBUNKER 101",
     date: "26/04/2021",
-    attended:"150+ Participants",
-    type:"Seminar",
+    attended: "150+ Participants",
+    type: "Seminar",
     image: "/events/debunker/picture1.png",
     oragnizer: "Sanath R Pai, Shravya S Rao, Rahul S",
     desc:
@@ -82,8 +115,8 @@ export const eventData = [
   {
     name: "Importance of Web in the era of AI",
     date: "10/10/2020",
-    attended:"200+ Participants",
-    type:"Seminar",
+    attended: "200+ Participants",
+    type: "Seminar",
     image: "/events/imp_web_ai_era/crp_pic.png",
     oragnizer: "Finite Loop Team",
     desc:
@@ -93,8 +126,8 @@ export const eventData = [
   {
     name: "A hands on session on DevOps",
     date: "24-25th February 2018",
-    attended:"30+ Participants",
-    type:"Workshop",
+    attended: "30+ Participants",
+    type: "Workshop",
     image: "/events/devops/picture1.png",
     oragnizer: "Finite Loop Team",
     desc:
@@ -104,19 +137,19 @@ export const eventData = [
   {
     name: "Screening Test",
     date: "12/01/2018",
-    attended:"40+ Participants",
-    type:"Workshop",
+    attended: "40+ Participants",
+    type: "Workshop",
     image: "/events/screening_test/Picture1.jpg",
     oragnizer: "Finite Loop Team",
     desc:
       "A screening test was conducted for those who wished to be a part of this club. In the first round, 20 objective type questions on C and C++ were to be answered by the students. Students from various branches took part in it. For the second round, the short listed students were asked to solve two questions, one of them being a problem statement, and another, a web development question. 9 contestants were selected as the new members of Finite Loop, based on their style, creativity and problem solving ability.",
     year: "2017-20"
-  },  
+  },
   {
     name: "Android App development",
     date: "28-29th October 2017",
-    attended:"30+ Participants",
-    type:"Android Development",
+    attended: "30+ Participants",
+    type: "Android Development",
     image: "/events/android_dev/picture3.png",
     oragnizer: "Finite Loop Team",
     desc:
@@ -126,8 +159,8 @@ export const eventData = [
   {
     name: "Introduction to Web Development",
     date: "16-17th September 2017",
-    attended:"60+ Participants",
-    type:"Web Development",
+    attended: "60+ Participants",
+    type: "Web Development",
     image: "/events/intro_to_web/Picture3.png",
     oragnizer: "Finite Loop Team",
     desc:
@@ -137,8 +170,8 @@ export const eventData = [
   {
     name: "Backend Development using PHP",
     date: "23-24th September 2017",
-    attended:"50+ Participants",
-    type:"Web Development",
+    attended: "50+ Participants",
+    type: "Web Development",
     image: "/events/backend_dev/Picture2.jpg",
     oragnizer: "Finite Loop Team",
     desc:

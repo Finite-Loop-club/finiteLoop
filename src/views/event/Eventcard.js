@@ -29,15 +29,15 @@ function Eventcard(props) {
                     <img className="rounded-lg" src={props.src} alt="" />
                     <div className="flex justify-between items-center">
                         <div>
-                            <h1 className={`mt-5 text-gray-600 ${`${props.name}`.length > 15 ? "text-md font-semibold" : "text-2xl"
+                            <h1 className={`mt-5 text-gray-600 ${`${props.name}`.length > 15 ? ( `${props.name}`.length> 25 ? "text-sm font-semibold" : "text-base font-semibold" ) : "text-2xl"
                                 } font-semibold`}>
                                 {props.name}
                             </h1>
                             <p className="mt-2 text-sm text-gray-600">{props.catogary}</p>
                         </div>
-                        <div className="mt-4 w-40 md:w-36" >
+                        <div className="mt-4 min-w-fit" >
                             <button
-                                className="bg-white text-slate-700 active:bg-slate-50 text-md font-bold  px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
+                                className="bg-white text-slate-700 active:bg-slate-50 text-base font-bold  px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150 w-fit nowrap"
                                 type="button"
                                 onClick={() => {
                                     setModal(true);
