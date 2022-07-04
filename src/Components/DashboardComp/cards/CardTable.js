@@ -26,7 +26,7 @@ export default function CardTable({ color }) {
 
   }
 
-  console.log(members.length)
+  // console.log(members.length)
   
   
   

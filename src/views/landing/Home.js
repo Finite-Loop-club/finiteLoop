@@ -10,20 +10,22 @@ import { BiMessageSquareDetail, BiCodeAlt, BiGitRepoForked } from 'react-icons/b
 import { FaFistRaised, FaChalkboardTeacher } from 'react-icons/fa'
 import { AiOutlineBranches, AiOutlineFundProjectionScreen } from 'react-icons/ai'
 import { FiGithub } from 'react-icons/fi'
-import { MdWorkOutline } from 'react-icons/md'
+import { MdWorkOutline, MdDeveloperMode } from 'react-icons/md'
 import ContactForm from './ContactForm'
 import { AuthContext } from "../../context/AuthContext"
 import SmallFooter from '../../Components/footers/SmallFooter'
 import { Fade, Slide } from 'react-awesome-reveal'
 import google_icons from '../../assets/img/phone.png'
 import github_icons from '../../assets/img/gmail.png'
+import Testimonials from './Testimonials'
+import skillDevLab from '../../assets/pic1.jpg'
 
 
 function Home() {
 
     const { currentUser } = useContext(AuthContext);
     // console.log(currentUser.displayName)
-    console.log(currentUser)
+    // console.log(currentUser)
 
     return (
         <>
@@ -33,25 +35,25 @@ function Home() {
 
                     <Slide duration={1500} direction={"left"} >
                         <div className="mx-auto items-center flex flex-wrap">
-                            <div className="w-full md:w-8/12 lg:w-8/12 xl:w-8/12 px-10">
+                            <div className="w-screen  px-10">
                                 <div className="pt-5 sm:pt-0 z-50 ">
-                                    <h2 className="font-semibold text-4xl text-slate-600">
-                                        Finite Loop - A beautiful Coding Club
+                                    <h2 className=" text-7xl text-slate-700">
+                                        <span className='font-bold' > Finite Loop </span>
                                     </h2>
-                                    <p className="mt-4 text-lg leading-relaxed text-slate-500">
-                                        Some description Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore possimus fugiat autem in fuga. Quam. {" "}
+                                    <p className="mt-4 text-3xl font-semibold leading-relaxed text-slate-600">
+                                        We Code, We Innovate, We Inspire!
 
                                     </p>
                                     <div className="mt-12">
                                         <NavLink
                                             to="/joinus"
-                                            className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-orange-500 active:bg-orange-600  text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                                            className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-orange-500 active:bg-orange-600  text-lg shadow hover:shadow-lg ease-linear transition-all duration-150"
                                         >
-                                            Join Us
+                                            Register Now
                                         </NavLink>
                                         <NavLink
                                             to="/auth/signin"
-                                            className=" ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-slate-700 active:bg-slate-600  text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                                            className=" ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-slate-700 active:bg-slate-600  shadow hover:shadow-lg ease-linear transition-all duration-150 text-lg"
 
                                         >
                                             {!currentUser ? "Sign in" : "Profile"}
@@ -133,6 +135,8 @@ function Home() {
                                 </div>
 
                                 <div className="w-full md:w-6/12 mr-auto px-4 pt-16 md:pt-0">
+
+
                                     <img
                                         alt="..."
                                         className="max-w-full rounded-lg shadow-xl"
@@ -143,6 +147,7 @@ function Home() {
                                         src={team}
                                     />
                                 </div>
+
                             </div>
                         </div>
                     </Slide>
@@ -155,16 +160,16 @@ function Home() {
                                     <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-orange-500">
                                         <img
                                             alt="..."
-                                            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
+                                            src={skillDevLab}
                                             className="w-full align-middle rounded-t-lg"
                                         />
 
                                         <blockquote className="relative p-8 mb-4">
-                                            <h4 className="text-xl font-bold text-white">
+                                            <h4 className="text-2xl font-bold text-white">
                                                 Great for your awesome project
                                             </h4>
-                                            <p className="text-md font-light mt-2 text-white">
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.  voluptate quod accusantium vero molestiae reprehenderit sed.
+                                            <p className="text-base   mt-2 text-white">
+                                                Lab Oriented Training conducted by the ever-energetic 'Finite Loop Club' on 'Application Development using Collaborative Tools' to the first-year students (2021-2022) as a part of enhancing their skills.
                                             </p>
                                         </blockquote>
                                     </div>
@@ -357,7 +362,7 @@ function Home() {
 
             {/* call to action */}
 
-            <section className="py-10 bg-slate-600 overflow-hidden pb-40 md:pb-0 ">
+            <section className="py-4 bg-slate-600 overflow-hidden pb-40 md:pb-0 ">
                 <div className="container mx-auto pb-40">
                     <div className="flex flex-wrap justify-center">
                         <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64">
@@ -367,8 +372,8 @@ function Home() {
                             <h3 className="text-3xl mb-2 font-semibold leading-normal text-white">
                                 Join Us
                             </h3>
-                            <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-slate-400">
-                                Hey! fellow developer join for exciting journey ahead
+                            <p className="text-lg  leading-relaxed mt-4 mb-4 text-slate-100">
+                                Dream it, live it, just a click away! Join us for the exciting journey ahead.
                             </p>
 
                             <NavLink
@@ -381,7 +386,7 @@ function Home() {
                         </div>
 
                         <div className="w-full md:w-4/12 px-4 mx-auto  mt-12 relative">
-                            < FiGithub className='inline-block w-fit text-white absolute mx-auto text-[300px] lg:text-[500px] opacity-70 ' />
+                            < MdDeveloperMode className='inline-block w-fit text-white absolute mx-auto text-[300px] lg:text-[500px] opacity-70 ' />
 
                         </div>
                     </div>
@@ -466,7 +471,7 @@ function Home() {
                                     <a href="tel:8861643971">
 
                                         <button
-                                            className="bg-white active:bg-slate-50 text-slate-700  px-6 py-2 rounded-lg outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold ease-linear transition-all duration-150 text-xl" 
+                                            className="bg-white active:bg-slate-50 text-slate-700  px-6 py-2 rounded-lg outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold ease-linear transition-all duration-150 text-xl"
                                             type="button"
                                         >
                                             <img
@@ -496,9 +501,14 @@ function Home() {
 
 
                         </div>
+                        <div className=" w-screen my-4 text-center">
+                            <h6 className="text-slate-500 text-xl font-bold">
+                            Testimonials 
+                            </h6>
+                        </div>
+                        <div className=" flex flex-wrap justify-center px-4 mt-5 mx-auto gap-x-6  relative">
+                            <Testimonials />
 
-                        <div className=" hidden px-4 mr-auto ml-auto mt-32 relative">
-                            {/* < FiGithub className='inline-block text-white absolute -top-150-px -right-100 left-auto opacity-80 text-[500px] ' /> */}
 
                         </div>
                     </div>

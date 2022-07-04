@@ -76,18 +76,18 @@ function AuthNavbar() {
 
     const handleSignOut = (e) => {
 
-        if (!currentUser || pathname === "/" || pathname === "/profile/getinfo") {
+        if (!currentUser || pathname === "/" || pathname === "/joinus" || pathname === "/profile/getinfo") {
             if (!currentUser) {
-                console.log("already logout");
+                // console.log("already logout");
             }
-            console.log(pathname);
+            // console.log(pathname);
 
         }
         else {
             signOut(auth).then(() => {
 
                 // Sign-out successful.
-                console.log("signout is successfull");
+                // console.log("signout is successfull");
                 dispatch({ type: "SIGNOUT", payload: null })
 
             }).catch((error) => {

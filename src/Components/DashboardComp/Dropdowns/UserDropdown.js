@@ -23,12 +23,12 @@ const UserDropdown = () => {
   const { dispatch } = useContext(AuthContext);
 
   const handleSignOut = (e) => {
-    console.log("triggered");
+    // console.log("triggered");
     e.preventDefault();
     signOut(auth).then(() => {
 
       // Sign-out successful.
-      console.log("signout is successfull");
+      // console.log("signout is successfull");
       dispatch({ type: "SIGNOUT", payload: null })
 
     }).catch((error) => {
@@ -42,7 +42,7 @@ const UserDropdown = () => {
   }
 
   const { currentUser } = useContext(AuthContext)
-  console.log(currentUser.email);
+  // console.log(currentUser.email);
 
 
   return (

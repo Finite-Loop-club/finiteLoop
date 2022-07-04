@@ -34,7 +34,7 @@ function Info() {
     const handleGetInfo = async (e) => {
         e.preventDefault();
 
-        console.log(currentUser.uid);
+        // console.log(currentUser.uid);
         await setDoc(doc(db, "members", currentUser.uid), {
             name: name,
             usn: usn,

@@ -50,7 +50,7 @@ function Profile() {
           setBranch(members.branch);
           setPhone(members.phone);
           setIntro(members.intro);
-          console.log(members.name);
+          // console.log(members.name);
         })
         .catch((e) => {
         });

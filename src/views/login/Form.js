@@ -35,7 +35,7 @@ function Form() {
                     // Signed in 
                     const user = userCredential.user;
                     dispatch({ type: "SIGNIN", payload: user })
-                    console.log(user);
+                    // console.log(user);
                     // alert("login successful");
                     navigate("/admin/dashboard")
                     setError(false);
@@ -74,7 +74,7 @@ function Form() {
         signOut(auth).then(() => {
 
             // Sign-out successful.
-            console.log("signout is successfull");
+            // console.log("signout is successfull");
             dispatch({ type: "SIGNOUT", payload: null })
 
         }).catch((error) => {
@@ -96,7 +96,7 @@ function Form() {
                 // This gives you a Google Access Token. You can use it to access the Google API.
                 const credential = GoogleAuthProvider.credentialFromResult(result);
                 const token = credential.accessToken;
-                console.log(token);
+                // console.log(token);
                 // The signed-in user info.
                 const user = result.user;
                 if (user.email === "ayusmann23@gmail.com" || user.email === "nayakbhargavi01@gmail.com" || user.email === "shashankshetty@nitte.edu.in" || user.email === "shrilakshmipai@gmail.com" || user.email === "finiteloopclub@gmail.com") {
@@ -118,9 +118,9 @@ function Form() {
                 const email = error.customData.email;
                 // The AuthCredential type that was used.
                 const credential = GoogleAuthProvider.credentialFromError(error);
-                console.log(errorCode);
-                console.log(email);
-                console.log(credential);
+                // console.log(errorCode);
+                // console.log(email);
+                // console.log(credential);
                 // ...
             });
     }
