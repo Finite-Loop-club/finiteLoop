@@ -5,8 +5,8 @@ import team from '../../assets/team/team.jpg'
 import pattern from '../../assets/img/pattern_react.png'
 import { GiThink, GiTeacher } from 'react-icons/gi'
 import { GrWorkshop } from 'react-icons/gr'
-import { BsCardChecklist, } from 'react-icons/bs'
-import { BiMessageSquareDetail, BiGitRepoForked } from 'react-icons/bi'
+import { BsCardChecklist } from 'react-icons/bs'
+import { BiMessageSquareDetail,BiCodeAlt, BiGitRepoForked } from 'react-icons/bi'
 import { FaFistRaised, FaChalkboardTeacher } from 'react-icons/fa'
 import { AiOutlineBranches, AiOutlineFundProjectionScreen } from 'react-icons/ai'
 import { FiGithub } from 'react-icons/fi'
@@ -227,7 +227,7 @@ function Home() {
                                             </div>
 
                                         </div>
-                                        <div className="w-full md:w-6/12 mx-auto px-4">
+                                        <div className="w-full flex flex-col md:flex-row   mx-auto px-4">
                                             <div className="relative flex flex-col min-w-0 mt-4">
                                                 <div className="px-4 py-5 flex-auto">
                                                     <div className="  text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white text-2xl ">
@@ -236,6 +236,17 @@ function Home() {
                                                     <h6 className="text-xl mb-1 font-semibold">Real-Time Projects</h6>
                                                     <p className="mb-4 text-slate-500">
                                                         Being in this club, you get to work on real time projects, which allows you to bring out your creative side.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="relative flex flex-col min-w-0 mt-4">
+                                                <div className="px-4 py-5 flex-auto">
+                                                    <div className="  text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white text-2xl ">
+                                                        <BiCodeAlt className='text-slate-900  ' />
+                                                    </div>
+                                                    <h6 className="text-xl mb-1 font-semibold">Coding Contest</h6>
+                                                    <p className="mb-4 text-slate-500">
+                                                    We ensure to conduct biweekly coding contests, to improve your analytical and problem solving skills.
                                                     </p>
                                                 </div>
                                             </div>
@@ -262,10 +273,10 @@ function Home() {
                                                 <img
                                                     alt="..."
                                                     className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                                                    src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/svelte.jpg"
+                                                    src="https://material-dashboard-laravel.creative-tim.com/material/img/laravel.svg"
                                                 />
                                                 <p className="text-lg text-white mt-4 font-semibold">
-                                                    Svelte
+                                                    Laravel
                                                 </p>
                                             </div>
 
@@ -282,16 +293,7 @@ function Home() {
                                             </div>
 
 
-                                            <div className="bg-slate-700 shadow-lg rounded-lg text-center p-8 mt-8">
-                                                <img
-                                                    alt="..."
-                                                    className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                                                    src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/nextjs.jpg"
-                                                />
-                                                <p className="text-lg text-white mt-4 font-semibold">
-                                                    NextJS
-                                                </p>
-                                            </div>
+                                            
 
                                         </div>
                                         <div className="my-4 w-full lg:w-6/12 px-4 lg:mt-16">
@@ -308,17 +310,7 @@ function Home() {
                                             </div>
 
 
-                                            <div className="bg-red-700 shadow-lg rounded-lg text-center p-8 mt-8">
-                                                <img
-                                                    alt="..."
-                                                    className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                                                    src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/angular.jpg"
-                                                />
-                                                <p className="text-lg text-white mt-4 font-semibold">
-                                                    Angular
-                                                </p>
-                                            </div>
-
+                                            
 
                                             <div className="bg-emerald-500 shadow-lg rounded-lg text-center p-8 mt-8">
                                                 <img
@@ -371,15 +363,15 @@ function Home() {
                                 <AiOutlineBranches className='inline-block text-slate-900 text-2xl' />
                             </div>
                             <h3 className="text-3xl mb-2 font-semibold leading-normal text-white">
-                                Github Session
+                                Join Us 
                             </h3>
                             <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-slate-400">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores veritatis consequuntur, quisquam sit quibusdam similique eveniet nulla error?
+                                Hey! fellow developer join for exciting journey ahead
                             </p>
 
                             <NavLink
-                                to="/"
-                                target="_blank"
+                                to="/joinus"
+                               
                                 className="github-star mt-4 inline-block text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-slate-700 active:bg-slate-600 uppercase text-sm shadow hover:shadow-lg"
                             >
                                 Register Now

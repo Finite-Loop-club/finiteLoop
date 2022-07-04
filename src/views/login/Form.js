@@ -135,7 +135,7 @@ function Form() {
                             <div className="rounded-t mb-0 px-6 py-6">
                                 <div className="text-center mb-3">
                                     <h6 className="text-slate-500 text-sm font-bold">
-                                        Sign in with
+                                        Sign in with For Admin only
                                     </h6>
                                 </div>
                                 <div className="btn-wrapper text-center">

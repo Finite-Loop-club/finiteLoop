@@ -58,18 +58,48 @@ function NewEntries() {
                 email: email,
                 phone: phone,
                 branch: branch,
-                timeStamp: Date() ,
+                timeStamp: Date(),
             })
             setLoading(false)
             // console.log("data recorded" + usn)
             setModal(true)
-            
+
         } else {
             setLoading(false)
             setErrModal(true)
 
         }
     }
+
+    const branchList = [
+        {
+            value: "Artificial Intelligence & Machine Learning",
+        },
+        {
+            value: "Biotechnology",
+        },
+        {
+            value: "Civil Engineering",
+        },
+        {
+            value: "Computer & Communication Engineering",
+        },
+        {
+            value: "Computer Science and Engineering",
+        },
+        {
+            value: "Electronics & Communication Engineering",
+        },
+        {
+            value: "Information Science & Engineering",
+        },
+        {
+            value: "Robotics & Artificial Intelligence",
+        },
+        {
+            value: "Mechanical Engineering",
+        },
+    ]
 
 
     return (
@@ -122,10 +152,16 @@ function NewEntries() {
                                                     onChange={e => setBranch(e.target.value)}
                                                 >
                                                     <option value="">--Select Branch--</option>
-                                                    <option value="CSE">CSE</option>
-                                                    <option value="Information Science Enginnering.">Information Science Enginnering.</option>
-                                                    <option value="ECE">ECE</option>
-                                                    <option value="AIML">AIML</option>
+                                                    {
+                                                        branchList.map((branch, key) => {
+                                                            return (
+                                                                <>
+                                                                <option value={branch.value}>{branch.value}</option>
+
+                                                            </>
+                                                        )
+                                                    })
+                                                    }
 
                                                 </select>
                                             </div>
@@ -203,10 +239,10 @@ function NewEntries() {
                                         <button
                                             onClick={handleSubmission}
                                             disabled={loading || openModal}
-                                            
+
                                             className={`bg-slate-800 text-white active:bg-slate-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150 ${(loading || openModal) ? "cursor-not-allowed" : ""} `}
-                                            
-                                            >
+
+                                        >
                                             {loading ? <AiOutlineLoading3Quarters className="inline mr-2  text-md animate-spin align-middle  " /> : ""}
 
                                             {loading ? "Submiting " : " Submit"}
@@ -214,7 +250,7 @@ function NewEntries() {
                                         </button>
 
                                         <button
-                                            
+
                                             disabled={loading || openModal}
                                             type='reset'
 

@@ -44,7 +44,9 @@ const SmallFooter = (props) => {
                         </div>
                         <div className={` ${props.white? "text-white": "text-black" } `} >
 
-                            Created with <GiTechnoHeart className=" inline text-red-700 " /> by <NavLink to='/devteam' className='text-orange-500 font-semibold ' > Anjuman </NavLink> from <NavLink to="/" className='text-orange-500 font-semibold ' > Finite Loop </NavLink>
+                            Created with <GiTechnoHeart className=" inline text-red-700 " /> by
+                            {/* <NavLink to='/devteam' className='text-orange-500 font-semibold ' > Anjuman </NavLink> from  */}
+                            <NavLink to="/" className='text-orange-500 font-semibold ' > Finite Loop </NavLink>
                         </div>
                         <div className="  px-4">
 
