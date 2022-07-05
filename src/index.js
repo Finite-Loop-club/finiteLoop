@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import {AuthContextProvider} from "./context/AuthContext" 
+// import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS
 
 ReactDOM.render(
   <BrowserRouter>

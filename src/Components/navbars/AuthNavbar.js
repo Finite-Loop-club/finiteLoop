@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom'
 import logo from '../../assets/images/logo.png'
 import logoBig from '../../assets/images/logo1.png'
 import { BiHomeAlt, } from 'react-icons/bi'
-import { AiOutlineTeam, } from 'react-icons/ai'
+import { AiOutlineTeam,AiOutlineForm } from 'react-icons/ai'
+
 import { MdOutlineEmojiEvents, } from 'react-icons/md'
 import { RiGalleryLine, } from 'react-icons/ri'
 import { FaTeamspeak, } from 'react-icons/fa'
@@ -44,6 +45,12 @@ function AuthNavbar() {
             option: "Team",
             link: "/team",
             icons: <AiOutlineTeam className='inline text-slate-50 mr-2 text-lg' />,
+
+        },
+        {
+            option: "Register Now",
+            link: "/joinus",
+            icons: <AiOutlineForm className='inline text-slate-50 mr-2 text-lg' />,
 
         },
     ]

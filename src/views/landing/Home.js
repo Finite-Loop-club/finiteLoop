@@ -19,13 +19,37 @@ import google_icons from '../../assets/img/phone.png'
 import github_icons from '../../assets/img/gmail.png'
 import Testimonials from './Testimonials'
 import skillDevLab from '../../assets/pic1.jpg'
-
+import SimpleImageSlider from "react-simple-image-slider";
 
 function Home() {
 
     const { currentUser } = useContext(AuthContext);
     // console.log(currentUser.displayName)
     // console.log(currentUser)
+
+    const teamImage = [
+        {
+            url: "/team/team_intro/7.jpg",
+        },
+        {
+            url: "/team/team_intro/2.jpeg",
+        },
+        {
+            url: "/team/team_intro/1.jpeg",
+        },
+        {
+            url: "/team/team_intro/3.jpeg",
+        },
+        {
+            url: "/team/team_intro/4.jpeg",
+        },
+        {
+            url: "/team/team_intro/5.jpeg",
+        },
+        {
+            url: "/team/team_intro/6.jpeg",
+        },
+    ]
 
     return (
         <>
@@ -135,8 +159,18 @@ function Home() {
                                 </div>
 
                                 <div className="w-full md:w-6/12 mr-auto px-4 pt-16 md:pt-0">
-
-
+{/* 
+                                    <SimpleImageSlider
+                                        width={796}
+                                        height={504}
+                                        images={teamImage}
+                                        showBullets={true}
+                                        showNavs={true}
+                                        style={{
+                                            transform:
+                                                "scale(.75 ) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg)",
+                                        }}
+                                    /> */}
                                     <img
                                         alt="..."
                                         className="max-w-full rounded-lg shadow-xl"
@@ -501,16 +535,16 @@ function Home() {
 
 
                         </div>
-                        <div className=" w-screen my-4 text-center">
+                        {/* <div className=" w-screen my-4 text-center">
                             <h6 className="text-slate-500 text-xl font-bold">
-                            Testimonials 
+                                Testimonials
                             </h6>
                         </div>
                         <div className=" flex flex-wrap justify-center px-4 mt-5 mx-auto gap-x-6  relative">
                             <Testimonials />
 
 
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
