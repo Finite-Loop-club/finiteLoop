@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import logo from '../../assets/images/logo.png'
-import logoBig from '../../assets/images/logo1.png'
+// import logoBig from '../../assets/images/logo1.png'
 import { BiHomeAlt, } from 'react-icons/bi'
 import { AiOutlineTeam,AiOutlineForm } from 'react-icons/ai'
 
 import { MdOutlineEmojiEvents, } from 'react-icons/md'
-import { RiGalleryLine, } from 'react-icons/ri'
+
 import { FaTeamspeak, } from 'react-icons/fa'
 import { FiFacebook, FiInstagram, FiLinkedin } from 'react-icons/fi'
 import { CgMenuRight } from 'react-icons/cg'
@@ -98,10 +98,10 @@ function AuthNavbar() {
                 dispatch({ type: "SIGNOUT", payload: null })
 
             }).catch((error) => {
-                const errorCode = error.code;
+                
                 const errorMessage = error.message;
                 console.log("error in signing out");
-                console.log(errorCode);
+                console.log(errorMessage);
                 // An error happened.
             });
         }
@@ -169,7 +169,7 @@ function AuthNavbar() {
                                             <a
                                                 className="text-white lg:hover:text-slate-200  px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                                                 href={index.link}
-                                                target="_blank"
+                                                target="blank"
                                             >
                                                 {index.icons}
                                                 <span className="lg:hidden inline-block ">{index.name}</span>
