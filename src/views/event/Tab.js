@@ -5,7 +5,7 @@ function Tab({year, setYear}) {
 
     const element = [
         "All",
-        "2022-23",
+        // "2022-23",
         "2021-22",
         "2020-21",
         "2017-20",
@@ -16,7 +16,7 @@ function Tab({year, setYear}) {
         <>
 
             <div className=" flex justify-center text-sm font-medium text-center text-gray-500  border-gray-200 p-3 m-0">
-                <ul className="flex flex-wrap -mb-px">
+                <ul className="flex flex-wrap justify-center -mb-px">
                     {element.map((index, key) => {
                         return (
                             <li key={key} className="mr-2">

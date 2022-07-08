@@ -61,10 +61,10 @@ function Home() {
                         <div className="mx-auto items-center flex flex-wrap">
                             <div className="w-screen  px-10">
                                 <div className="pt-5 sm:pt-0 z-50 ">
-                                    <h2 className=" text-7xl text-slate-700">
+                                    <h2 className=" text-5xl md:text-7xl text-slate-700">
                                         <span className='font-bold' > Finite Loop </span>
                                     </h2>
-                                    <p className="mt-4 text-3xl font-semibold leading-relaxed text-slate-600">
+                                    <p className="mt-4 text-2xl md:text-3xl font-semibold leading-relaxed text-slate-600">
                                         We Code, We Innovate, We Inspire!
 
                                     </p>
@@ -375,14 +375,9 @@ function Home() {
                                         Work on new Trending Tech Stack
                                     </h3>
                                     <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-slate-600">
-                                        In order to create a great User Experience some components
-                                        require JavaScript. In this way you can manipulate the elements
-                                        on the page and give more options to your users.
+                                    Get a chance to explore and innovate using the in-demand Tech Stack! Get your hands to code your idea and enter the world of developers!
                                     </p>
-                                    <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-slate-600">
-                                        We created a set of Components that are dynamic and come to help
-                                        you.
-                                    </p>
+                                    
 
 
                                 </div>
@@ -501,16 +496,16 @@ function Home() {
                                         Contact Us
                                     </h6>
                                 </div>
-                                <div className="btn-wrapper space-x-5 text-center">
+                                <div className=" flex justify-center flex-wrap gap-5 text-center">
                                     <a href="tel:8861643971">
 
                                         <button
-                                            className="bg-white active:bg-slate-50 text-slate-700  px-6 py-2 rounded-lg outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold ease-linear transition-all duration-150 text-xl"
+                                            className="bg-white active:bg-slate-50 text-slate-700  px-6 py-2 rounded-lg outline-none focus:outline-none   uppercase shadow hover:shadow-md inline-flex items-center font-bold ease-linear transition-all duration-150 text-xl"
                                             type="button"
                                         >
                                             <img
                                                 alt="..."
-                                                className="w-8 mr-4"
+                                                className="w-8 mx-0 mr-4 "
                                                 src={google_icons}
                                             />
                                             Call us
@@ -519,12 +514,12 @@ function Home() {
                                     <a href="mailto:finiteloopclub@gmail.com">
 
                                         <button
-                                            className="bg-white active:bg-slate-50 text-slate-700  px-6 py-2 rounded-lg outline-none focus:outline-none mr-1 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xl ease-linear transition-all duration-150"
+                                            className="bg-white active:bg-slate-50 text-slate-700  px-6 py-2 rounded-lg outline-none focus:outline-none   uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xl ease-linear transition-all duration-150"
                                             type="button"
                                         >
                                             <img
                                                 alt="..."
-                                                className="w-8 mr-4"
+                                                className="w-8 mx-0 mr-4"
                                                 src={github_icons}
                                             />
                                             Mail us

@@ -37,8 +37,8 @@ function DevTeam() {
                             <h1 className="text-3xl font-bold pt-8 lg:pt-0">Anjuman Raj</h1>
                             <div className="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-orange-500 opacity-75"></div>
                             <p className="pt-4 text-base font-bold flex items-center justify-center lg:justify-start"> Full Stack Developer</p>
-                            <p className="pt-2 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex beatae </p>
-                            <p className="pt-8 text-sm">Totally optional short description about yourself, what you do and so on.</p>
+                            <p className="pt-2 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start">Beyond Ethereum and Hyperledger. Blockchain expert, Web Developer with a passion for ideation, design, and creation of innovative products. I love to create, to learn new stuff and to share it. 
+                            </p>
 
                             <div className="pt-12 pb-8">
                                 <a target="blank" href="https://anjuman-23.web.app/">
