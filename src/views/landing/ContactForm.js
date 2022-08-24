@@ -22,8 +22,6 @@ function ContactForm() {
     };
 
     const resetMsg = () => {
-        
-
         setMsg({ ...Msg, [name]: "" });
     };
 
