@@ -28,9 +28,9 @@ function EventModal(props) {
                                 {/* <!-- Modal body --> */}
                                 <div className="overflow-y-scroll sm:overflow-y-auto  h-[80vh] sm:h-auto p-1 sm:flex sm:flex-row md:flex md:flex-row  ">
 
-                                    
-                                        <img src={props.src} alt={""} className=" " />
-                                    
+
+                                    <img src={props.src} alt={""} className="w-full md:w-2/5  " />
+
                                     <div className="align-middle px-2 md:p-10 pt-4   space-y-6  sm:overflow-y-scroll lg:overflow-hidden  sm:h-[75vh] md:h-full">
                                         <div>
                                             <div className="py-3 text-gray-100 text-4xl bold"> <span className='font-bold'>Events Details </span>
