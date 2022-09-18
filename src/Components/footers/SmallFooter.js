@@ -6,14 +6,6 @@ const SmallFooter = (props) => {
     const main = [{
         item: "Home",
         link: "/",
-    },
-    {
-        item: "Login",
-        link: "/auth/signin",
-    },
-    {
-        item: "Other Links",
-        link: "/",
     }]
 
     const pathname = window.location.pathname
@@ -31,7 +23,7 @@ const SmallFooter = (props) => {
                 <div className="container mx-auto px-4">
                     <hr className="mb-6 border-b-1 border-slate-600" />
                     <div className="flex flex-wrap items-center flex-col md:flex-row  md:justify-between justify-center">
-                        <div className={` ${props.white? "text-white px-4 ": "text-black px-4" } `}>
+                        <div className={` ${props.white ? "text-white px-4 " : "text-black px-4"} `}>
                             <div className="text-sm  font-semibold py-1 text-center">
                                 Copyright © {new Date().getFullYear()}
                                 <NavLink
@@ -42,7 +34,7 @@ const SmallFooter = (props) => {
                                 </NavLink>
                             </div>
                         </div>
-                        <div className={` ${props.white? "text-white": "text-black" } `} >
+                        <div className={` ${props.white ? "text-white" : "text-black"} `} >
 
                             Created with <GiTechnoHeart className=" inline text-red-700 " /> by
                             {/* <NavLink to='/devteam' className='text-orange-500 font-semibold ' > Anjuman </NavLink> from  */}
@@ -55,7 +47,7 @@ const SmallFooter = (props) => {
                                 {main.map((index, key) => {
                                     return (
                                         < >
-                                            <li key={key} className={` ${props.white? "text-white": "text-black" } `} >
+                                            <li key={key} className={` ${props.white ? "text-white" : "text-black"} `} >
                                                 <NavLink
                                                     to={index.link}
                                                     className="hover:text-slate-600 text-sm font-semibold block py-1 px-3"

@@ -7,7 +7,7 @@ import SmallFooter from '../footers/SmallFooter'
 
 function Team() {
 
-  const [year, setYear] = useState("2021-22");
+  const [year, setYear] = useState("2022-23");
   const [elements, setElements] = useState(members);
 
   useEffect(() => {

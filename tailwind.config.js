@@ -5,6 +5,7 @@ module.exports = {
       colors: {
         org: "#F5820D"
       },
+      
     },
   },
   plugins: [],
