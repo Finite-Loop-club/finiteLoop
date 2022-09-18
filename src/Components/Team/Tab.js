@@ -4,6 +4,7 @@ function Tab({year, setYear}) {
 
     const element = [
         "Faculty",
+        "2022-23",
         "2021-22",
         "2020-21",
         "2017-20",

@@ -40,7 +40,7 @@ function App() {
 
 
   return (
-    <div className="App bg-[#eff0f3]">
+    <div className="overflow-x-hidden bg-[#eff0f3] ">
       {/* <ScrollToTop> */}
 
       {/* <Navbar /> */}
